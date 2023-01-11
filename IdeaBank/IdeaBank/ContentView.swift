@@ -16,14 +16,14 @@ struct ContentView: View {
             Divider()
             
             SwipeCarousel(items: words, id: \.id) { word, size in
-                // Custom View goes here
-                VStack {
-                    Text(word.word)
-                        .bold()
-                        .padding()
-                    Text(word.description)
-                        .padding()
-                }
+                CardView(title: word.word, description: word.description)
+//                VStack {
+//                    Text(word.word)
+//                        .bold()
+//                        .padding()
+//                    Text(word.description)
+//                        .padding()
+//                }
                 
                 .frame(width: 240, height: 200)
                 .background(.ultraThickMaterial, in: RoundedRectangle(cornerRadius: 15))
