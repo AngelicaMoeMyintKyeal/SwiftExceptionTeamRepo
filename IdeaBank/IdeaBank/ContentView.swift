@@ -17,16 +17,7 @@ struct ContentView: View {
             
             SwipeCarousel(items: words, id: \.id) { word, size in
                 CardView(title: word.word, description: word.description)
-//                VStack {
-//                    Text(word.word)
-//                        .bold()
-//                        .padding()
-//                    Text(word.description)
-//                        .padding()
-//                }
-                
-                .frame(width: 240, height: 200)
-                .background(.ultraThickMaterial, in: RoundedRectangle(cornerRadius: 15))
+                    .frame(width: 240, height: 200)
                 
             }
             // Card size specified here, otherwise whole screen will be occupied
@@ -35,11 +26,8 @@ struct ContentView: View {
         }
         .background(
             LinearGradient(colors: [.blue, .purple], startPoint: .topLeading, endPoint: .bottomTrailing)
-        )
-        
+        )   
     }
-        
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
