@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0CD296F0BEE003FE504 /* WordCard.swift */; };
+		4C43B0D3296F0D0F003FE504 /* SwipeCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */; };
 		AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9C296EA531001B8538 /* IdeaBankApp.swift */; };
 		AC493D9F296EA531001B8538 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9E296EA531001B8538 /* ContentView.swift */; };
 		AC493DA1296EA532001B8538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA0296EA532001B8538 /* Assets.xcassets */; };
@@ -14,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C43B0CD296F0BEE003FE504 /* WordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCard.swift; sourceTree = "<group>"; };
+		4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCarousel.swift; sourceTree = "<group>"; };
 		AC493D99296EA531001B8538 /* IdeaBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdeaBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC493D9C296EA531001B8538 /* IdeaBankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaBankApp.swift; sourceTree = "<group>"; };
 		AC493D9E296EA531001B8538 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +36,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C43B0CC296F0BD7003FE504 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C43B0CD296F0BEE003FE504 /* WordCard.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C43B0CF296F0C67003FE504 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		AC493D90296EA531001B8538 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +73,8 @@
 			children = (
 				AC493D9C296EA531001B8538 /* IdeaBankApp.swift */,
 				AC493D9E296EA531001B8538 /* ContentView.swift */,
+				4C43B0CF296F0C67003FE504 /* Views */,
+				4C43B0CC296F0BD7003FE504 /* Model */,
 				AC493DA0296EA532001B8538 /* Assets.xcassets */,
 				AC493DA2296EA532001B8538 /* Preview Content */,
 			);
@@ -137,6 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C43B0D3296F0D0F003FE504 /* SwipeCarousel.swift in Sources */,
+				4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */,
 				AC493D9F296EA531001B8538 /* ContentView.swift in Sources */,
 				AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */,
 			);
@@ -267,7 +291,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IdeaBank/Preview Content\"";
-				DEVELOPMENT_TEAM = 4Y299ULQLV;
+				DEVELOPMENT_TEAM = MLWR3753W4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -280,7 +304,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = angelicaHtetMyat.IdeaBank;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eireware.IdeaBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -296,7 +320,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IdeaBank/Preview Content\"";
-				DEVELOPMENT_TEAM = 4Y299ULQLV;
+				DEVELOPMENT_TEAM = MLWR3753W4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -309,7 +333,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = angelicaHtetMyat.IdeaBank;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eireware.IdeaBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
