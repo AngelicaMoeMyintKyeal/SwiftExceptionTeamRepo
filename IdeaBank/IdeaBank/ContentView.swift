@@ -16,6 +16,12 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
+            Spacer()
+            
+            PhaseInformView(phaseHeader: "Phase 1", phaseTitle: "Choose", phaseDescription: "Swipe right to save a word if you like it or it inspires you, swipe right to discard it")
+            
+            Spacer()
+            
             LazyVGrid(columns: layout, alignment: .leading) {
                 ForEach(words) { word in
                     CompactWordView(title: word.word)
