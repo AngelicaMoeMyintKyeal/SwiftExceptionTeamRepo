@@ -14,7 +14,6 @@ struct CardView: View {
     
     var body: some View {
         ZStack {
-            
             HStack {
                 VStack(alignment: .leading) {
                     Text(title)

@@ -25,7 +25,10 @@ struct ContentView: View {
             
         }
         .background(
-            LinearGradient(colors: [.blue, .purple], startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(
+                colors: [.indigo, .purple],
+                startPoint: .topLeading, endPoint: .bottomTrailing
+            )
         )   
     }
 }
