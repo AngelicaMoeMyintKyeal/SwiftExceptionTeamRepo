@@ -11,6 +11,7 @@
 		4C43B0D3296F0D0F003FE504 /* SwipeCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */; };
 		AA50B160296F1B7700E85284 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA50B15F296F1B7700E85284 /* CardView.swift */; };
 		AAA904C0296F216E00D8B070 /* CompactWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA904BF296F216E00D8B070 /* CompactWordView.swift */; };
+		AAEECBB92970601600D06A39 /* PhaseInformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEECBB82970601600D06A39 /* PhaseInformView.swift */; };
 		AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9C296EA531001B8538 /* IdeaBankApp.swift */; };
 		AC493D9F296EA531001B8538 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9E296EA531001B8538 /* ContentView.swift */; };
 		AC493DA1296EA532001B8538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA0296EA532001B8538 /* Assets.xcassets */; };
@@ -23,6 +24,7 @@
 		4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCarousel.swift; sourceTree = "<group>"; };
 		AA50B15F296F1B7700E85284 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		AAA904BF296F216E00D8B070 /* CompactWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactWordView.swift; sourceTree = "<group>"; };
+		AAEECBB82970601600D06A39 /* PhaseInformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseInformView.swift; sourceTree = "<group>"; };
 		AC493D99296EA531001B8538 /* IdeaBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdeaBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC493D9C296EA531001B8538 /* IdeaBankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaBankApp.swift; sourceTree = "<group>"; };
 		AC493D9E296EA531001B8538 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				AC493D9E296EA531001B8538 /* ContentView.swift */,
 				AA50B15F296F1B7700E85284 /* CardView.swift */,
 				AAA904BF296F216E00D8B070 /* CompactWordView.swift */,
+				AAEECBB82970601600D06A39 /* PhaseInformView.swift */,
 				4C43B0CF296F0C67003FE504 /* Views */,
 				4C43B0CC296F0BD7003FE504 /* Model */,
 				AC493DA0296EA532001B8538 /* Assets.xcassets */,
@@ -205,6 +208,7 @@
 				AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */,
 				AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */,
 				AA50B160296F1B7700E85284 /* CardView.swift in Sources */,
+				AAEECBB92970601600D06A39 /* PhaseInformView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
