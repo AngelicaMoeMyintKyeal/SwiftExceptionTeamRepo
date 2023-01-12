@@ -9,9 +9,21 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var words: [Word] = Word.exampleWords
+    let layout = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
 
     var body: some View {
         VStack {
+            LazyVGrid(columns: layout, alignment: .leading) {
+                ForEach(words) { word in
+                    CompactWordView(title: word.word)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.6)
+                }
+            }
+            .padding()
             Spacer()
             Divider()
 
