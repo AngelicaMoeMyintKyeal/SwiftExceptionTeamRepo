@@ -7,13 +7,12 @@
 
 import SwiftUI
 
-//MARK: Sample Message Model
+// MARK: Sample Message Model
 struct Word: Identifiable, Equatable {
     var id: String = UUID().uuidString
     var word: String
     var description: String
-    
-    
+
     static var exampleWords = [
         Word(word: "Monkey", description: "A kind of simian"),
         Word(word: "Banana", description: "Fruit that a monkey likes to eat"),

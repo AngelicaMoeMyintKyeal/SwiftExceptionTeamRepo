@@ -43,4 +43,3 @@ struct PhaseTwoMainView_Previews: PreviewProvider {
         PhaseTwoMainView()
     }
 }
-

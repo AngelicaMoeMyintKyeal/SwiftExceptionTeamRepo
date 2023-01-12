@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct CardView: View {
-    
+
     var title: String
     var description: String
-    
+
     var body: some View {
         ZStack {
-            
             HStack {
                 VStack(alignment: .leading) {
                     Text(title)
