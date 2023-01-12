@@ -7,18 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0CD296F0BEE003FE504 /* WordCard.swift */; };
+		4C43B0D3296F0D0F003FE504 /* SwipeCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */; };
+		AA50B160296F1B7700E85284 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA50B15F296F1B7700E85284 /* CardView.swift */; };
+		AAA904C0296F216E00D8B070 /* CompactWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA904BF296F216E00D8B070 /* CompactWordView.swift */; };
+		AAEECBB92970601600D06A39 /* PhaseInformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEECBB82970601600D06A39 /* PhaseInformView.swift */; };
 		AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9C296EA531001B8538 /* IdeaBankApp.swift */; };
 		AC493D9F296EA531001B8538 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9E296EA531001B8538 /* ContentView.swift */; };
 		AC493DA1296EA532001B8538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA0296EA532001B8538 /* Assets.xcassets */; };
 		AC493DA4296EA532001B8538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA3296EA532001B8538 /* Preview Assets.xcassets */; };
+		AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C43B0CD296F0BEE003FE504 /* WordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCard.swift; sourceTree = "<group>"; };
+		4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCarousel.swift; sourceTree = "<group>"; };
+		AA50B15F296F1B7700E85284 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		AAA904BF296F216E00D8B070 /* CompactWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactWordView.swift; sourceTree = "<group>"; };
+		AAEECBB82970601600D06A39 /* PhaseInformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseInformView.swift; sourceTree = "<group>"; };
 		AC493D99296EA531001B8538 /* IdeaBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdeaBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC493D9C296EA531001B8538 /* IdeaBankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaBankApp.swift; sourceTree = "<group>"; };
 		AC493D9E296EA531001B8538 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AC493DA0296EA532001B8538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC493DA3296EA532001B8538 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseTwoMainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +44,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C43B0CC296F0BD7003FE504 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C43B0CD296F0BEE003FE504 /* WordCard.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C43B0CF296F0C67003FE504 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AC870946296F20D300E5EA23 /* PhaseTwoViews */,
+				4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		AC493D90296EA531001B8538 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +82,11 @@
 			children = (
 				AC493D9C296EA531001B8538 /* IdeaBankApp.swift */,
 				AC493D9E296EA531001B8538 /* ContentView.swift */,
+				AA50B15F296F1B7700E85284 /* CardView.swift */,
+				AAA904BF296F216E00D8B070 /* CompactWordView.swift */,
+				AAEECBB82970601600D06A39 /* PhaseInformView.swift */,
+				4C43B0CF296F0C67003FE504 /* Views */,
+				4C43B0CC296F0BD7003FE504 /* Model */,
 				AC493DA0296EA532001B8538 /* Assets.xcassets */,
 				AC493DA2296EA532001B8538 /* Preview Content */,
 			);
@@ -67,6 +101,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		AC870946296F20D300E5EA23 /* PhaseTwoViews */ = {
+			isa = PBXGroup;
+			children = (
+				AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */,
+			);
+			path = PhaseTwoViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,6 +119,7 @@
 				AC493D95296EA531001B8538 /* Sources */,
 				AC493D96296EA531001B8538 /* Frameworks */,
 				AC493D97296EA531001B8538 /* Resources */,
+				4C3F12ED297043AA009F5126 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -132,13 +175,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4C3F12ED297043AA009F5126 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi \n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC493D95296EA531001B8538 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAA904C0296F216E00D8B070 /* CompactWordView.swift in Sources */,
+				4C43B0D3296F0D0F003FE504 /* SwipeCarousel.swift in Sources */,
+				4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */,
 				AC493D9F296EA531001B8538 /* ContentView.swift in Sources */,
 				AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */,
+				AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */,
+				AA50B160296F1B7700E85284 /* CardView.swift in Sources */,
+				AAEECBB92970601600D06A39 /* PhaseInformView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,7 +337,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IdeaBank/Preview Content\"";
-				DEVELOPMENT_TEAM = 4Y299ULQLV;
+				DEVELOPMENT_TEAM = MLWR3753W4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -280,7 +350,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = angelicaHtetMyat.IdeaBank;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eireware.IdeaBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -296,7 +366,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IdeaBank/Preview Content\"";
-				DEVELOPMENT_TEAM = 4Y299ULQLV;
+				DEVELOPMENT_TEAM = MLWR3753W4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -309,7 +379,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = angelicaHtetMyat.IdeaBank;
+				PRODUCT_BUNDLE_IDENTIFIER = com.eireware.IdeaBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
