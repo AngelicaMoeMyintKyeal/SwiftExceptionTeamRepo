@@ -17,8 +17,10 @@ struct PhaseInformView: View {
         VStack {
             Text(phaseHeader.uppercased())
                 .foregroundColor(.secondary)
+                .foregroundStyle(.secondary)
                 .font(.subheadline)
                 .fontWeight(.black)
+                
             
             Text(phaseTitle)
                 .font(.largeTitle)
