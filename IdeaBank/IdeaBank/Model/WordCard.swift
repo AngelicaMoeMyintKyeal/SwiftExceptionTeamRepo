@@ -16,6 +16,10 @@ struct Word: Identifiable, Equatable {
     static var exampleWords = [
         Word(word: "Monkey", description: "A kind of simian"),
         Word(word: "Banana", description: "Fruit that a monkey likes to eat"),
-        Word(word: "Chicken", description: "Everyone's favourite snack")
+        Word(word: "Chicken", description: "Everyone's favourite snack"),
+        Word(word: "ExtremlyLongWord", description: "A really long word that is used for testing UI"),
+        Word(word: "AnotherVeryLongWord", description: "You get the idea"),
+        Word(word: "Contrary", description: "Mary, Mary...."),
+        Word(word: "Cantankerous", description: "A description of myself in the morning")
     ]
 }
