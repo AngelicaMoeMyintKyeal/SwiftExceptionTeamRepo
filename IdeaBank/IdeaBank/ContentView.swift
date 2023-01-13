@@ -9,6 +9,9 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var words: [Word] = Word.exampleWords
+    @State private var deck: [Word] = []
+    @State private var selectedWords: [Word] = []
+
     let layout = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -17,7 +20,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             LazyVGrid(columns: layout, alignment: .leading) {
-                ForEach(words) { word in
+                ForEach(selectedWords) { word in
                     CompactWordView(title: word.word)
                         .lineLimit(1)
                         .minimumScaleFactor(0.6)
@@ -27,7 +30,7 @@ struct ContentView: View {
             Spacer()
             Divider()
 
-            SwipeCarousel(items: words, id: \.id) { word, size in
+            SwipeCarousel(items: deck, id: \.id) { word, size in
                 CardView(title: word.word, description: word.description)
                     .frame(width: 240, height: 200)
 
@@ -37,8 +40,14 @@ struct ContentView: View {
 
         }
         .background(
-            LinearGradient(colors: [.blue, .purple], startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(colors: [.blue, .purple], startPoint: .top, endPoint: .bottom)
         )
+        .onAppear {
+            deck.append(words.randomElement()!)
+            deck.append(words.randomElement()!)
+            deck.append(words.randomElement()!)
+            deck.append(words.randomElement()!)
+        }
     }
 }
 

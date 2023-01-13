@@ -8,29 +8,28 @@
 import SwiftUI
 
 struct PhaseInformView: View {
-    
+
     var phaseHeader: String
     var phaseTitle: String
     var phaseDescription: String
-    
+
     var body: some View {
         VStack {
             Text(phaseHeader.uppercased())
                 .foregroundColor(.secondary)
                 .font(.subheadline)
                 .fontWeight(.black)
-            
+
             Text(phaseTitle)
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.bottom, 8)
-            
+
             Text(phaseDescription)
                 .font(.caption)
                 .multilineTextAlignment(.center)
         }
         .padding(.horizontal, 32.0)
-        
     }
 }
 
@@ -39,4 +38,3 @@ struct PhaseInformView_Previews: PreviewProvider {
         PhaseInformView(phaseHeader: "phase 1", phaseTitle: "Choose", phaseDescription: "Swipe right to save a word if you like it or it inspires you, swipe right to discard it")
     }
 }
-
