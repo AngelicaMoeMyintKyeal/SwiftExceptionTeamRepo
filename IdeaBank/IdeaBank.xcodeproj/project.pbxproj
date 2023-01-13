@@ -17,7 +17,7 @@
 		AC493DA1296EA532001B8538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA0296EA532001B8538 /* Assets.xcassets */; };
 		AC493DA4296EA532001B8538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA3296EA532001B8538 /* Preview Assets.xcassets */; };
 		AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */; };
-		AC984201297148F3007E3FB3 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC984200297148F3007E3FB3 /* TextFieldView.swift */; };
+		AC984201297148F3007E3FB3 /* UserInputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC984200297148F3007E3FB3 /* UserInputTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 		AC493DA0296EA532001B8538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC493DA3296EA532001B8538 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseTwoMainView.swift; sourceTree = "<group>"; };
-		AC984200297148F3007E3FB3 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		AC984200297148F3007E3FB3 /* UserInputTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputTextFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 				AAEECBB82970601600D06A39 /* PhaseInformView.swift */,
 				AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */,
 				4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */,
-				AC984200297148F3007E3FB3 /* TextFieldView.swift */,
+				AC984200297148F3007E3FB3 /* UserInputTextFieldView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,7 +204,7 @@
 				AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */,
 				AA50B160296F1B7700E85284 /* CardView.swift in Sources */,
 				AAEECBB92970601600D06A39 /* PhaseInformView.swift in Sources */,
-				AC984201297148F3007E3FB3 /* TextFieldView.swift in Sources */,
+				AC984201297148F3007E3FB3 /* UserInputTextFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
