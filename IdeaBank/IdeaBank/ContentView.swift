@@ -43,7 +43,7 @@ struct ContentView: View {
 
         }
         .background(
-            LinearGradient(colors: [.blue, .purple], startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(colors: [.black, .purple], startPoint: .topLeading, endPoint: .bottomTrailing)
         )
     }
 }

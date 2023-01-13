@@ -9,23 +9,24 @@
 /* Begin PBXBuildFile section */
 		4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0CD296F0BEE003FE504 /* WordCard.swift */; };
 		4C43B0D3296F0D0F003FE504 /* SwipeCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */; };
-		AA50B160296F1B7700E85284 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA50B15F296F1B7700E85284 /* CardView.swift */; };
-		AAA904C0296F216E00D8B070 /* CompactWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA904BF296F216E00D8B070 /* CompactWordView.swift */; };
-		AAEECBB92970601600D06A39 /* PhaseInformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEECBB82970601600D06A39 /* PhaseInformView.swift */; };
+		AA2985F229706EA200196733 /* IdeaAtCheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */; };
+		AADFA9CE2971AA0D005D4C83 /* PhaseInformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFA9CB2971AA0C005D4C83 /* PhaseInformView.swift */; };
+		AADFA9CF2971AA0D005D4C83 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFA9CC2971AA0C005D4C83 /* CardView.swift */; };
+		AADFA9D02971AA0D005D4C83 /* CompactWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFA9CD2971AA0C005D4C83 /* CompactWordView.swift */; };
 		AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9C296EA531001B8538 /* IdeaBankApp.swift */; };
 		AC493D9F296EA531001B8538 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9E296EA531001B8538 /* ContentView.swift */; };
 		AC493DA1296EA532001B8538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA0296EA532001B8538 /* Assets.xcassets */; };
 		AC493DA4296EA532001B8538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA3296EA532001B8538 /* Preview Assets.xcassets */; };
 		AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */; };
-		AC984201297148F3007E3FB3 /* UserInputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC984200297148F3007E3FB3 /* UserInputTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4C43B0CD296F0BEE003FE504 /* WordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCard.swift; sourceTree = "<group>"; };
 		4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCarousel.swift; sourceTree = "<group>"; };
-		AA50B15F296F1B7700E85284 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		AAA904BF296F216E00D8B070 /* CompactWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactWordView.swift; sourceTree = "<group>"; };
-		AAEECBB82970601600D06A39 /* PhaseInformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseInformView.swift; sourceTree = "<group>"; };
+		AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaAtCheckoutView.swift; sourceTree = "<group>"; };
+		AADFA9CB2971AA0C005D4C83 /* PhaseInformView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaseInformView.swift; sourceTree = "<group>"; };
+		AADFA9CC2971AA0C005D4C83 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		AADFA9CD2971AA0C005D4C83 /* CompactWordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompactWordView.swift; sourceTree = "<group>"; };
 		AC493D99296EA531001B8538 /* IdeaBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdeaBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC493D9C296EA531001B8538 /* IdeaBankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaBankApp.swift; sourceTree = "<group>"; };
 		AC493D9E296EA531001B8538 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,9 +58,9 @@
 		4C43B0CF296F0C67003FE504 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AA50B15F296F1B7700E85284 /* CardView.swift */,
-				AAA904BF296F216E00D8B070 /* CompactWordView.swift */,
-				AAEECBB82970601600D06A39 /* PhaseInformView.swift */,
+				AADFA9CC2971AA0C005D4C83 /* CardView.swift */,
+				AADFA9CD2971AA0C005D4C83 /* CompactWordView.swift */,
+				AADFA9CB2971AA0C005D4C83 /* PhaseInformView.swift */,
 				AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */,
 				4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */,
 				AC984200297148F3007E3FB3 /* UserInputTextFieldView.swift */,
@@ -88,6 +89,7 @@
 			children = (
 				AC493D9C296EA531001B8538 /* IdeaBankApp.swift */,
 				AC493D9E296EA531001B8538 /* ContentView.swift */,
+				AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */,
 				4C43B0CF296F0C67003FE504 /* Views */,
 				4C43B0CC296F0BD7003FE504 /* Model */,
 				AC493DA0296EA532001B8538 /* Assets.xcassets */,
@@ -196,15 +198,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAA904C0296F216E00D8B070 /* CompactWordView.swift in Sources */,
 				4C43B0D3296F0D0F003FE504 /* SwipeCarousel.swift in Sources */,
 				4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */,
+				AADFA9CE2971AA0D005D4C83 /* PhaseInformView.swift in Sources */,
 				AC493D9F296EA531001B8538 /* ContentView.swift in Sources */,
 				AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */,
+				AADFA9D02971AA0D005D4C83 /* CompactWordView.swift in Sources */,
 				AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */,
-				AA50B160296F1B7700E85284 /* CardView.swift in Sources */,
-				AAEECBB92970601600D06A39 /* PhaseInformView.swift in Sources */,
-				AC984201297148F3007E3FB3 /* UserInputTextFieldView.swift in Sources */,
+				AADFA9CF2971AA0D005D4C83 /* CardView.swift in Sources */,
+				AA2985F229706EA200196733 /* IdeaAtCheckoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

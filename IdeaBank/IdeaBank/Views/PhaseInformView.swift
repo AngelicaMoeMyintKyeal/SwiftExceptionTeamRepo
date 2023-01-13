@@ -16,20 +16,24 @@ struct PhaseInformView: View {
     var body: some View {
         VStack {
             Text(phaseHeader.uppercased())
-                .foregroundColor(.secondary)
-                .foregroundStyle(.secondary)
+                
+                .foregroundStyle(.thinMaterial)
+                .foregroundColor(.white)
                 .font(.subheadline)
                 .fontWeight(.black)
-                
-            
+                .opacity(0.5)
+
             Text(phaseTitle)
                 .font(.largeTitle)
+                .foregroundColor(.white)
                 .fontWeight(.bold)
                 .padding(.bottom, 8)
             
             Text(phaseDescription)
                 .font(.caption)
+                .foregroundColor(.white)
                 .multilineTextAlignment(.center)
+            
         }
         .padding(.horizontal, 32.0)
         
