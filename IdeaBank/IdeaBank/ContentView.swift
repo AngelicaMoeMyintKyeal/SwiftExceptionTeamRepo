@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var words: [Word] = Word.exampleWords
+    @State private var words: [Word] = Word.shortExampleWords
     let layout = [
         GridItem(.flexible()),
         GridItem(.flexible())
