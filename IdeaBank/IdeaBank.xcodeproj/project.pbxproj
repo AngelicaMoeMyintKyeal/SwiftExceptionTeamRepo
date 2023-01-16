@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0CD296F0BEE003FE504 /* WordCard.swift */; };
 		4C43B0D3296F0D0F003FE504 /* SwipeCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */; };
+		4C98BDE5297534780050519D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98BDE4297534780050519D /* ViewModel.swift */; };
+		4C98BDE7297538370050519D /* StackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98BDE6297538370050519D /* StackCardView.swift */; };
 		AA2985F229706EA200196733 /* IdeaAtCheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */; };
 		AA4FA5F12971B3A0007A0D84 /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4FA5F02971B3A0007A0D84 /* Idea.swift */; };
 		AADFA9CE2971AA0D005D4C83 /* PhaseInformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFA9CB2971AA0C005D4C83 /* PhaseInformView.swift */; };
@@ -24,6 +26,8 @@
 /* Begin PBXFileReference section */
 		4C43B0CD296F0BEE003FE504 /* WordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCard.swift; sourceTree = "<group>"; };
 		4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCarousel.swift; sourceTree = "<group>"; };
+		4C98BDE4297534780050519D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4C98BDE6297538370050519D /* StackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCardView.swift; sourceTree = "<group>"; };
 		AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaAtCheckoutView.swift; sourceTree = "<group>"; };
 		AA4FA5F02971B3A0007A0D84 /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
 		AADFA9CB2971AA0C005D4C83 /* PhaseInformView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaseInformView.swift; sourceTree = "<group>"; };
@@ -63,12 +67,21 @@
 			children = (
 				AADFA9CC2971AA0C005D4C83 /* CardView.swift */,
 				AADFA9CD2971AA0C005D4C83 /* CompactWordView.swift */,
+				4C98BDE6297538370050519D /* StackCardView.swift */,
 				AADFA9CB2971AA0C005D4C83 /* PhaseInformView.swift */,
 				AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */,
 				4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */,
 				AC984200297148F3007E3FB3 /* UserInputTextFieldView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4C98BDE3297534660050519D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4C98BDE4297534780050519D /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		AC493D90296EA531001B8538 = {
@@ -92,6 +105,7 @@
 			children = (
 				AC493D9C296EA531001B8538 /* IdeaBankApp.swift */,
 				AC493D9E296EA531001B8538 /* ContentView.swift */,
+				4C98BDE3297534660050519D /* ViewModel */,
 				AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */,
 				4C43B0CF296F0C67003FE504 /* Views */,
 				4C43B0CC296F0BD7003FE504 /* Model */,
@@ -201,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C98BDE5297534780050519D /* ViewModel.swift in Sources */,
 				4C43B0D3296F0D0F003FE504 /* SwipeCarousel.swift in Sources */,
 				4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */,
 				AA4FA5F12971B3A0007A0D84 /* Idea.swift in Sources */,
@@ -210,6 +225,7 @@
 				AADFA9D02971AA0D005D4C83 /* CompactWordView.swift in Sources */,
 				AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */,
 				AADFA9CF2971AA0D005D4C83 /* CardView.swift in Sources */,
+				4C98BDE7297538370050519D /* StackCardView.swift in Sources */,
 				AA2985F229706EA200196733 /* IdeaAtCheckoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct IdeaBankApp: App {
+    @StateObject var viewModel: ViewModel = ViewModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
         }
     }
 }

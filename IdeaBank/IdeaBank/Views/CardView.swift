@@ -8,26 +8,24 @@
 import SwiftUI
 
 struct CardView: View {
-
-    var title: String
-    var description: String
+    var word: Word
 
     var body: some View {
         ZStack {
             HStack {
                 VStack(alignment: .leading) {
-                    Text(title)
+                    Text(word.word)
                         .font(.title)
                         .fontWeight(.bold)
-                    Text(description)
+                    Text(word.description)
                     Spacer()
                 }
                 Spacer()
             }
             .padding(24)
             .background(.thinMaterial)
-            .frame(width: 300, height: 200)
-            .cornerRadius(20)
+//            .frame(width: 300, height: 200)
+//            .cornerRadius(20)
         }
         .overlay(
             RoundedRectangle(cornerRadius: 20)
@@ -40,6 +38,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(title: "Word 1", description: "This is a long description")
+        CardView(word: Word(word: "Word 1", description: "This is a long description"))
     }
 }
