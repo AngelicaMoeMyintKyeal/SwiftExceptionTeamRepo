@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0CD296F0BEE003FE504 /* WordCard.swift */; };
 		4C43B0D3296F0D0F003FE504 /* SwipeCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */; };
+		8869B1412975832E00E7B2A5 /* IdeaBrainstormingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8869B1402975832E00E7B2A5 /* IdeaBrainstormingView.swift */; };
 		AA2985F229706EA200196733 /* IdeaAtCheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */; };
 		AA4FA5F12971B3A0007A0D84 /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4FA5F02971B3A0007A0D84 /* Idea.swift */; };
 		AADFA9CE2971AA0D005D4C83 /* PhaseInformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFA9CB2971AA0C005D4C83 /* PhaseInformView.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		4C43B0CD296F0BEE003FE504 /* WordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCard.swift; sourceTree = "<group>"; };
 		4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCarousel.swift; sourceTree = "<group>"; };
+		8869B1402975832E00E7B2A5 /* IdeaBrainstormingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaBrainstormingView.swift; sourceTree = "<group>"; };
 		AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaAtCheckoutView.swift; sourceTree = "<group>"; };
 		AA4FA5F02971B3A0007A0D84 /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
 		AADFA9CB2971AA0C005D4C83 /* PhaseInformView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhaseInformView.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				AADFA9CB2971AA0C005D4C83 /* PhaseInformView.swift */,
 				AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */,
 				4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */,
+				8869B1402975832E00E7B2A5 /* IdeaBrainstormingView.swift */,
 				AC984200297148F3007E3FB3 /* UserInputTextFieldView.swift */,
 			);
 			path = Views;
@@ -209,6 +212,7 @@
 				AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */,
 				AADFA9D02971AA0D005D4C83 /* CompactWordView.swift in Sources */,
 				AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */,
+				8869B1412975832E00E7B2A5 /* IdeaBrainstormingView.swift in Sources */,
 				AADFA9CF2971AA0D005D4C83 /* CardView.swift in Sources */,
 				AA2985F229706EA200196733 /* IdeaAtCheckoutView.swift in Sources */,
 			);
