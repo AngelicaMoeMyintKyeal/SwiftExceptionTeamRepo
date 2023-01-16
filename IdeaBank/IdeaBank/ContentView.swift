@@ -10,8 +10,6 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var vm: ViewModel
     
-    @State private var selectedWords: [Word] = []
-    
     let layout = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -30,7 +28,7 @@ struct ContentView: View {
                 Spacer()
                 
                 LazyVGrid(columns: layout, alignment: .leading) {
-                    ForEach(selectedWords) { word in
+                    ForEach(vm.selectedWords) { word in
                         CompactWordView(title: word.word)
                             .lineLimit(1)
                             .minimumScaleFactor(0.6)

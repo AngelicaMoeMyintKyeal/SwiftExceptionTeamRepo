@@ -12,6 +12,7 @@ class ViewModel: ObservableObject {
     
     @Published var fetchedWords: [Word] = []
     @Published var displayingWords: [Word]?
+    @Published var selectedWords: [Word] = []
     
     init() {
         fetchedWords = [

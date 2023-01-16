@@ -127,6 +127,7 @@ struct StackCardView: View {
     
     func rightSwipe() {
         // Do stuff
+        vm.selectedWords.append(word)
         print("Swiped right")
     }
 }
