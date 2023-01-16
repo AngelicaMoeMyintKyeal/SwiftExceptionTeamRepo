@@ -9,11 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var vm: ViewModel
-    
-    @State private var words: [Word] = []
-    @State private var cardPool: [Word] = []
-    
-    
     let layout = [
         GridItem(.flexible()),
         GridItem(.flexible())

@@ -12,8 +12,15 @@ struct CompactWordView: View {
     var title: String
     var body: some View {
         VStack {
-            Text(title)
-                .fontWeight(.medium)
+            HStack {
+                Spacer()
+                
+                Text(title)
+                    .fontWeight(.medium)
+                
+                Spacer()
+            }
+            
         }
         .padding(16)
         .frame(height: 50)
