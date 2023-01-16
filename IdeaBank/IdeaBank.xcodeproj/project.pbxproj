@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0CD296F0BEE003FE504 /* WordCard.swift */; };
-		4C43B0D3296F0D0F003FE504 /* SwipeCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */; };
 		4C98BDE5297534780050519D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98BDE4297534780050519D /* ViewModel.swift */; };
 		4C98BDE7297538370050519D /* StackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98BDE6297538370050519D /* StackCardView.swift */; };
 		AA2985F229706EA200196733 /* IdeaAtCheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */; };
@@ -25,7 +24,6 @@
 
 /* Begin PBXFileReference section */
 		4C43B0CD296F0BEE003FE504 /* WordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCard.swift; sourceTree = "<group>"; };
-		4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCarousel.swift; sourceTree = "<group>"; };
 		4C98BDE4297534780050519D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		4C98BDE6297538370050519D /* StackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCardView.swift; sourceTree = "<group>"; };
 		AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaAtCheckoutView.swift; sourceTree = "<group>"; };
@@ -70,7 +68,6 @@
 				4C98BDE6297538370050519D /* StackCardView.swift */,
 				AADFA9CB2971AA0C005D4C83 /* PhaseInformView.swift */,
 				AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */,
-				4C43B0D2296F0D0F003FE504 /* SwipeCarousel.swift */,
 				AC984200297148F3007E3FB3 /* UserInputTextFieldView.swift */,
 			);
 			path = Views;
@@ -216,7 +213,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C98BDE5297534780050519D /* ViewModel.swift in Sources */,
-				4C43B0D3296F0D0F003FE504 /* SwipeCarousel.swift in Sources */,
 				4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */,
 				AA4FA5F12971B3A0007A0D84 /* Idea.swift in Sources */,
 				AADFA9CE2971AA0D005D4C83 /* PhaseInformView.swift in Sources */,

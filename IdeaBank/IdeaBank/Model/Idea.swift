@@ -13,9 +13,9 @@ struct Idea: Identifiable, Equatable {
     var description: String
     var inspirationWords: [Word]
     
-    static var sampleIdeas = [
-        Idea(name: "FirstIdea", description: "An idea that will make me millionare", inspirationWords: [Word.shortExampleWords[1], Word.shortExampleWords[2], Word.shortExampleWords[3]]),
-        Idea(name: "FirstIdea", description: "An idea that will make me Billionare", inspirationWords: [Word.shortExampleWords[6], Word.shortExampleWords[9]]),
-        Idea(name: "FirstIdea", description: "An idea that will make me Trillionare", inspirationWords: [Word.shortExampleWords[8]])
-    ]
+//    static var sampleIdeas = [
+//        Idea(name: "FirstIdea", description: "An idea that will make me millionare", inspirationWords: [Word.shortExampleWords[1], Word.shortExampleWords[2], Word.shortExampleWords[3]]),
+//        Idea(name: "FirstIdea", description: "An idea that will make me Billionare", inspirationWords: [Word.shortExampleWords[6], Word.shortExampleWords[9]]),
+//        Idea(name: "FirstIdea", description: "An idea that will make me Trillionare", inspirationWords: [Word.shortExampleWords[8]])
+//    ]
 }
