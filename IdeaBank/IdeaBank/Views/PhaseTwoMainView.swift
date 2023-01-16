@@ -8,9 +8,34 @@
 import SwiftUI
 
 struct PhaseTwoMainView: View {
+    @EnvironmentObject var vm: ViewModel
+    @State private var textFieldText: String = ""
+    
     var body: some View {
         NavigationStack {
-            PhaseInformView(phaseHeader: "PHASE 2", phaseTitle: "Compose", phaseDescription: "Out of the 20 words you choose, what do these 3 make you think about?")
+            
+            
+            ZStack {
+                LinearGradient(colors: [.black, .purple], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .ignoresSafeArea(.all)
+                
+                VStack {
+                    Spacer()
+                    
+                    PhaseInformView(phaseHeader: "PHASE 2", phaseTitle: "Compose", phaseDescription: "Out of the 20 words you choose, what do these 3 make you think about?")
+                    
+                    Spacer()
+                    
+                    GridView()
+                                
+                    Spacer()
+                    Divider()
+  
+                    TextField("Enter your app idea", text: $textFieldText)
+                    Spacer()
+                }
+            }
+            
 //            VStack {
 //                Text("PHASE 2")
 //                    .font(.subheadline)
@@ -42,5 +67,6 @@ struct PhaseTwoMainView: View {
 struct PhaseTwoMainView_Previews: PreviewProvider {
     static var previews: some View {
         PhaseTwoMainView()
+            .environmentObject(ViewModel())
     }
 }
