@@ -34,6 +34,7 @@ struct ContentView: View {
                             .minimumScaleFactor(0.6)
                     }
                 }
+                .frame(height: 300)
                 .padding()
                 Spacer()
                 Divider()
@@ -52,6 +53,7 @@ struct ContentView: View {
                                 // Card view
                                 StackCardView(word: word)
                                     .frame(width: 320, height: 300)
+                                
                             }
                         }
                     } else {
