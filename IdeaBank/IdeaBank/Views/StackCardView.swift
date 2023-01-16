@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StackCardView: View {
     @EnvironmentObject var vm: ViewModel
+    
     var word: Word
     
     // Gesture properties
@@ -84,7 +85,6 @@ struct StackCardView: View {
         withAnimation(.none) {
             endSwipe = true
         }
-        
         // After the card is swiped away, remove the card from the array to preserve memory
         
         // The delay time is based on the animation time
@@ -108,14 +108,11 @@ struct StackCardView: View {
             vm.selectedWords.append(word)
         } else {
             // What to do when you hit 10 words
-            return
+
         }
-        
         print("Swiped right")
     }
 }
-
-
 
 // Extending View to get bounds
 extension View {
@@ -123,7 +120,6 @@ extension View {
         return UIScreen.main.bounds
     }
 }
-
 
 struct StackCardView_Previews: PreviewProvider {
     static var previews: some View {
