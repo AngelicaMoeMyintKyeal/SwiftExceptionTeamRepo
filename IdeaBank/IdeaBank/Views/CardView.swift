@@ -24,8 +24,6 @@ struct CardView: View {
             }
             .padding(24)
             .background(.thinMaterial)
-//            .frame(width: 300, height: 200)
-//            .cornerRadius(20)
         }
         .overlay(
             RoundedRectangle(cornerRadius: 20)
