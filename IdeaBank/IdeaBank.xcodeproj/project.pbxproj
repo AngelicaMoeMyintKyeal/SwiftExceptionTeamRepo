@@ -23,6 +23,8 @@
 		AC493DA1296EA532001B8538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA0296EA532001B8538 /* Assets.xcassets */; };
 		AC493DA4296EA532001B8538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA3296EA532001B8538 /* Preview Assets.xcassets */; };
 		AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */; };
+		ACCBEA2D2975996400D4A72C /* WordDefinitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCBEA2C2975996400D4A72C /* WordDefinitionModel.swift */; };
+		ACCBEA2F2976951700D4A72C /* WordDefinitionSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCBEA2E2976951700D4A72C /* WordDefinitionSearchManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		AC493DA3296EA532001B8538 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseTwoMainView.swift; sourceTree = "<group>"; };
 		AC984200297148F3007E3FB3 /* UserInputTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputTextFieldView.swift; sourceTree = "<group>"; };
+		ACCBEA2C2975996400D4A72C /* WordDefinitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDefinitionModel.swift; sourceTree = "<group>"; };
+		ACCBEA2E2976951700D4A72C /* WordDefinitionSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDefinitionSearchManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,7 @@
 			children = (
 				4C43B0CD296F0BEE003FE504 /* WordCard.swift */,
 				AA4FA5F02971B3A0007A0D84 /* Idea.swift */,
+				ACCBEA2C2975996400D4A72C /* WordDefinitionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -86,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				4C98BDE4297534780050519D /* ViewModel.swift */,
+				ACCBEA2E2976951700D4A72C /* WordDefinitionSearchManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -234,6 +240,8 @@
 				AADFA9CF2971AA0D005D4C83 /* CardView.swift in Sources */,
 				88216BB129769BB5004615BB /* IdeaBrainstormingView.swift in Sources */,
 				4C98BDE7297538370050519D /* StackCardView.swift in Sources */,
+				ACCBEA2D2975996400D4A72C /* WordDefinitionModel.swift in Sources */,
+				ACCBEA2F2976951700D4A72C /* WordDefinitionSearchManager.swift in Sources */,
 				AA2985F229706EA200196733 /* IdeaAtCheckoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,7 +371,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IdeaBank/Preview Content\"";
-				DEVELOPMENT_TEAM = MLWR3753W4;
+				DEVELOPMENT_TEAM = 4Y299ULQLV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -371,12 +379,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eireware.IdeaBank;
+				PRODUCT_BUNDLE_IDENTIFIER = angelicaHtetMyat.IdeaBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -392,7 +401,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IdeaBank/Preview Content\"";
-				DEVELOPMENT_TEAM = MLWR3753W4;
+				DEVELOPMENT_TEAM = 4Y299ULQLV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -400,12 +409,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.eireware.IdeaBank;
+				PRODUCT_BUNDLE_IDENTIFIER = angelicaHtetMyat.IdeaBank;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
