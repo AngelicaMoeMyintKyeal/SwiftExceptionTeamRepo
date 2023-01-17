@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StackCardView: View {
     @EnvironmentObject var vm: ViewModel
+    
     var word: Word
     
     // Gesture properties
@@ -71,29 +72,6 @@ struct StackCardView: View {
                     }
                 })
         )
-        // Receiving notifications
-        .onReceive(NotificationCenter.default.publisher(for: Notification.Name("ACTIONFROMBUTTON"), object: nil)) { data in
-            guard let info = data.userInfo else { return }
-            
-            let id = info["id"] as? String ?? ""
-            let rightSwipe = info["rightSwipe"] as? Bool ?? false
-            let width = getRect().width - 50
-            
-            if word.id == id {
-                // Romoving card
-                withAnimation {
-                    offset = (rightSwipe ? width : -width) * 2
-                    endSwipeActions()
-                    
-                    if rightSwipe {
-                        self.rightSwipe()
-                    } else {
-                        self.leftSwipe()
-                    }
-                    
-                }
-            }
-        }
     }
     
     // Rotation
@@ -107,7 +85,6 @@ struct StackCardView: View {
         withAnimation(.none) {
             endSwipe = true
         }
-        
         // After the card is swiped away, remove the card from the array to preserve memory
         
         // The delay time is based on the animation time
@@ -127,6 +104,12 @@ struct StackCardView: View {
     
     func rightSwipe() {
         // Do stuff
+        if vm.selectedWords.count < 10 {
+            vm.selectedWords.append(word)
+        } else {
+            // What to do when you hit 10 words
+
+        }
         print("Swiped right")
     }
 }
@@ -137,7 +120,6 @@ extension View {
         return UIScreen.main.bounds
     }
 }
-
 
 struct StackCardView_Previews: PreviewProvider {
     static var previews: some View {

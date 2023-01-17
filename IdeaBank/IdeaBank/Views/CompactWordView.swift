@@ -20,7 +20,6 @@ struct CompactWordView: View {
                 
                 Spacer()
             }
-            
         }
         .padding(16)
         .frame(height: 50)
