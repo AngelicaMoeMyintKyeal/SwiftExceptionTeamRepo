@@ -19,12 +19,13 @@
 		AADFA9CF2971AA0D005D4C83 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFA9CC2971AA0C005D4C83 /* CardView.swift */; };
 		AADFA9D02971AA0D005D4C83 /* CompactWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADFA9CD2971AA0C005D4C83 /* CompactWordView.swift */; };
 		AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9C296EA531001B8538 /* IdeaBankApp.swift */; };
-		AC493D9F296EA531001B8538 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9E296EA531001B8538 /* ContentView.swift */; };
 		AC493DA1296EA532001B8538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA0296EA532001B8538 /* Assets.xcassets */; };
 		AC493DA4296EA532001B8538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA3296EA532001B8538 /* Preview Assets.xcassets */; };
 		AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */; };
 		ACCBEA2D2975996400D4A72C /* WordDefinitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCBEA2C2975996400D4A72C /* WordDefinitionModel.swift */; };
 		ACCBEA2F2976951700D4A72C /* WordDefinitionSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCBEA2E2976951700D4A72C /* WordDefinitionSearchManager.swift */; };
+		ACCBEA302976AD0300D4A72C /* UserInputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC984200297148F3007E3FB3 /* UserInputTextFieldView.swift */; };
+		ACCBEA312976D74600D4A72C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9E296EA531001B8538 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -230,10 +231,11 @@
 				4CC36A472975AC6500269953 /* PhaseOneMainView.swift in Sources */,
 				4C98BDE5297534780050519D /* ViewModel.swift in Sources */,
 				4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */,
+				ACCBEA302976AD0300D4A72C /* UserInputTextFieldView.swift in Sources */,
 				4CC36A492975AE3F00269953 /* GridView.swift in Sources */,
 				AA4FA5F12971B3A0007A0D84 /* Idea.swift in Sources */,
 				AADFA9CE2971AA0D005D4C83 /* PhaseInformView.swift in Sources */,
-				AC493D9F296EA531001B8538 /* ContentView.swift in Sources */,
+				ACCBEA312976D74600D4A72C /* ContentView.swift in Sources */,
 				AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */,
 				AADFA9D02971AA0D005D4C83 /* CompactWordView.swift in Sources */,
 				AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */,
