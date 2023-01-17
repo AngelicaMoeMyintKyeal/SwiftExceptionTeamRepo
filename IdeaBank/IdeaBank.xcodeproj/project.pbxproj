@@ -24,7 +24,7 @@
 		AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */; };
 		ACCBEA2D2975996400D4A72C /* WordDefinitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCBEA2C2975996400D4A72C /* WordDefinitionModel.swift */; };
 		ACCBEA2F2976951700D4A72C /* WordDefinitionSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCBEA2E2976951700D4A72C /* WordDefinitionSearchManager.swift */; };
-		ACCBEA302976AD0300D4A72C /* UserInputTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC984200297148F3007E3FB3 /* UserInputTextFieldView.swift */; };
+		ACCBEA302976AD0300D4A72C /* (null) in Sources */ = {isa = PBXBuildFile; };
 		ACCBEA312976D74600D4A72C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9E296EA531001B8538 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,9 +74,8 @@
 		4C43B0CF296F0C67003FE504 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */,
 				88216BB029769BB5004615BB /* IdeaBrainstormingView.swift */,
-				AADFA9CC2971AA0C005D4C83 /* CardView.swift */,
-				AADFA9CD2971AA0C005D4C83 /* CompactWordView.swift */,
 				4C98BDE6297538370050519D /* StackCardView.swift */,
 				AADFA9CB2971AA0C005D4C83 /* PhaseInformView.swift */,
 				4CC36A462975AC6500269953 /* PhaseOneMainView.swift */,
@@ -116,8 +115,8 @@
 			children = (
 				AC493D9C296EA531001B8538 /* IdeaBankApp.swift */,
 				AC493D9E296EA531001B8538 /* ContentView.swift */,
+				ACD47AE22976DD6800B5068B /* Components */,
 				4C98BDE3297534660050519D /* ViewModel */,
-				AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */,
 				4C43B0CF296F0C67003FE504 /* Views */,
 				4C43B0CC296F0BD7003FE504 /* Model */,
 				AC493DA0296EA532001B8538 /* Assets.xcassets */,
@@ -132,6 +131,15 @@
 				AC493DA3296EA532001B8538 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACD47AE22976DD6800B5068B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AADFA9CD2971AA0C005D4C83 /* CompactWordView.swift */,
+				AADFA9CC2971AA0C005D4C83 /* CardView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +237,7 @@
 				4CC36A472975AC6500269953 /* PhaseOneMainView.swift in Sources */,
 				4C98BDE5297534780050519D /* ViewModel.swift in Sources */,
 				4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */,
-				ACCBEA302976AD0300D4A72C /* UserInputTextFieldView.swift in Sources */,
+				ACCBEA302976AD0300D4A72C /* (null) in Sources */,
 				4CC36A492975AE3F00269953 /* GridView.swift in Sources */,
 				AA4FA5F12971B3A0007A0D84 /* Idea.swift in Sources */,
 				AADFA9CE2971AA0D005D4C83 /* PhaseInformView.swift in Sources */,
