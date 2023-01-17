@@ -14,10 +14,6 @@ class ViewModel: ObservableObject {
     @Published var fetchedWords: [Word] = []
     @Published var displayingWords: [Word]?
     @Published var selectedWords: [Word] = []
-    @Published var layout = [
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
     
     init() {
         fetchedWords = [
