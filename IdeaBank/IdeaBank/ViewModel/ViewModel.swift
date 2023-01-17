@@ -8,7 +8,8 @@
 import SwiftUI
 
 class ViewModel: ObservableObject {
-    // FetchedWords is all words, displayingEords is a subset that will be updated based on user interaction to reduce memory usage
+    // FetchedWords is all words, displayingWords is a subset that
+    // will be updated based on user interaction to reduce memory usage
     
     @Published var fetchedWords: [Word] = []
     @Published var displayingWords: [Word]?

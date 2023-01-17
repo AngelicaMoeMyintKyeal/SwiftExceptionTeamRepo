@@ -11,20 +11,25 @@ struct ContentView: View {
     @EnvironmentObject var vm: ViewModel
     @State private var isShowingPhaseTwo: Bool = false
 
-    
     var body: some View {
         NavigationStack {
-            if vm.selectedWords.count < 10 {
-                PhaseOneMainView()
-            } else {
-                PhaseTwoMainView()
+            ZStack {
+                LinearGradient(
+                    colors: [.black, .purple],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+                    .ignoresSafeArea(.all)
+                
+                if vm.selectedWords.count < 10 {
+                    PhaseOneMainView()
+                } else {
+                    PhaseTwoMainView()
+                }
             }
-            
         }
     }
 }
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
