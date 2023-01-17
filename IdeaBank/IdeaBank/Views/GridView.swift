@@ -10,8 +10,13 @@ import SwiftUI
 struct GridView: View {
     @EnvironmentObject var vm: ViewModel
     
+    private var layout = [
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var body: some View {
-        LazyVGrid(columns: vm.layout, alignment: .leading) {
+        LazyVGrid(columns: layout, alignment: .leading) {
             ForEach(vm.selectedWords) { word in
                 CompactWordView(title: word.word)
                     .lineLimit(1)
@@ -26,5 +31,6 @@ struct GridView: View {
 struct GridView_Previews: PreviewProvider {
     static var previews: some View {
         GridView()
+            .environmentObject(ViewModel())
     }
 }
