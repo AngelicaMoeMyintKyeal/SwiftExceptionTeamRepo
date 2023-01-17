@@ -14,14 +14,21 @@ Our project release schedule style will be one week sprint.
 
 ## Roadmap
 
-- Week One (09/January/2023 - 13/January/2023) -> Released initial screen 
+- Week One (09/January/2023 - 13/January/2023)
+  -  Released initial screen 
 
-- Week Two (16/January/2023 - 20/January/2023) -> Implemented the API to get the random words' definitions.
+- Week Two (16/January/2023 - 20/January/2023)
+  - Implemented the API to get the random words' definitions.
 
 ## Authors and Acknowledgement
+
+- [Htet Myat Moe Myin Kyeal](https://github.com/AngelicaMoeMyintKyeal)
+- [Séamus Ó Connor](https://github.com/shinra-electric)
+- [Pierpaolo Siciliano](https://github.com/PierSic-dev)
+- [Andrea Copellino](https://github.com/andreacopellino1)
 
 ## License
 
 ## Project Status
 
-Work in Progress
+- Work in Progress
