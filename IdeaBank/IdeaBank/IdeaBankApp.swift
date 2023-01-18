@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct IdeaBankApp: App {
     @StateObject var viewModel: ViewModel = ViewModel()
-    var wordDefinitionManager = WordDefinitionSearchManager()
+    @StateObject var wordDefinitionManager = WordDefinitionSearchManager()
     
     var body: some Scene {
         WindowGroup {

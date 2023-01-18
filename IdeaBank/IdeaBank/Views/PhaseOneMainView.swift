@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PhaseOneMainView: View {
     @EnvironmentObject var vm: ViewModel
+    @EnvironmentObject var wordDefinitionManager: WordDefinitionSearchManager
     
     var body: some View {
         ZStack {
