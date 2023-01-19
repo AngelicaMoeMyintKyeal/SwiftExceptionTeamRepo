@@ -9,7 +9,6 @@ import SwiftUI
 
 struct PhaseOneMainView: View {
     @EnvironmentObject var vm: ViewModel
-//    @EnvironmentObject var wordDefinitionManager: WordDefinitionSearchManager
     
     var body: some View {
         VStack {
@@ -23,7 +22,7 @@ struct PhaseOneMainView: View {
             GridView()
             Spacer()
             ZStack {
-                if let words = vm.displayingWords {
+                if let words = vm.words {
                     if words.isEmpty {
                         Text("Nothing to display right now. Come back later...")
                             .font(.caption)
