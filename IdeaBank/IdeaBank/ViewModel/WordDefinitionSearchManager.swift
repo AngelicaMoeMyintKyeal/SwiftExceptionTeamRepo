@@ -9,7 +9,7 @@ import Foundation
 
 class WordDefinitionSearchManager: ObservableObject {
     
-    @Published var words: [Words] = []
+    @Published var words: [Word] = []
     
     func fetchDefinition(randomWord: String) {
 
@@ -32,15 +32,15 @@ class WordDefinitionSearchManager: ObservableObject {
                 guard let data = data  else {return}
                 DispatchQueue.main.async {
                     do {
-                        let decodedWords = try JSONDecoder().decode([Words].self, from: data)
+                        let decodedWords = try JSONDecoder().decode([Word].self, from: data)
                         self.words = decodedWords
+                        print(self.words)
                     } catch let error {
                         print("Error Decoding:", error)
                     }
                 }
             }
         }
-        
         dataTask.resume()
     }
 }

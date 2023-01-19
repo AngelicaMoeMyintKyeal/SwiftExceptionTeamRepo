@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct CardView: View {
+    @EnvironmentObject var vm: ViewModel
     var word: Word
-
+    
     var body: some View {
         ZStack {
             HStack {
@@ -17,13 +18,17 @@ struct CardView: View {
                     Text(word.word)
                         .font(.title)
                         .fontWeight(.bold)
-                    Text(word.description)
+//                    Text(vm.words[0].meanings[0].definitions[0].definition)
                     Spacer()
                 }
+
                 Spacer()
             }
             .padding(24)
             .background(.thinMaterial)
+        }
+        .onAppear {
+            vm.fetchDefinition(randomWord: word.word)
         }
         .overlay(
             RoundedRectangle(cornerRadius: 20)
@@ -32,10 +37,12 @@ struct CardView: View {
                 .opacity(0.5)
         )
     }
+
 }
 
-struct CardView_Previews: PreviewProvider {
-    static var previews: some View {
-        CardView(word: Word(word: "Word 1", description: "This is a long description"))
-    }
-}
+//
+//struct CardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CardView(word: Word(word: "Test word", defs: Words(meanings: [Meaning(definitions: [Definition(definition: "Definition of stuff here")])])))
+//    }
+//}
