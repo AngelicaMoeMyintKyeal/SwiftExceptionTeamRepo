@@ -1,15 +1,14 @@
 //
-//  CardView.swift
+//  Card.swift
 //  IdeaBank
 //
-//  Created by Andrea Copellino on 11/01/23.
+//  Created by Pierpaolo Siciliano on 17/01/23.
 //
 
 import SwiftUI
 
-struct CardView: View {
+struct Card: View {
     var word: Word
-
     var body: some View {
         ZStack {
             HStack {
@@ -34,8 +33,14 @@ struct CardView: View {
     }
 }
 
-struct CardView_Previews: PreviewProvider {
+struct Card_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(word: Word(word: "Word 1", description: "This is a long description"))
+        ZStack {
+            Color.background.ignoresSafeArea()
+            Card(word: Word(
+                word: "Apple",
+                description: "Expensive computer"
+            ))
+        }
     }
 }

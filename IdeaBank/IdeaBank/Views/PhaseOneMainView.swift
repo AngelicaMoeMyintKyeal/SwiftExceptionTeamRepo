@@ -13,10 +13,10 @@ struct PhaseOneMainView: View {
     var body: some View {
         VStack {
             Spacer()
-            PhaseInformView(
-                phaseHeader: "Phase 1",
-                phaseTitle: "Choose",
-                phaseDescription: "Swipe right to save a word if you like it or it inspires you, swipe right to discard it"
+            Header(
+                phase: 1,
+                title: "Choose",
+                description: "Swipe right to save a word if you like it or it inspires you, swipe right to discard it"
             )
             Spacer()
             GridView()
@@ -48,12 +48,7 @@ struct PhaseOneMainView: View {
 struct PhaseOneMainView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            LinearGradient(
-                colors: [.black, .purple],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            )
-            .ignoresSafeArea(.all)
+            Color.background.ignoresSafeArea()
             PhaseOneMainView()
                 .environmentObject(ViewModel())
         }

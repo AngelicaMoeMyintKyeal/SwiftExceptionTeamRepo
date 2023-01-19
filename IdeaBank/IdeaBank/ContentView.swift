@@ -16,13 +16,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                LinearGradient(
-                    colors: [.black, .purple],
-                    startPoint: .topLeading,
-                    endPoint: .bottomTrailing
-                )
-                    .ignoresSafeArea(.all)
-                
+                Color.background.ignoresSafeArea()
                 if vm.selectedWords.count < 10 {
                     PhaseOneMainView()
                 } else {

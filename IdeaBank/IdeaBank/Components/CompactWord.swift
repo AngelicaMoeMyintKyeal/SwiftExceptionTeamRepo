@@ -1,23 +1,20 @@
 //
-//  CompactWordView.swift
+//  CompactWord.swift
 //  IdeaBank
 //
-//  Created by Andrea Copellino on 11/01/23.
+//  Created by Pierpaolo Siciliano on 18/01/23.
 //
 
 import SwiftUI
 
-struct CompactWordView: View {
-    
-    var title: String
+struct CompactWord: View {
+    var word: String
     var body: some View {
         VStack {
             HStack {
                 Spacer()
-                
-                Text(title)
+                Text(word)
                     .fontWeight(.medium)
-                
                 Spacer()
             }
         }
@@ -28,8 +25,11 @@ struct CompactWordView: View {
     }
 }
 
-struct CompactWordView_Previews: PreviewProvider {
+struct CompactWord_Previews: PreviewProvider {
     static var previews: some View {
-        CompactWordView(title: "Word 1")
+        ZStack {
+            Color.background.ignoresSafeArea()
+            CompactWord(word: "Potato")
+        }
     }
 }

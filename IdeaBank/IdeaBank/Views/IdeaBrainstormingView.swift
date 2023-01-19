@@ -27,63 +27,49 @@ struct IdeaBrainstormingView: View {
                         }
                     }
                 }
-                .frame(
-                    height: geo.size.height * 0.7
-                )
+                .frame(maxHeight: geo.size.height * 0.7)
                 Spacer()
-                Divider()
-                ThinContainer {
-                    TextField("", text: $userInput)
-                }
-                .frame(
-                    height: geo.size.height * 0.2
-                )
+                    .frame(maxHeight: geo.size.height * 0.1)
+                TextEditor(text: $userInput)
+                    .scrollContentBackground(.hidden)
+                    .padding(10)
+                    .background {
+                        RoundedRectangle(cornerRadius: 15)
+                            .fill(.thinMaterial)
+                        
+                    }
+                    .frame(maxHeight: geo.size.height * 0.2)
             }
             .padding(10)
-            .background(
-                LinearGradient(
-                    colors: [.indigo, .purple],
-                    startPoint: .top,
-                    endPoint: .bottom
-                )
-            )
         }
     }
 }
 
-
-/// A view that puts its subviews in a custom container based on the RoundedRectangle shape
-struct ThinContainer<Content: View>: View {
-    var content: () -> Content
-    var body: some View {
-        RoundedRectangle(cornerRadius: 15)
-            .fill(.thinMaterial)
-            .overlay(content: content)
+struct IdeaBrainstormingView_Previews: PreviewProvider {
+    static var previews: some View {
+        ZStack {
+            Color.background.ignoresSafeArea()
+            IdeaBrainstormingView()
+        }
     }
 }
 
 /*
-// how to add a custom modifier
-struct ThinBackground: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .padding(10)
-            .background(RoundedRectangle(cornerRadius: 15)
-                .fill(.thinMaterial)
-            )
-    }
-}
-
-extension View {
-    /// Adds a custom padding and background to this view
-    func thinBackground() -> some View {
-        modifier(ThinBackground())
-    }
-}
-*/
-
-struct IdeaBrainstormingView_Previews: PreviewProvider {
-    static var previews: some View {
-        IdeaBrainstormingView()
-    }
-}
+ // how to add a custom modifier
+ struct ThinBackground: ViewModifier {
+ func body(content: Content) -> some View {
+ content
+ .background(
+ RoundedRectangle(cornerRadius: 15)
+ .fill(.thinMaterial)
+ )
+ }
+ }
+ 
+ extension View {
+ /// Adds a custom padding and background to this view
+ func thinBackground() -> some View {
+ modifier(ThinBackground())
+ }
+ }
+ */
