@@ -8,9 +8,8 @@
 import SwiftUI
 
 class ViewModel: ObservableObject {
-    // FetchedWords is all words, displayingEords is a subset that will be updated based on user interaction to reduce memory usage
-    
-    
+    // FetchedWords is all words, displayingWords is a subset that will be updated based on user interaction to reduce memory usage
+    private var wordPool: [String] = Word.exampleWords
     @Published var fetchedWords: [Word] = []
     @Published var displayingWords: [Word]?
     @Published var selectedWords: [Word] = []
@@ -18,43 +17,50 @@ class ViewModel: ObservableObject {
     @Published var words: [Word] = []
     
     init() {
+        Task {
+            for word in wordPool {
+                await fetchDefinition(randomWord: word)
+            }
+        }
+     
+        
 //        fetchedWords = [
-//            Word(word: "Monkey"),
-//            Word(word: "Banana"),
-//            Word(word: "Chicken"),
-//            Word(word: "Contrary"),
-//            Word(word: "Cantankerous"),
-//            Word(word: "University"),
-//            Word(word: "Professor"),
-//            Word(word: "Message"),
-//            Word(word: "Shy"),
-//            Word(word: "Food"),
-//            Word(word: "Educator"),
-//            Word(word: "Fitness Instructor"),
-//            Word(word: "Number"),
-//            Word(word: "Anxiety"),
-//            Word(word: "Cook"),
-//            Word(word: "Hairdresser"),
-//            Word(word: "Pressure"),
-//            Word(word: "Engineering"),
-//            Word(word: "Artist"),
-//            Word(word: "Manager"),
-//            Word(word: "Tax"),
-//            Word(word: "Healthcare"),
-//            Word(word: "Planner"),
-//            Word(word: "IT Specialist"),
-//            Word(word: "Birthday"),
-//            Word(word: "Scientist"),
-//            Word(word: "Receptionist"),
-//            Word(word: "Actor"),
-//            Word(word: "Books"),
-//            Word(word: "Photographer"),
-//            Word(word: "Mathematician"),
-//            Word(word: "Writer"),
-//            Word(word: "Cylinder"),
-//            Word(word: "Therapist"),
-//            Word(word: "Software Dev"),
-//            Word(word: "Electrician"),
+//            Word(word: "Monkey", meanings: nil),
+//            Word(word: "Banana", meanings: nil),
+//            Word(word: "Chicken", meanings: nil),
+//            Word(word: "Contrary", meanings: nil),
+//            Word(word: "Cantankerous", meanings: nil),
+//            Word(word: "University", meanings: nil),
+//            Word(word: "Professor", meanings: nil),
+//            Word(word: "Message", meanings: nil),
+//            Word(word: "Shy", meanings: nil),
+//            Word(word: "Food", meanings: nil),
+//            Word(word: "Educator", meanings: nil),
+//            Word(word: "Fitness Instructor", meanings: nil),
+//            Word(word: "Number", meanings: nil),
+//            Word(word: "Anxiety", meanings: nil),
+//            Word(word: "Cook", meanings: nil),
+//            Word(word: "Hairdresser", meanings: nil),
+//            Word(word: "Pressure", meanings: nil),
+//            Word(word: "Engineering", meanings: nil),
+//            Word(word: "Artist", meanings: nil),
+//            Word(word: "Manager", meanings: nil),
+//            Word(word: "Tax", meanings: nil),
+//            Word(word: "Healthcare", meanings: nil),
+//            Word(word: "Planner", meanings: nil),
+//            Word(word: "IT Specialist", meanings: nil),
+//            Word(word: "Birthday", meanings: nil),
+//            Word(word: "Scientist", meanings: nil),
+//            Word(word: "Receptionist", meanings: nil),
+//            Word(word: "Actor", meanings: nil),
+//            Word(word: "Books", meanings: nil),
+//            Word(word: "Photographer", meanings: nil),
+//            Word(word: "Mathematician", meanings: nil),
+//            Word(word: "Writer", meanings: nil),
+//            Word(word: "Cylinder", meanings: nil),
+//            Word(word: "Therapist", meanings: nil),
+//            Word(word: "Software Dev", meanings: nil),
+//            Word(word: "Electrician", meanings: nil),
 //            Word(word: "Settle"),
 //            Word(word: "Lake"),
 //            Word(word: "Need"),
@@ -147,10 +153,10 @@ class ViewModel: ObservableObject {
 //            Word(word: "Crazy"),
 //            Word(word: "Educated"),
 //            Word(word: "Quiet"),
-//            Word(word: "Sad")
+//            Word(word: "Sad", meanings: nil)
 //        ]
         
-        displayingWords = fetchedWords
+//        displayingWords = fetchedWords
         
     }
     
@@ -163,36 +169,20 @@ class ViewModel: ObservableObject {
         return index
     }
     
-    func fetchDefinition(randomWord: String) {
-        
-        guard let wordDefURL = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\(randomWord)") else { fatalError("Missing URL") }
-        
-        /// for testing temporarily
-        //        guard let wordDefURL = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\happy") else {fatalError("Missing URL")}
-        
-        let urlRequest = URLRequest(url: wordDefURL)
-        
-        let dataTask = URLSession.shared.dataTask(with: urlRequest) {(data, response, error) in
-            if let error = error {
-                print("Request Error:", error)
-                return
-            }
-            
-            guard let response = response as? HTTPURLResponse else {return}
-            
-            if response.statusCode == 200 {
-                guard let data = data  else {return}
-                DispatchQueue.main.async {
-                    do {
-                        let decodedWords = try JSONDecoder().decode([Word].self, from: data)
-                        self.words = decodedWords
-                    } catch let error {
-                        print("Error Decoding:", error)
-                    }
-                }
-            }
+    @MainActor
+    func fetchDefinition(randomWord: String) async {
+        guard let url = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\(randomWord)") else {
+         return
         }
-        dataTask.resume()
+        
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let decodedWords = try JSONDecoder().decode([Word].self, from: data)
+            self.words.append(contentsOf: decodedWords)
+        } catch {
+            print("Catch block!")
+            print(error.localizedDescription)
+        }  
     }
 }
 
