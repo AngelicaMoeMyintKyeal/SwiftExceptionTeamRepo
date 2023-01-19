@@ -18,7 +18,7 @@ struct Card: View {
                     Text(word.word)
                         .font(.title)
                         .fontWeight(.bold)
-//                    Text(vm.words[0].meanings[0].definitions[0].definition)
+                    Text(word.meanings[0].definitions[0].definition)
                     Spacer()
                 }
 
@@ -26,9 +26,6 @@ struct Card: View {
             }
             .padding(24)
             .background(.thinMaterial)
-        }
-        .onAppear {
-            vm.fetchDefinition(randomWord: word.word)
         }
         .overlay(
             RoundedRectangle(cornerRadius: 20)

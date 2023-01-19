@@ -24,9 +24,6 @@ struct ContentView: View {
                 }
             }
         }
-        .onAppear {
-            wordDefManager.fetchDefinition(randomWord: "apple")
-        }
     }
 }
 
