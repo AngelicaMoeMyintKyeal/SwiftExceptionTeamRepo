@@ -18,7 +18,7 @@ struct GridView: View {
     var body: some View {
         LazyVGrid(columns: layout, alignment: .leading) {
             ForEach(vm.selectedWords) { word in
-                CompactWordView(title: word.word)
+                CompactWord(word: word.word)
                     .lineLimit(1)
                     .minimumScaleFactor(0.6)
             }
@@ -30,7 +30,10 @@ struct GridView: View {
 
 struct GridView_Previews: PreviewProvider {
     static var previews: some View {
-        GridView()
-            .environmentObject(ViewModel())
+        ZStack {
+            Color.background.ignoresSafeArea()
+            GridView()
+                .environmentObject(ViewModel())
+        }
     }
 }

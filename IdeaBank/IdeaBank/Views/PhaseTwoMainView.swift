@@ -9,44 +9,42 @@ import SwiftUI
 
 struct PhaseTwoMainView: View {
     @EnvironmentObject var vm: ViewModel
-    @State private var textFieldText: String = ""
+    @State private var textFieldInput: String = ""
     
     var body: some View {
         NavigationStack {
-            
-            
             ZStack {
-                LinearGradient(colors: [.black, .purple], startPoint: .topLeading, endPoint: .bottomTrailing)
-                    .ignoresSafeArea(.all)
-                
+                Color.background.ignoresSafeArea()
                 VStack {
                     Spacer()
-                    
-                    PhaseInformView(phaseHeader: "PHASE 2", phaseTitle: "Compose", phaseDescription: "Out of the 20 words you choose, what do these 3 make you think about?")
-                    
+                    Header(
+                        phase: 2,
+                        title: "Compose",
+                        description: "Out of the 20 words you choose, what do these 3 make you think about?"
+                    )
                     Spacer()
                     
                     VStack {
                         var shuffledSelectedWords = vm.selectedWords.shuffled()
         
                         ForEach(0..<3, id:\.self) { index in
-                            CompactWordView(title: shuffledSelectedWords[index].word)
+                            CompactWord(word: shuffledSelectedWords[index].word)
                         }
                     }
                     .padding(.horizontal)
                     
                                 
                     Spacer()
-                    Divider()
-  
-                    TextField("Enter your app idea", text: $textFieldText)
+                    ThinContainer {
+                        TextField("Enter your app idea", text: $textFieldInput)
+                    }
                     Spacer()
                 }
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Next Phase") {
-                        // next phase action
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button("Next Phase") {
+                            // next phase action
+                        }
                     }
                 }
             }

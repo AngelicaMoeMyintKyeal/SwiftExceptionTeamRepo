@@ -13,24 +13,22 @@ struct ContentView: View {
     
     @State private var isShowingPhaseTwo: Bool = false
 
-    
     var body: some View {
         NavigationStack {
-            if vm.selectedWords.count < 10 {
-                PhaseOneMainView()
-                    
-            } else {
-                PhaseTwoMainView()
+            ZStack {
+                Color.background.ignoresSafeArea()
+                if vm.selectedWords.count < 10 {
+                    PhaseOneMainView()
+                } else {
+                    PhaseTwoMainView()
+                }
             }
-            
         }
         .onAppear {
             wordDefManager.fetchDefinition(randomWord: "apple")
         }
     }
 }
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
