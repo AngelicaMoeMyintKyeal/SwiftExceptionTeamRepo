@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var vm: ViewModel
-//    @EnvironmentObject var wordDefManager: WordDefinitionSearchManager
+    @EnvironmentObject var wordDefManager: WordDefinitionSearchManager
     
     @State private var isShowingPhaseTwo: Bool = false
 
@@ -18,10 +18,14 @@ struct ContentView: View {
         NavigationStack {
             if vm.selectedWords.count < 10 {
                 PhaseOneMainView()
+                    
             } else {
                 PhaseTwoMainView()
             }
             
+        }
+        .onAppear {
+            wordDefManager.fetchDefinition(randomWord: "apple")
         }
     }
 }
