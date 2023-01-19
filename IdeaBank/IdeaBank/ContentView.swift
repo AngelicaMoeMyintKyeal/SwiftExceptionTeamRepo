@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var vm: ViewModel
-    @EnvironmentObject var wordDefManager: WordDefinitionSearchManager
+//    @EnvironmentObject var wordDefManager: WordDefinitionSearchManager
     
     @State private var isShowingPhaseTwo: Bool = false
 
@@ -31,6 +31,6 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(ViewModel())
-            .environmentObject(WordDefinitionSearchManager())
+//            .environmentObject(WordDefinitionSearchManager())
     }
 }
