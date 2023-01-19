@@ -26,7 +26,15 @@ struct PhaseTwoMainView: View {
                     
                     Spacer()
                     
-                    GridView()
+                    VStack {
+                        var shuffledSelectedWords = vm.selectedWords.shuffled()
+        
+                        ForEach(0..<3, id:\.self) { index in
+                            CompactWordView(title: shuffledSelectedWords[index].word)
+                        }
+                    }
+                    .padding(.horizontal)
+                    
                                 
                     Spacer()
                     Divider()
