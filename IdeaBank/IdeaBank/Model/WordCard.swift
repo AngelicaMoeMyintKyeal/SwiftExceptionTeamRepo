@@ -8,10 +8,23 @@
 import SwiftUI
 
 // MARK: Sample Message Model
-struct Word: Identifiable, Equatable {
-    var id: String = UUID().uuidString
-    var word: String
-    var description: String
+struct Word: Codable, Identifiable {
+    var id = UUID().uuidString
+    let word: String
+    let meanings: [Meaning]
+    
+    enum CodingKeys: String, CodingKey {
+        case word = "word"
+        case meanings = "meanings"
+    }
+}
+
+struct Meaning: Codable {
+    let definitions: [Definition]
+}
+
+struct Definition: Codable {
+    let definition: String
 }
 
 extension Word {

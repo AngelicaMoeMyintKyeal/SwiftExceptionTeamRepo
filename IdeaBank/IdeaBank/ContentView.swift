@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var vm: ViewModel
-//    @EnvironmentObject var wordDefManager: WordDefinitionSearchManager
+    @EnvironmentObject var wordDefManager: WordDefinitionSearchManager
     
     @State private var isShowingPhaseTwo: Bool = false
 
@@ -23,6 +23,9 @@ struct ContentView: View {
                     PhaseTwoMainView()
                 }
             }
+        }
+        .onAppear {
+            wordDefManager.fetchDefinition(randomWord: "apple")
         }
     }
 }

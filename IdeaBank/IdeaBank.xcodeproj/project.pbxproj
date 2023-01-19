@@ -36,6 +36,7 @@
 		4C98BDE6297538370050519D /* StackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCardView.swift; sourceTree = "<group>"; };
 		4CC36A462975AC6500269953 /* PhaseOneMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseOneMainView.swift; sourceTree = "<group>"; };
 		4CC36A482975AE3F00269953 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		4CDF513929784A5700A71EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88216BB029769BB5004615BB /* IdeaBrainstormingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaBrainstormingView.swift; sourceTree = "<group>"; };
 		88216BB529772B49004615BB /* ThinContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThinContainer.swift; sourceTree = "<group>"; };
 		88216BB929772F00004615BB /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
@@ -116,6 +117,7 @@
 		AC493D9B296EA531001B8538 /* IdeaBank */ = {
 			isa = PBXGroup;
 			children = (
+				4CDF513929784A5700A71EE1 /* Info.plist */,
 				AC493D9C296EA531001B8538 /* IdeaBankApp.swift */,
 				AC493D9E296EA531001B8538 /* ContentView.swift */,
 				ACD47AE22976DD6800B5068B /* Components */,
@@ -390,7 +392,7 @@
 				DEVELOPMENT_TEAM = U77Q6FJLJF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = IdeaBank/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -420,7 +422,7 @@
 				DEVELOPMENT_TEAM = U77Q6FJLJF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = IdeaBank/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

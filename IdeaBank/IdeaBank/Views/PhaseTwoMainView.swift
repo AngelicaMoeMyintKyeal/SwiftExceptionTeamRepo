@@ -23,7 +23,17 @@ struct PhaseTwoMainView: View {
                         description: "Out of the 20 words you choose, what do these 3 make you think about?"
                     )
                     Spacer()
-                    GridView()
+                    
+                    VStack {
+                        var shuffledSelectedWords = vm.selectedWords.shuffled()
+        
+                        ForEach(0..<3, id:\.self) { index in
+                            CompactWord(word: shuffledSelectedWords[index].word)
+                        }
+                    }
+                    .padding(.horizontal)
+                    
+                                
                     Spacer()
                     ThinContainer {
                         TextField("Enter your app idea", text: $textFieldInput)
