@@ -53,6 +53,8 @@ Our project release schedule style will be one week sprint.
 
 ## License
 
+- GNU General Public License (GPLv3)
+
 ## Project Status
 
 - Work in Progress
