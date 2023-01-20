@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct IdeaBankApp: App {
-    @StateObject var viewModel: ViewModel = ViewModel()
+    @StateObject var viewModel = ViewModel()
     @StateObject var wordDefinitionManager = WordDefinitionSearchManager()
     
     var body: some Scene {

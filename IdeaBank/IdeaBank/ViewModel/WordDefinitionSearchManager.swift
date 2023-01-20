@@ -13,7 +13,9 @@ class WordDefinitionSearchManager: ObservableObject {
     
     func fetchDefinition(randomWord: String) {
 
-        guard let wordDefURL = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\(randomWord)") else {fatalError("Missing URL")}
+        guard let wordDefURL = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\(randomWord)") else {
+            fatalError("Uable to find the URL")
+        }
 
         /// for testing temporarily
 //        guard let wordDefURL = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\happy") else {fatalError("Missing URL")}
