@@ -50,7 +50,7 @@ struct PhaseOneMainView_Previews: PreviewProvider {
         ZStack {
             Color.background.ignoresSafeArea()
             PhaseOneMainView()
-                .environmentObject(ViewModel(fillWords: false))
+                .environmentObject(ViewModel())
         }
     }
 }
