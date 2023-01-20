@@ -25,7 +25,7 @@ struct PhaseTwoMainView: View {
                     Spacer()
                     
                     VStack {
-                        var shuffledSelectedWords = vm.selectedWords.shuffled()
+                        let shuffledSelectedWords = vm.selectedWords.shuffled()
         
                         ForEach(0..<3, id:\.self) { index in
                             CompactWord(word: shuffledSelectedWords[index].word)
