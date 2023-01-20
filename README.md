@@ -21,9 +21,11 @@
 
 Brainstorming about ideas can be fun but also troublesome sometimes. Our main goal is to help users brainstorm multiple ideas by selecting the desired words provided randomly with the definitions. 
 
-Here in this application, user can swipe left or right to choose or reject the words randomly provided and create multiple ideas by their chosen words.
+In this project, we aim to create an application to meet that specific need for users.
 
 The information about the public `API` implemented in this project can found here -> [Free Dictionary API](https://dictionaryapi.dev)
+
+Our project release schedule style will be one week sprint.
 
 ## Application Name
 
@@ -31,7 +33,7 @@ We still have to decide the application's name and icon.
 
 ## Description
 
-Our project release schedule style will be one week sprint.
+With our application, user can swipe left or right to choose or reject the words randomly provided and create multiple ideas by their chosen words.
 
 ## Roadmap
 
