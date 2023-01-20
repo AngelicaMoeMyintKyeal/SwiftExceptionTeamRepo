@@ -26,7 +26,7 @@ class ViewModel: ObservableObject {
     
     // Get the index of the user
     func getIndex(word: Word) -> Int {
-        let index = displayingWords?.firstIndex(where: { currentWord in
+        let index = words.firstIndex(where: { currentWord in
             return word.id == currentWord.id
         }) ?? 0
         
