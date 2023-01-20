@@ -89,9 +89,9 @@ struct StackCardView: View {
         
         // The delay time is based on the animation time
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            if let _ = vm.displayingWords?.first {
+            if let _ = vm.words.first {
                 let _ = withAnimation {
-                    vm.displayingWords?.removeFirst()
+                    vm.words.removeFirst()
                 }
             }
         }
