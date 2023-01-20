@@ -26,7 +26,7 @@ struct PhaseOneMainView: View {
                     if words.isEmpty {
                         Text("Nothing to display right now. Come back later...")
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.primary)
                     } else {
                         // Displaying cards
                         // Cards are reversed because it's a ZStack
@@ -50,7 +50,7 @@ struct PhaseOneMainView_Previews: PreviewProvider {
         ZStack {
             Color.background.ignoresSafeArea()
             PhaseOneMainView()
-                .environmentObject(ViewModel())
+                .environmentObject(ViewModel(fillWords: false))
         }
     }
 }

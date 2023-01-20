@@ -16,12 +16,14 @@ class ViewModel: ObservableObject {
     
     @Published var words: [Word] = []
     
-    init() {
-          Task {
-              for word in wordPool {
-                  await fetchDefinition(randomWord: word)
-              }
-          }
+    init(fillWords: Bool = true) {
+        if fillWords {
+            Task {
+                for word in wordPool {
+                    await fetchDefinition(randomWord: word)
+                }
+            }
+        }
     }
     
     // Get the index of the user
