@@ -8,13 +8,13 @@
 import SwiftUI
 
 class ViewModel: ObservableObject {
-    private var wordPool: [String] = Word.exampleWords
-    
     @Published var fetchedWords: [Word] = []
     @Published var displayingWords: [Word]?
     @Published var selectedWords: [Word] = []
-    
     @Published var words: [Word] = []
+    
+    private var wordPool: [String] = Word.exampleWords
+    
     
     init() {
         Task {
@@ -52,5 +52,41 @@ class ViewModel: ObservableObject {
     
 }
 
-
+// MARK: special code for canvas debugging
+extension ViewModel {
+    var placeholderWords: [Word] {
+        var placeholders: [Word] = []
+        for i in 0..<10 {
+            placeholders.append(
+                Word(
+                    word: "Placeholder \(i)",
+                    meanings: [
+                        Meaning(
+                            definitions: [
+                                Definition(definition: "Meaning 1 - Definition 1"),
+                                Definition(definition: "Meaning 1 - Definition 2")
+                            ]
+                        ),
+                        Meaning(
+                            definitions: [
+                                Definition(definition: "Meaning 2 - Definition 1"),
+                                Definition(definition: "Meaning 2 - Definition 2")
+                            ]
+                        )
+                    ]
+                )
+            )
+        }
+        return placeholders
+    }
+    
+    convenience init(showPlaceholders: Bool) {
+        self.init()
+        if showPlaceholders {
+            words = placeholderWords
+        } else {
+            words = []
+        }
+    }
+}
 
