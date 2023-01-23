@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct IdeaBankApp: App {
+    @StateObject var viewModel = ViewModel()
+    @StateObject var wordDefinitionManager = WordDefinitionSearchManager()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModel)
+                .environmentObject(wordDefinitionManager)
         }
     }
 }
