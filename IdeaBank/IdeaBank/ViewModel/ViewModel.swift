@@ -9,12 +9,8 @@ import SwiftUI
 
 class ViewModel: ObservableObject {
     private var wordPool: [String] = Word.exampleWords
-    
-    @Published var fetchedWords: [Word] = []
-    @Published var displayingWords: [Word]?
-    @Published var selectedWords: [Word] = []
-    
     @Published var words: [Word] = []
+    @Published var selectedWords: [Word] = []
     
     init() {
         Task {
@@ -47,9 +43,7 @@ class ViewModel: ObservableObject {
             print("Catch block!")
             print(error.localizedDescription)
         }
-        
     }
-    
 }
 
 
