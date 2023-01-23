@@ -12,9 +12,9 @@ class ViewModel: ObservableObject {
     @Published var displayingWords: [Word]?
     @Published var selectedWords: [Word] = []
     @Published var words: [Word] = []
-    @Published var selectedWords: [Word] = []
-    
     @Published var ideaArray = [Idea]()
+    
+    private var wordPool: [String] = Word.exampleWords
     
     init() {
         Task {
@@ -78,12 +78,21 @@ extension ViewModel {
         return placeholders
     }
     
-    convenience init(showPlaceholders: Bool) {
+    enum canvasPreview {
+        case phaseOnePlaceholders
+        case phaseOneEmpty
+        case phaseTwoPlaceholders
+    }
+    
+    convenience init(show previewType: canvasPreview) {
         self.init()
-        if showPlaceholders {
+        switch previewType {
+        case .phaseOnePlaceholders:
             words = placeholderWords
-        } else {
+        case .phaseOneEmpty:
             words = []
+        case .phaseTwoPlaceholders:
+            selectedWords = placeholderWords
         }
     }
 }

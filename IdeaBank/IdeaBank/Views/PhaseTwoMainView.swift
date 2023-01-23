@@ -11,7 +11,6 @@ struct PhaseTwoMainView: View {
     @EnvironmentObject var vm: ViewModel
     @State private var textFieldInput: String = ""
     
-    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -20,12 +19,11 @@ struct PhaseTwoMainView: View {
                     Header(
                         phase: 2,
                         title: "Compose",
-                        description: "Out of the 20 words you choose, what do these 3 make you think about?"
+                        description: "Out of the 10 words you choose, what do these 3 make you think about?"
                     )
                     Spacer()
                     VStack {
 //                        var shuffledSelectedWords = vm.selectedWords
-        
                         ForEach(0..<3, id:\.self) { index in
                             CompactWord(word: vm.selectedWords[index].word)
                         }
@@ -83,6 +81,6 @@ struct PhaseTwoMainView: View {
 struct PhaseTwoMainView_Previews: PreviewProvider {
     static var previews: some View {
         PhaseTwoMainView()
-            .environmentObject(ViewModel())
+            .environmentObject(ViewModel(show: .phaseTwoPlaceholders))
     }
 }
