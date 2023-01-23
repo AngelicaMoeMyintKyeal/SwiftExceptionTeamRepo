@@ -24,10 +24,10 @@ struct PhaseTwoMainView: View {
                     )
                     Spacer()
                     VStack {
-                        let shuffledSelectedWords = vm.selectedWords
+//                        var shuffledSelectedWords = vm.selectedWords
         
                         ForEach(0..<3, id:\.self) { index in
-                            CompactWord(word: shuffledSelectedWords[index].word)
+                            CompactWord(word: vm.selectedWords[index].word)
                         }
                     }
                     .padding(.horizontal)
@@ -40,6 +40,11 @@ struct PhaseTwoMainView: View {
                             .clipShape(Capsule())
                             .padding(.trailing, 4.0)
                         Button {
+                            vm.ideaArray.append(Idea(body: textFieldInput, parentWords: [vm.selectedWords[0].word, vm.selectedWords[1].word, vm.selectedWords[2].word]))
+                            
+                            print(vm.ideaArray)
+                            print("\n")
+                            textFieldInput = ""
                             vm.selectedWords.shuffle()
                         } label: {
                             VStack(alignment: .center) {

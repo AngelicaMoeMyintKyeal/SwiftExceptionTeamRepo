@@ -12,8 +12,9 @@ class ViewModel: ObservableObject {
     @Published var displayingWords: [Word]?
     @Published var selectedWords: [Word] = []
     @Published var words: [Word] = []
+    @Published var selectedWords: [Word] = []
     
-    private var wordPool: [String] = Word.exampleWords
+    @Published var ideaArray = [Idea]()
     
     init() {
         Task {
@@ -46,9 +47,7 @@ class ViewModel: ObservableObject {
             print("Catch block!")
             print(error.localizedDescription)
         }
-        
     }
-    
 }
 
 // MARK: special code for canvas debugging
