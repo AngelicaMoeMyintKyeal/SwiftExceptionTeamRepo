@@ -19,3 +19,11 @@ import Foundation
 //        Idea(name: "FirstIdea", description: "An idea that will make me Trillionare", inspirationWords: [Word.shortExampleWords[8]])
 //    ]
 //}
+
+struct Idea: Identifiable, Codable {
+    var id = UUID()
+    var body: String
+    var parentWords = [String]()
+}
+
+
