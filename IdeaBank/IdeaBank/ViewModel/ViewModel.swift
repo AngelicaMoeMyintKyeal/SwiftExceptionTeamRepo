@@ -12,6 +12,8 @@ class ViewModel: ObservableObject {
     @Published var words: [Word] = []
     @Published var selectedWords: [Word] = []
     
+    @Published var ideaArray = [Idea]()
+    
     init() {
         Task {
             for word in wordPool {
