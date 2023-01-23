@@ -15,7 +15,6 @@ class ViewModel: ObservableObject {
     
     private var wordPool: [String] = Word.exampleWords
     
-    
     init() {
         Task {
             for word in wordPool {

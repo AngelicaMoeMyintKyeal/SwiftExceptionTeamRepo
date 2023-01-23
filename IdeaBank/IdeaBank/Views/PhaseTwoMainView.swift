@@ -17,25 +17,21 @@ struct PhaseTwoMainView: View {
             ZStack {
                 Color.background.ignoresSafeArea()
                 VStack {
-                    
                     Header(
                         phase: 2,
                         title: "Compose",
                         description: "Out of the 20 words you choose, what do these 3 make you think about?"
                     )
                     Spacer()
-                    
                     VStack {
-                        var shuffledSelectedWords = vm.selectedWords
+                        let shuffledSelectedWords = vm.selectedWords
         
                         ForEach(0..<3, id:\.self) { index in
                             CompactWord(word: shuffledSelectedWords[index].word)
                         }
                     }
                     .padding(.horizontal)
-                    
                     Spacer()
-                    
                     HStack {
                         TextField("Enter your idea", text: $textFieldInput)
                             .padding(/*@START_MENU_TOKEN@*/.leading, 16.0/*@END_MENU_TOKEN@*/)
@@ -43,7 +39,6 @@ struct PhaseTwoMainView: View {
                             .background(.thinMaterial)
                             .clipShape(Capsule())
                             .padding(.trailing, 4.0)
-                            
                         Button {
                             vm.selectedWords.shuffle()
                         } label: {
@@ -55,7 +50,6 @@ struct PhaseTwoMainView: View {
                         }
                         .background(.thinMaterial)
                         .clipShape(Circle())
-                        
                         Button {
                             vm.selectedWords.shuffle()
                         } label: {
@@ -66,12 +60,8 @@ struct PhaseTwoMainView: View {
                         }
                         .background(.thinMaterial)
                         .clipShape(Circle())
-                        
-                        
                     }
                     .padding(.horizontal)
-                    
-                    
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
