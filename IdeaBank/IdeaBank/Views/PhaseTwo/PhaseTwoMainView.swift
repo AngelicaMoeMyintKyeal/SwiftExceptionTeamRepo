@@ -19,7 +19,7 @@ struct PhaseTwoMainView: View {
                 VStack {
                     Header(
                         title: "Compose",
-                        description: "Out of the 10 words you choose, what do these 3 make you think about?"
+                        description: "Out of all the words you chose, what do these 3 make you think about?"
                     )
                     Spacer()
                     VStack {
@@ -64,7 +64,7 @@ struct PhaseTwoMainView: View {
                         .background(.thinMaterial)
                         .clipShape(Circle())
                     }
-                    .padding(.horizontal)
+                    .padding()
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {

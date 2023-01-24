@@ -18,7 +18,7 @@ struct Card: View {
                     Text(word.word)
                         .font(.title)
                         .fontWeight(.bold)
-                    Text(word.meanings[0].definitions[0].definition)
+                    Text(word.meanings?[0].definitions[0].definition ?? "")
                     Spacer()
                 }
 
@@ -41,11 +41,7 @@ struct Card_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.background.ignoresSafeArea()
-//            Card(word: Word(
-//                word: "Apple", meanings: ["An expensive computer", "A tool to keep doctors away"]
-//            ))
             Card(
-//                vm: ViewModel(),
                 word: Word(
                     word: "Apple",
                     meanings: [
