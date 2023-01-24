@@ -12,7 +12,6 @@
 		4C98BDE7297538370050519D /* StackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98BDE6297538370050519D /* StackCardView.swift */; };
 		4CC36A472975AC6500269953 /* PhaseOneMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC36A462975AC6500269953 /* PhaseOneMainView.swift */; };
 		4CC36A492975AE3F00269953 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC36A482975AE3F00269953 /* GridView.swift */; };
-		88216BB129769BB5004615BB /* IdeaBrainstormingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88216BB029769BB5004615BB /* IdeaBrainstormingView.swift */; };
 		88216BB629772B49004615BB /* ThinContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88216BB529772B49004615BB /* ThinContainer.swift */; };
 		88216BBA29772F00004615BB /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88216BB929772F00004615BB /* Header.swift */; };
 		88216BBE29774447004615BB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88216BBD29774447004615BB /* Card.swift */; };
@@ -25,8 +24,8 @@
 		AC493DA1296EA532001B8538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA0296EA532001B8538 /* Assets.xcassets */; };
 		AC493DA4296EA532001B8538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA3296EA532001B8538 /* Preview Assets.xcassets */; };
 		AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */; };
-		ACCBEA2D2975996400D4A72C /* WordDefinitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCBEA2C2975996400D4A72C /* WordDefinitionModel.swift */; };
-		ACCBEA2F2976951700D4A72C /* WordDefinitionSearchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCBEA2E2976951700D4A72C /* WordDefinitionSearchManager.swift */; };
+		AC874E27298027F0003EA045 /* WordDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC874E25298027F0003EA045 /* WordDatabase.xcdatamodeld */; };
+		AC874E2A29802924003EA045 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC874E2929802924003EA045 /* DataController.swift */; };
 		ACCBEA302976AD0300D4A72C /* (null) in Sources */ = {isa = PBXBuildFile; };
 		ACCBEA312976D74600D4A72C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9E296EA531001B8538 /* ContentView.swift */; };
 /* End PBXBuildFile section */
@@ -38,7 +37,6 @@
 		4CC36A462975AC6500269953 /* PhaseOneMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseOneMainView.swift; sourceTree = "<group>"; };
 		4CC36A482975AE3F00269953 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		4CDF513929784A5700A71EE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88216BB029769BB5004615BB /* IdeaBrainstormingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdeaBrainstormingView.swift; sourceTree = "<group>"; };
 		88216BB529772B49004615BB /* ThinContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThinContainer.swift; sourceTree = "<group>"; };
 		88216BB929772F00004615BB /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		88216BBD29774447004615BB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
@@ -53,8 +51,8 @@
 		AC493DA0296EA532001B8538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC493DA3296EA532001B8538 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseTwoMainView.swift; sourceTree = "<group>"; };
-		ACCBEA2C2975996400D4A72C /* WordDefinitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDefinitionModel.swift; sourceTree = "<group>"; };
-		ACCBEA2E2976951700D4A72C /* WordDefinitionSearchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDefinitionSearchManager.swift; sourceTree = "<group>"; };
+		AC874E26298027F0003EA045 /* WordDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WordDatabase.xcdatamodel; sourceTree = "<group>"; };
+		AC874E2929802924003EA045 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,7 +71,6 @@
 			children = (
 				4C43B0CD296F0BEE003FE504 /* WordCard.swift */,
 				AA4FA5F02971B3A0007A0D84 /* Idea.swift */,
-				ACCBEA2C2975996400D4A72C /* WordDefinitionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -81,13 +78,10 @@
 		4C43B0CF296F0C67003FE504 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC874E24298026DF003EA045 /* PhaseThree */,
+				AC874E23298026D9003EA045 /* PhaseTwo */,
+				AC874E22298026B2003EA045 /* PhaseOne */,
 				4CC36A482975AE3F00269953 /* GridView.swift */,
-				AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */,
-				88216BB029769BB5004615BB /* IdeaBrainstormingView.swift */,
-				4CC36A462975AC6500269953 /* PhaseOneMainView.swift */,
-				AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */,
-				AA3100FE297ED8AD00955F55 /* PhaseThreeMainView.swift */,
-				4C98BDE6297538370050519D /* StackCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -96,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				4C98BDE4297534780050519D /* ViewModel.swift */,
-				ACCBEA2E2976951700D4A72C /* WordDefinitionSearchManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -127,8 +120,10 @@
 				4C98BDE3297534660050519D /* ViewModel */,
 				4C43B0CF296F0C67003FE504 /* Views */,
 				4C43B0CC296F0BD7003FE504 /* Model */,
+				AC874E2829802912003EA045 /* Utility */,
 				AC493DA0296EA532001B8538 /* Assets.xcassets */,
 				AC493DA2296EA532001B8538 /* Preview Content */,
+				AC874E25298027F0003EA045 /* WordDatabase.xcdatamodeld */,
 			);
 			path = IdeaBank;
 			sourceTree = "<group>";
@@ -139,6 +134,40 @@
 				AC493DA3296EA532001B8538 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AC874E22298026B2003EA045 /* PhaseOne */ = {
+			isa = PBXGroup;
+			children = (
+				4C98BDE6297538370050519D /* StackCardView.swift */,
+				4CC36A462975AC6500269953 /* PhaseOneMainView.swift */,
+			);
+			path = PhaseOne;
+			sourceTree = "<group>";
+		};
+		AC874E23298026D9003EA045 /* PhaseTwo */ = {
+			isa = PBXGroup;
+			children = (
+				AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */,
+			);
+			path = PhaseTwo;
+			sourceTree = "<group>";
+		};
+		AC874E24298026DF003EA045 /* PhaseThree */ = {
+			isa = PBXGroup;
+			children = (
+				AA3100FE297ED8AD00955F55 /* PhaseThreeMainView.swift */,
+				AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */,
+			);
+			path = PhaseThree;
+			sourceTree = "<group>";
+		};
+		AC874E2829802912003EA045 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				AC874E2929802924003EA045 /* DataController.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 		ACD47AE22976DD6800B5068B /* Components */ = {
@@ -250,20 +279,19 @@
 				4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */,
 				ACCBEA302976AD0300D4A72C /* (null) in Sources */,
 				4CC36A492975AE3F00269953 /* GridView.swift in Sources */,
+				AC874E2A29802924003EA045 /* DataController.swift in Sources */,
 				AA4FA5F12971B3A0007A0D84 /* Idea.swift in Sources */,
 				ACCBEA312976D74600D4A72C /* ContentView.swift in Sources */,
+				AC874E27298027F0003EA045 /* WordDatabase.xcdatamodeld in Sources */,
 				AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */,
 				88216BBA29772F00004615BB /* Header.swift in Sources */,
 				AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */,
 				88216BC0297837AA004615BB /* ColorExtension.swift in Sources */,
-				88216BB129769BB5004615BB /* IdeaBrainstormingView.swift in Sources */,
 				AA3100FF297ED8AD00955F55 /* PhaseThreeMainView.swift in Sources */,
 				4C98BDE7297538370050519D /* StackCardView.swift in Sources */,
 				88216BB629772B49004615BB /* ThinContainer.swift in Sources */,
 				88216BC2297841DA004615BB /* CompactWord.swift in Sources */,
 				88216BBE29774447004615BB /* Card.swift in Sources */,
-				ACCBEA2D2975996400D4A72C /* WordDefinitionModel.swift in Sources */,
-				ACCBEA2F2976951700D4A72C /* WordDefinitionSearchManager.swift in Sources */,
 				AA2985F229706EA200196733 /* IdeaAtCheckoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +495,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC874E25298027F0003EA045 /* WordDatabase.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC874E26298027F0003EA045 /* WordDatabase.xcdatamodel */,
+			);
+			currentVersion = AC874E26298027F0003EA045 /* WordDatabase.xcdatamodel */;
+			path = WordDatabase.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AC493D91296EA531001B8538 /* Project object */;
 }

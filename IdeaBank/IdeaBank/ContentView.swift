@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) private var moc: NSManagedObjectContext
     @EnvironmentObject var vm: ViewModel
     
     @State private var isShowingPhaseTwo: Bool = false

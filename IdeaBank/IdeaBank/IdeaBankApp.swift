@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct IdeaBankApp: App {
+    @StateObject private var dataController = DataController.shared
     @StateObject var viewModel = ViewModel()
 //    @StateObject var wordDefinitionManager = WordDefinitionSearchManager()
     
