@@ -57,18 +57,18 @@ extension ViewModel {
         for i in 0..<10 {
             placeholders.append(
                 Word(
-                    word: "Placeholder \(i)",
+                    word: "Laziness \(i)",
                     meanings: [
                         Meaning(
                             definitions: [
-                                Definition(definition: "Meaning 1 - Definition 1"),
-                                Definition(definition: "Meaning 1 - Definition 2")
+                                Definition(definition: "The art of taking rest before getting tired. Because prevention is better than cure"),
+                                Definition(definition: "Me")
                             ]
                         ),
                         Meaning(
                             definitions: [
-                                Definition(definition: "Meaning 2 - Definition 1"),
-                                Definition(definition: "Meaning 2 - Definition 2")
+                                Definition(definition: "If you see me, be worried"),
+                                Definition(definition: "If you also see me, run")
                             ]
                         )
                     ]
