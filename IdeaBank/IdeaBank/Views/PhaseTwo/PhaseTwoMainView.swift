@@ -18,7 +18,6 @@ struct PhaseTwoMainView: View {
                 Color.background.ignoresSafeArea()
                 VStack {
                     Header(
-                        phase: 2,
                         title: "Compose",
                         description: "Out of the 10 words you choose, what do these 3 make you think about?"
                     )
@@ -69,7 +68,7 @@ struct PhaseTwoMainView: View {
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        NavigationLink("Phase 3", destination: PhaseThreeMainView())
+                        NavigationLink("Next", destination: PhaseThreeMainView())
                     }
                 }
             }
