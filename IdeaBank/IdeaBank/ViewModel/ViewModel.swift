@@ -14,12 +14,12 @@ class ViewModel: ObservableObject {
     @Published var words: [Word] = []
     @Published var ideaArray: [Idea] = []
     
-    private var wordPool: [String] = Word.exampleWords
+    private var wordPool: [Word] = Word.exampleWords
     
     init() {
         Task {
             for word in wordPool {
-                await fetchDefinition(randomWord: word)
+                await fetchDefinition(randomWord: word.word)
             }
         }
     }
