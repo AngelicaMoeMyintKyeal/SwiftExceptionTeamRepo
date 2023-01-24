@@ -10,8 +10,9 @@
       <a href="#application-name">Application Name</a>
     </li>
     <li><a href="#description">Description</a></li>
+    <li><a href="#installation">Installation</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributors">Contributors</a></li>
+    <li><a href="#authors-and-contributors">Authors and Contributors</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#project-status">Project Status</a></li>
   </ol>
@@ -35,6 +36,24 @@ We still have to decide the application's name and icon.
 
 With our application, user can swipe left or right to choose or reject the words randomly provided and create multiple ideas by their chosen words.
 
+## Installation
+
+1. Clone the repository (either with https or ssh)
+
+  - https
+
+  ```sh
+  git clone https://github.com/AngelicaMoeMyintKyeal/SwiftExceptionTeamRepo.git
+  ```
+
+  - ssh
+  
+  ```sh
+  git clone git@github.com:AngelicaMoeMyintKyeal/SwiftExceptionTeamRepo.git
+  ```
+
+2. Open the `.xcodeproj` file.
+
 ## Roadmap
 
 - Week One (09/January/2023 - 13/January/2023)
@@ -46,7 +65,7 @@ With our application, user can swipe left or right to choose or reject the words
   - Implement the API to get the random words' definitions.
   - Support both Light and Dark modes system.
 
-## Contributors
+## Authors and Contributors
 
 - [Htet Myat Moe Myin Kyeal](https://github.com/AngelicaMoeMyintKyeal)
 - [Séamus Ó Connor](https://github.com/shinra-electric)
