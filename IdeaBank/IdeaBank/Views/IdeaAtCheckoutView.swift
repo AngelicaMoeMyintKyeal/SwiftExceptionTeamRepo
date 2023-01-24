@@ -12,42 +12,63 @@ struct IdeaAtCheckoutView: View {
     var usedWords = [String]()
     var title: String
     var description: String
-    var isToggled: Bool = true
+    @State var isToggled: Bool = false
     
     var body: some View {
-        
-        ZStack {
-            HStack {
-                VStack(alignment: .leading) {
-                    HStack {
-                        ForEach(usedWords, id: \.self) {
-                            Text("\($0)".uppercased())
-                                .font(.caption)
-                                .fontWeight(.bold)
-                                .foregroundColor(.secondary)
+        Button {
+            isToggled.toggle()
+        } label: {
+            Group {
+
+                    ZStack {
+                        HStack {
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    ForEach(usedWords, id: \.self) {
+                                        Text("\($0)".uppercased())
+                                            .font(.caption)
+                                            .fontWeight(.bold)
+                                            .foregroundColor(.secondary)
+                                    }
+                                }
+                                
+                                Text(title)
+                                    .font(.title)
+                                    .fontWeight(.bold)
+                                    .padding(.bottom, 2.0)
+                                    .foregroundColor(Color("mainColorOpposite"))
+                                
+
+                                    Text(description)
+                            
+                                .multilineTextAlignment(.leading)
+                                .foregroundColor(Color("mainColorOpposite"))
+                            }
+                            
+                            Spacer()
+                            
+                            isToggled ? Image(systemName: "checkmark.circle.fill") : Image(systemName: "circle")
+
                         }
+                        
+                        .padding(16)
+                        .background(.thinMaterial)
+                        .frame(width: 340)
+                        .cornerRadius(20)
                     }
-                    
-                    Text(title)
-                        .font(.title)
-                        .fontWeight(.bold)
-                        .padding(.bottom, 2.0)
-                    Text(description)
-                    
-                }
-                Spacer()
+    //                .overlay(
+    //                    RoundedRectangle(cornerRadius: 20)
+    //                        .stroke(isToggled ? .primary : .secondary, lineWidth: 4)
+    //                        .padding(-2)
+    //                        .opacity(isToggled ? 1 : 0.0)
+    //                )
+                
+
+                
             }
-            .padding(16)
-            .background(.thinMaterial)
-            .frame(width: 340)
-            .cornerRadius(20)
         }
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(isToggled ? .primary : .secondary, lineWidth: 4)
-                .padding(-2)
-                .opacity(isToggled ? 1 : 0.0)
-        )
+        
+        
     }
 }
 
