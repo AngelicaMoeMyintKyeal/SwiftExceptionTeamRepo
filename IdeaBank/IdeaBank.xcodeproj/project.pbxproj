@@ -78,9 +78,9 @@
 		4C43B0CF296F0C67003FE504 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AC874E24298026DF003EA045 /* PhaseThree */,
-				AC874E23298026D9003EA045 /* PhaseTwo */,
 				AC874E22298026B2003EA045 /* PhaseOne */,
+				AC874E23298026D9003EA045 /* PhaseTwo */,
+				AC874E24298026DF003EA045 /* PhaseThree */,
 				4CC36A482975AE3F00269953 /* GridView.swift */,
 			);
 			path = Views;

@@ -10,11 +10,10 @@ import SwiftUI
 extension Color {
     static let background = LinearGradient(
         colors: [
-            Color("mainColor1"),
-            .purple
+            Color(uiColor: .systemBackground),
+            Color(uiColor: .systemPurple)
         ],
         startPoint: .topLeading,
         endPoint: .bottomTrailing
     )
-    static let main = Color("mainColor1")
 }

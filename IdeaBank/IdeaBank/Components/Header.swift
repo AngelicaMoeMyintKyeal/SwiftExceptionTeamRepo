@@ -21,18 +21,18 @@ struct Header: View {
     var body: some View {
         VStack {
             Text("phase \(phase)".uppercased())
-                .foregroundColor(Color.main).colorInvert()
+                .foregroundColor(.primary)
                 .font(.subheadline)
                 .fontWeight(.black)
                 .opacity(0.5)
             Text(title)
                 .font(.largeTitle)
-                .foregroundColor(Color.main).colorInvert()
+                .foregroundColor(.primary)
                 .fontWeight(.bold)
                 .padding(.bottom, 8)
             Text(description)
                 .font(.caption)
-                .foregroundColor(Color.main).colorInvert()
+                .foregroundColor(.primary)
                 .multilineTextAlignment(.center)
         }
         .padding(.horizontal, 32.0)

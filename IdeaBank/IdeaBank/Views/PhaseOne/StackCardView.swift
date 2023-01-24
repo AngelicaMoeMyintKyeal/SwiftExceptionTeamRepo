@@ -9,13 +9,11 @@ import SwiftUI
 
 struct StackCardView: View {
     @EnvironmentObject var vm: ViewModel
-    
     var word: Word
     
     // Gesture properties
     @State private var offset: CGFloat = 0
     @GestureState var isDragging: Bool = false
-    
     @State private var endSwipe: Bool = false
     
     var body: some View {
@@ -124,6 +122,6 @@ extension View {
 struct StackCardView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(ViewModel())
+            .environmentObject(ViewModel(setPreviewWith: .filledSelectedWords))
     }
 }

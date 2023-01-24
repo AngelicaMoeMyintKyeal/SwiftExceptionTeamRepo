@@ -23,7 +23,7 @@ import Foundation
 struct Idea: Identifiable, Codable {
     var id = UUID()
     var body: String
-    var parentWords = [String]()
+    var parentWords: [String] = []
 }
 
 

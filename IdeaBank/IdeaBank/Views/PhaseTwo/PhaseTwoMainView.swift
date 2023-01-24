@@ -11,32 +11,26 @@ struct PhaseTwoMainView: View {
     @EnvironmentObject var vm: ViewModel
     @State private var textFieldInput: String = ""
     
-    
     var body: some View {
         NavigationStack {
             
             ZStack {
                 Color.background.ignoresSafeArea()
                 VStack {
-                    
                     Header(
                         phase: 2,
                         title: "Compose",
-                        description: "Out of the 20 words you choose, what do these 3 make you think about?"
+                        description: "Out of the 10 words you choose, what do these 3 make you think about?"
                     )
                     Spacer()
-                    
                     VStack {
 //                        var shuffledSelectedWords = vm.selectedWords
-        
                         ForEach(0..<3, id:\.self) { index in
                             CompactWord(word: vm.selectedWords[index].word)
                         }
                     }
                     .padding(.horizontal)
-                    
                     Spacer()
-                    
                     HStack {
                         TextField("Enter your idea", text: $textFieldInput)
                             .padding(/*@START_MENU_TOKEN@*/.leading, 16.0/*@END_MENU_TOKEN@*/)
@@ -44,7 +38,6 @@ struct PhaseTwoMainView: View {
                             .background(.thinMaterial)
                             .clipShape(Capsule())
                             .padding(.trailing, 4.0)
-                            
                         Button {
                             vm.ideaArray.append(Idea(body: textFieldInput, parentWords: [vm.selectedWords[0].word, vm.selectedWords[1].word, vm.selectedWords[2].word]))
                             
@@ -61,7 +54,6 @@ struct PhaseTwoMainView: View {
                         }
                         .background(.thinMaterial)
                         .clipShape(Circle())
-                        
                         Button {
                             vm.selectedWords.shuffle()
                         } label: {
@@ -72,12 +64,8 @@ struct PhaseTwoMainView: View {
                         }
                         .background(.thinMaterial)
                         .clipShape(Circle())
-                        
-                        
                     }
                     .padding(.horizontal)
-                    
-                    
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -92,6 +80,6 @@ struct PhaseTwoMainView: View {
 struct PhaseTwoMainView_Previews: PreviewProvider {
     static var previews: some View {
         PhaseTwoMainView()
-            .environmentObject(ViewModel())
+            .environmentObject(ViewModel(setPreviewWith: .filledSelectedWords))
     }
 }

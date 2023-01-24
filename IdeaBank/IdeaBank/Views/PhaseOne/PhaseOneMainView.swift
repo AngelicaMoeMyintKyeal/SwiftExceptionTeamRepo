@@ -32,7 +32,6 @@ struct PhaseOneMainView: View {
                         // Cards are reversed because it's a ZStack
                         // so you can use .reversed() on the forEach
                         ForEach(words.reversed()) { word in
-                            // Card view
                             StackCardView(word: word)
                                 .frame(width: 320, height: 300)
                         }
@@ -50,7 +49,7 @@ struct PhaseOneMainView_Previews: PreviewProvider {
         ZStack {
             Color.background.ignoresSafeArea()
             PhaseOneMainView()
-                .environmentObject(ViewModel())
+                .environmentObject(ViewModel(setPreviewWith: .filledWords))
         }
     }
 }
