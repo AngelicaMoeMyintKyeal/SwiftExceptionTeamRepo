@@ -14,6 +14,7 @@ struct PhaseTwoMainView: View {
     
     var body: some View {
         NavigationStack {
+            
             ZStack {
                 Color.background.ignoresSafeArea()
                 VStack {
@@ -80,9 +81,7 @@ struct PhaseTwoMainView: View {
                 }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button("Next Phase") {
-                            // next phase action
-                        }
+                        NavigationLink("Phase 3", destination: PhaseThreeMainView())
                     }
                 }
             }
