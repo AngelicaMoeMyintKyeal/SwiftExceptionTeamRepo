@@ -11,13 +11,11 @@ import SwiftUI
 struct IdeaBankApp: App {
     @StateObject private var dataController = DataController.shared
     @StateObject var viewModel = ViewModel()
-//    @StateObject var wordDefinitionManager = WordDefinitionSearchManager()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(viewModel)
-//                .environmentObject(wordDefinitionManager)
         }
     }
 }
