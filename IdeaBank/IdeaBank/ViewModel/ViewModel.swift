@@ -79,19 +79,19 @@ extension ViewModel {
     }
     
     enum canvasPreview {
-        case phaseOnePlaceholders
-        case phaseOneEmpty
-        case phaseTwoPlaceholders
+        case filledWords
+        case emptyWords
+        case filledSelectedWords
     }
     
-    convenience init(show previewType: canvasPreview) {
+    convenience init(setPreviewWith previewType: canvasPreview) {
         self.init()
         switch previewType {
-        case .phaseOnePlaceholders:
+        case .filledWords:
             words = placeholderWords
-        case .phaseOneEmpty:
+        case .emptyWords:
             words = []
-        case .phaseTwoPlaceholders:
+        case .filledSelectedWords:
             selectedWords = placeholderWords
         }
     }
