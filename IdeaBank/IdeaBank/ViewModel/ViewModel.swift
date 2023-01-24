@@ -14,7 +14,7 @@ class ViewModel: ObservableObject {
     @Published var words: [Word] = []
     @Published var ideaArray: [Idea] = []
     
-    private var wordPool: [Word] = Word.exampleWords
+    private var wordPool: [Word] = Word.exampleWords.shuffled()
     
     init() {
         Task {
