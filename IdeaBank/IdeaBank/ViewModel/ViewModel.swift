@@ -42,7 +42,12 @@ class ViewModel: ObservableObject {
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             let decodedWords = try JSONDecoder().decode([Word].self, from: data)
-            self.words.append(contentsOf: decodedWords)
+            if decodedWords.count == 1 {
+                self.words.append(contentsOf: decodedWords)
+            } else {
+                let firstWord = decodedWords[0]
+                words.append(firstWord)
+            }
         } catch {
             print("Catch block!")
             print(error.localizedDescription)
