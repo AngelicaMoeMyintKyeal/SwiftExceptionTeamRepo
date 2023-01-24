@@ -16,8 +16,7 @@ struct PhaseThreeMainView: View {
             VStack {
                 
                 Header(
-                    phase: 3,
-                    title: "Refine",
+                    title: "Confirm",
                     description: "These are all the ideas you generated, which ones do you like the most?"
                 )
                 

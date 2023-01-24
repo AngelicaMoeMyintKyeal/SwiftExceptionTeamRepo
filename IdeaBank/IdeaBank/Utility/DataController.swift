@@ -9,7 +9,7 @@ import CoreData
 import Foundation
 
 class DataController: ObservableObject {
-    let container = NSPersistentContainer(name: "WordDataBase") // Only connect to the DB (prepare)
+    let container = NSPersistentContainer(name: "WordDatabase") // Only connect to the DB (prepare)
     
     static var shared = DataController()
     

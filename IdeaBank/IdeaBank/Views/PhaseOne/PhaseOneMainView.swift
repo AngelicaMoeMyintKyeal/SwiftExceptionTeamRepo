@@ -14,7 +14,6 @@ struct PhaseOneMainView: View {
         VStack {
             Spacer()
             Header(
-                phase: 1,
                 title: "Choose",
                 description: "Swipe right to save a word if you like it or it inspires you, swipe right to discard it"
             )
