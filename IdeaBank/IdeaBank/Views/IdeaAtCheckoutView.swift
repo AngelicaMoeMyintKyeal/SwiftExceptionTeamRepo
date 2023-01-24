@@ -36,13 +36,13 @@ struct IdeaAtCheckoutView: View {
                                     .font(.title)
                                     .fontWeight(.bold)
                                     .padding(.bottom, 2.0)
-                                    .foregroundColor(Color("mainColorOpposite"))
+                                    .foregroundColor(.primary)
                                 
 
                                     Text(description)
                             
                                 .multilineTextAlignment(.leading)
-                                .foregroundColor(Color("mainColorOpposite"))
+                                .foregroundColor(.primary)
                             }
                             
                             Spacer()

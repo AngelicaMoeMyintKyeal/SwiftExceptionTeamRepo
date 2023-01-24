@@ -12,7 +12,7 @@ class ViewModel: ObservableObject {
     @Published var displayingWords: [Word]?
     @Published var selectedWords: [Word] = []
     @Published var words: [Word] = []
-    @Published var ideaArray = [Idea]()
+    @Published var ideaArray: [Idea] = []
     
     private var wordPool: [String] = Word.exampleWords
     
@@ -78,10 +78,28 @@ extension ViewModel {
         return placeholders
     }
     
+    var placeholderIdeas: [Idea] {
+        var placeholders: [Idea] = []
+        for i in 0..<5 {
+            placeholders.append(
+                Idea(
+                    body: "Roasted Duck \(i)",
+                    parentWords: [
+                        "Louie \(i)",
+                        "Huey \(i)",
+                        "Dewey \(i)"
+                    ]
+                )
+            )
+        }
+        return placeholders
+    }
+    
     enum canvasPreview {
         case filledWords
         case emptyWords
         case filledSelectedWords
+        case fillIdeaArray
     }
     
     convenience init(setPreviewWith previewType: canvasPreview) {
@@ -93,6 +111,8 @@ extension ViewModel {
             words = []
         case .filledSelectedWords:
             selectedWords = placeholderWords
+        case .fillIdeaArray:
+            ideaArray = placeholderIdeas
         }
     }
 }
