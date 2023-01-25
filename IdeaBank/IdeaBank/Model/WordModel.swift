@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 // MARK: Sample Message Model
 struct Word: Codable, Identifiable {
@@ -158,4 +159,19 @@ extension Word {
         Word(word: "Quiet", meanings: nil),
         Word(word: "Sad", meanings: nil)
     ]
+}
+
+class WordRepository: ObservableObject {
+    
+    private init() {}
+    
+    static func saveRandomWords(context: NSManagedObjectContext, word: String, meanings: NSArray) -> RandomWords {
+        
+        let randomWord = RandomWords(context: context)
+        randomWord.id = UUID()
+        randomWord.word = word
+        randomWord.meanings = meanings
+        
+        return randomWord
+    }
 }

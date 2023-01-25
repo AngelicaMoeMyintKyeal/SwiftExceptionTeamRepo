@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0CD296F0BEE003FE504 /* WordCard.swift */; };
+		4C43B0CE296F0BEE003FE504 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0CD296F0BEE003FE504 /* WordModel.swift */; };
 		4C98BDE5297534780050519D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98BDE4297534780050519D /* ViewModel.swift */; };
 		4C98BDE7297538370050519D /* StackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98BDE6297538370050519D /* StackCardView.swift */; };
 		4CC36A472975AC6500269953 /* PhaseOneMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC36A462975AC6500269953 /* PhaseOneMainView.swift */; };
@@ -25,13 +25,13 @@
 		AC493DA4296EA532001B8538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA3296EA532001B8538 /* Preview Assets.xcassets */; };
 		AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */; };
 		AC874E27298027F0003EA045 /* WordDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC874E25298027F0003EA045 /* WordDatabase.xcdatamodeld */; };
-		AC874E2A29802924003EA045 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC874E2929802924003EA045 /* DataController.swift */; };
+		AC874E2A29802924003EA045 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC874E2929802924003EA045 /* Persistence.swift */; };
 		ACCBEA302976AD0300D4A72C /* (null) in Sources */ = {isa = PBXBuildFile; };
 		ACCBEA312976D74600D4A72C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9E296EA531001B8538 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C43B0CD296F0BEE003FE504 /* WordCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCard.swift; sourceTree = "<group>"; };
+		4C43B0CD296F0BEE003FE504 /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
 		4C98BDE4297534780050519D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		4C98BDE6297538370050519D /* StackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCardView.swift; sourceTree = "<group>"; };
 		4CC36A462975AC6500269953 /* PhaseOneMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseOneMainView.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		AC493DA3296EA532001B8538 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseTwoMainView.swift; sourceTree = "<group>"; };
 		AC874E26298027F0003EA045 /* WordDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WordDatabase.xcdatamodel; sourceTree = "<group>"; };
-		AC874E2929802924003EA045 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		AC874E2929802924003EA045 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 		4C43B0CC296F0BD7003FE504 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4C43B0CD296F0BEE003FE504 /* WordCard.swift */,
+				4C43B0CD296F0BEE003FE504 /* WordModel.swift */,
 				AA4FA5F02971B3A0007A0D84 /* Idea.swift */,
 			);
 			path = Model;
@@ -165,7 +165,7 @@
 		AC874E2829802912003EA045 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				AC874E2929802924003EA045 /* DataController.swift */,
+				AC874E2929802924003EA045 /* Persistence.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -276,10 +276,10 @@
 			files = (
 				4CC36A472975AC6500269953 /* PhaseOneMainView.swift in Sources */,
 				4C98BDE5297534780050519D /* ViewModel.swift in Sources */,
-				4C43B0CE296F0BEE003FE504 /* WordCard.swift in Sources */,
+				4C43B0CE296F0BEE003FE504 /* WordModel.swift in Sources */,
 				ACCBEA302976AD0300D4A72C /* (null) in Sources */,
 				4CC36A492975AE3F00269953 /* GridView.swift in Sources */,
-				AC874E2A29802924003EA045 /* DataController.swift in Sources */,
+				AC874E2A29802924003EA045 /* Persistence.swift in Sources */,
 				AA4FA5F12971B3A0007A0D84 /* Idea.swift in Sources */,
 				ACCBEA312976D74600D4A72C /* ContentView.swift in Sources */,
 				AC874E27298027F0003EA045 /* WordDatabase.xcdatamodeld in Sources */,
