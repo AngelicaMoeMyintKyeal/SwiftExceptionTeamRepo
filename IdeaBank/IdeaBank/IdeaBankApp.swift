@@ -9,13 +9,14 @@ import SwiftUI
 
 @main
 struct IdeaBankApp: App {
-    @StateObject private var persistenceController = PersistenceController.shared
+    let persistenceManager = PersistenceManager.shared
     @StateObject var viewModel = ViewModel()
     
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(viewModel)
+                .environment(\.managedObjectContext, persistenceManager.container.viewContext)
         }
     }
 }

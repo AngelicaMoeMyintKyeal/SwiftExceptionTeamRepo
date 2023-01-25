@@ -30,7 +30,6 @@ struct Definition: Codable {
 
 extension Word {
     
-    
     static var exampleWords: [Word] = [
         Word(word: "Monkey", meanings: nil),
         Word(word: "Banana", meanings: nil),
@@ -159,19 +158,4 @@ extension Word {
         Word(word: "Quiet", meanings: nil),
         Word(word: "Sad", meanings: nil)
     ]
-}
-
-class WordRepository: ObservableObject {
-    
-    private init() {}
-    
-    static func saveRandomWords(context: NSManagedObjectContext, word: String, meanings: NSArray) -> RandomWords {
-        
-        let randomWord = RandomWords(context: context)
-        randomWord.id = UUID()
-        randomWord.word = word
-        randomWord.meanings = meanings
-        
-        return randomWord
-    }
 }
