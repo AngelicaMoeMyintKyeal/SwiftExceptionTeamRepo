@@ -15,7 +15,7 @@ struct PhaseOneMainView: View {
             Spacer()
             Header(
                 title: "Choose",
-                description: "Swipe right to save a word if you like it or it inspires you, swipe right to discard it"
+                description: "Swipe right to save a word if you like it or it inspires you, swipe right to discard"
             )
             Spacer()
             GridView()

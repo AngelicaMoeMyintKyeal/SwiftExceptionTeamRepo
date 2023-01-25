@@ -25,6 +25,7 @@ struct PhaseThreeMainView: View {
                         IdeaAtCheckoutView(usedWords: x.parentWords, title: "Idea", description: x.body, isToggled: false)
                     }
                 }
+                .scrollIndicators(.hidden)
                 .padding(.top)
                 .frame(maxWidth: .infinity)
                 

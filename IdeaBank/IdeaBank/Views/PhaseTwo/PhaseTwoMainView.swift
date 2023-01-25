@@ -19,7 +19,7 @@ struct PhaseTwoMainView: View {
                 VStack {
                     Header(
                         title: "Compose",
-                        description: "Out of all the words you chose, what do these 3 make you think about?"
+                        description: "Out of all the words you've chosen, what do these three make you think about?"
                     )
                     Spacer()
                     VStack {
@@ -37,6 +37,7 @@ struct PhaseTwoMainView: View {
                             .background(.thinMaterial)
                             .clipShape(Capsule())
                             .padding(.trailing, 4.0)
+                            .keyboardType(.default)
                         Button {
                             vm.ideaArray.append(Idea(body: textFieldInput, parentWords: [vm.selectedWords[0].word, vm.selectedWords[1].word, vm.selectedWords[2].word]))
                             
