@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 class ViewModel: ObservableObject {
     @Published var fetchedWords: [Word] = []
@@ -13,6 +14,7 @@ class ViewModel: ObservableObject {
     @Published var selectedWords: [Word] = []
     @Published var words: [Word] = []
     @Published var ideaArray: [Idea] = []
+    @Environment(\.managedObjectContext) private var storedData: NSManagedObjectContext
     
     private var wordPool: [Word] = Word.exampleWords.shuffled()
     
