@@ -16,7 +16,7 @@ struct IdeaBankApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(viewModel)
-                .environment(\.managedObjectContext, persistenceManager.container.viewContext)
+                .environment(\.managedObjectContext, persistenceManager.persistenceContainer.viewContext)
         }
     }
 }
