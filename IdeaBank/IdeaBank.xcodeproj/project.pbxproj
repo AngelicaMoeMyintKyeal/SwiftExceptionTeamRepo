@@ -24,7 +24,6 @@
 		AC493DA1296EA532001B8538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA0296EA532001B8538 /* Assets.xcassets */; };
 		AC493DA4296EA532001B8538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA3296EA532001B8538 /* Preview Assets.xcassets */; };
 		AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */; };
-		AC874E27298027F0003EA045 /* WordDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC874E25298027F0003EA045 /* WordDatabase.xcdatamodeld */; };
 		AC874E2A29802924003EA045 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC874E2929802924003EA045 /* Persistence.swift */; };
 		ACCBEA302976AD0300D4A72C /* (null) in Sources */ = {isa = PBXBuildFile; };
 		ACCBEA312976D74600D4A72C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9E296EA531001B8538 /* ContentView.swift */; };
@@ -51,7 +50,6 @@
 		AC493DA0296EA532001B8538 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC493DA3296EA532001B8538 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseTwoMainView.swift; sourceTree = "<group>"; };
-		AC874E26298027F0003EA045 /* WordDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WordDatabase.xcdatamodel; sourceTree = "<group>"; };
 		AC874E2929802924003EA045 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,7 +121,6 @@
 				AC874E2829802912003EA045 /* Utility */,
 				AC493DA0296EA532001B8538 /* Assets.xcassets */,
 				AC493DA2296EA532001B8538 /* Preview Content */,
-				AC874E25298027F0003EA045 /* WordDatabase.xcdatamodeld */,
 			);
 			path = IdeaBank;
 			sourceTree = "<group>";
@@ -282,7 +279,6 @@
 				AC874E2A29802924003EA045 /* Persistence.swift in Sources */,
 				AA4FA5F12971B3A0007A0D84 /* Idea.swift in Sources */,
 				ACCBEA312976D74600D4A72C /* ContentView.swift in Sources */,
-				AC874E27298027F0003EA045 /* WordDatabase.xcdatamodeld in Sources */,
 				AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */,
 				88216BBA29772F00004615BB /* Header.swift in Sources */,
 				AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */,
@@ -495,19 +491,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		AC874E25298027F0003EA045 /* WordDatabase.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				AC874E26298027F0003EA045 /* WordDatabase.xcdatamodel */,
-			);
-			currentVersion = AC874E26298027F0003EA045 /* WordDatabase.xcdatamodel */;
-			path = WordDatabase.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = AC493D91296EA531001B8538 /* Project object */;
 }

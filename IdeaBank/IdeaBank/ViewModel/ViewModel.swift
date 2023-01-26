@@ -15,33 +15,17 @@ class ViewModel: ObservableObject {
     @Published var words: [Word] = []
     @Published var ideaArray: [Idea] = []
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "word", ascending: true)]) var randomWordy: FetchedResults<RandomWords>
     
     private var wordPool: [Word] = Word.exampleWords.shuffled()
     
     init() {
-        saveRandomWordArray()
         Task {
             for word in wordPool {
-                print("Woorrrdddd>>>>", randomWordy[0].word)
-                await fetchDefinition(randomWord: randomWordy[0].word ?? "")
+                await fetchDefinition(randomWord: word.word)
             }
         }
     }
     
-    func saveRandomWordArray() {
-        for word in wordPool {
-            saveRandomWord(word: word.word, meanings: [word.meanings?[0].definitions[0].definition ?? ""])
-        }
-    }
-    func saveRandomWord(word: String, meanings: NSArray?) {
-        let randomWord = RandomWords(context: viewContext)
-        randomWord.id = UUID()
-        randomWord.word = word
-        randomWord.meanings = meanings
-        
-        PersistenceManager.shared.saveContext()
-    }
     
     // Get the index of the user
     func getIndex(word: Word) -> Int {
