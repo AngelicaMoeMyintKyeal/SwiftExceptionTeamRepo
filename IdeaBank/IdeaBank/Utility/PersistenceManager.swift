@@ -1,5 +1,5 @@
 //
-//  DataController.swift
+//  PersisenceManager.swift
 //  IdeaBank
 //
 //  Created by Htet Myat Moe Myint Kyeal on 24/01/23.
@@ -8,12 +8,12 @@
 import CoreData
 import Foundation
 
-class DataController: ObservableObject {
+class PersisenceManager: ObservableObject {
     let container = NSPersistentContainer(name: "WordDatabase") // Only connect to the DB (prepare)
     
-    static var shared = DataController()
+    static var shared = PersisenceManager()
     
-    static var sharedMock = DataController(isInMemory: true)
+    static var sharedMock = PersisenceManager(isInMemory: true)
     
     // Try to load the data from the disk
     private init(isInMemory: Bool = false) {
