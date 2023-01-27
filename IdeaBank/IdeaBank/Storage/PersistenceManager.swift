@@ -34,6 +34,7 @@ struct PersistenceManager {
     }
     
     func createRandomWord(resultWord: String, resultMeanings: String) {
+        print("IS CALLING")
         let managedContext = PersistenceManager.shared.persistenceContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "RandomWord", in: managedContext)!
         
@@ -48,7 +49,7 @@ struct PersistenceManager {
         }
     }
     
-    func findrandomWord(findWord: String) -> RandomWord? {
+    func findRandomWord(findWord: String) -> RandomWord? {
         let managedContext = PersistenceManager.shared.persistenceContainer.viewContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "RandomWord")
         fetchRequest.predicate = NSPredicate(format: "word ==%@", findWord)

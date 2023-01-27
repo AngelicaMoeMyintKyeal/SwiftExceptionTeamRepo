@@ -13,17 +13,22 @@ class ViewModel: ObservableObject {
     @Published var displayingWords: [Word]?
     @Published var selectedWords: [Word] = []
     @Published var words: [Word] = []
+    @Published var meanings: [Meaning] = []
+    @Published var definitions: [Definition] = []
     @Published var ideaArray: [Idea] = []
-//    @Environment(\.managedObjectContext) private var viewContext
-//    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "word", ascending: true)]) var randomWordy: FetchedResults<RandomWord>
     
-    private var wordPool: [String] = Word.exampleWords.shuffled()
+    var persistenceManager = PersistenceManager()
+    var definitionItem: String = ""
+    
+//    private var wordPool: [String] = Word.exampleWords.shuffled()
+    private var wordPool: [String] = Word.exampleWords
+
     
     init() {
-//        saveRandomWordArray()
         Task {
             for word in wordPool {
-//                await fetchDefinition(randomWord: wordPool[word])
+                await fetchDefinition(randomWord: word)
+                saveRandomWords()
             }
         }
     }
@@ -50,12 +55,37 @@ class ViewModel: ObservableObject {
                 self.words.append(contentsOf: decodedWords)
             } else {
                 let firstWord = decodedWords[0]
-                words.append(firstWord)
+                self.words.append(firstWord)
             }
         } catch {
             print("Catch block!")
             print(error.localizedDescription)
         }
+    }
+    
+    func saveRandomWords() {
+        for wordItem in self.words {
+            
+            self.meanings += wordItem.meanings!
+            
+            for meaningItem in self.meanings {
+                self.definitions += meaningItem.definitions
+            }
+            
+            for defItem in self.definitions {
+                self.definitionItem = defItem.definition
+            }
+            persistenceManager.createRandomWord(resultWord: wordItem.word, resultMeanings: self.definitionItem)
+            print("HERE1>>>", wordItem.word)
+            print("HERE2>>>", self.definitionItem)
+        }
+        retrieveRandomWords()
+    }
+    
+    func retrieveRandomWords() {
+        let wordy = persistenceManager.findRandomWord(findWord: "monkey")
+        print("OOOOOOOOO>>>>", wordy?.word)
+        print("IIIIIIIII>>>>", wordy?.definition)
     }
 }
 
