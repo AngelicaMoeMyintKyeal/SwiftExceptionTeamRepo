@@ -28,8 +28,6 @@ struct Definition: Codable {
 }
 
 extension Word {
-    
-    
     static var exampleWords: [Word] = [
         Word(word: "Monkey", meanings: nil),
         Word(word: "Banana", meanings: nil),
