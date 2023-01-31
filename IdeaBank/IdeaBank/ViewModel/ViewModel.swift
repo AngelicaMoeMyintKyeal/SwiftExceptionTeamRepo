@@ -48,8 +48,14 @@ class ViewModel: ObservableObject {
                 let firstWord = decodedWords[0]
                 words.append(firstWord)
             }
+            print("API Called")
         } catch {
             print("Catch block!")
+            if words.isEmpty {
+                for word in wordPool {
+                    words.append(word)
+                }
+            }
             print(error.localizedDescription)
         }
     }
