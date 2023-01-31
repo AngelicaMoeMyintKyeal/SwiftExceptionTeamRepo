@@ -21,7 +21,7 @@ struct PhaseOneMainView: View {
             GridView()
             Spacer()
             ZStack {
-                if let words = vm.words {
+                if let words = vm.displayingWords {
                     if words.isEmpty {
                         Text("Nothing to display right now. Come back later...")
                             .font(.caption)
