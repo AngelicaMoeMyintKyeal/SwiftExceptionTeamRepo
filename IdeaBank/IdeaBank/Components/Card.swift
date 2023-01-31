@@ -12,29 +12,20 @@ struct Card: View {
     var word: Word
     
     var body: some View {
-        ZStack {
             HStack {
-                VStack(alignment: .leading) {
-                    Text(word.word)
-                        .font(.title)
-                        .fontWeight(.bold)
-                    Text(word.meanings?[0].definitions[0].definition ?? "")
-                    Spacer()
-                }
-
+                Spacer()
+                Text(word.word)
+                    .font(.title)
+                    .fontWeight(.bold)
                 Spacer()
             }
             .padding(24)
+            .frame(height: 180)
             .background(.thinMaterial)
-        }
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(.secondary, lineWidth: 4)
-                .padding(-2)
-                .opacity(0.5)
-        )
+            .cornerRadius(20)
+            .shadow(color: .black.opacity(0.4),radius: 3, x: 2, y: -1)
     }
-
+    
 }
 
 struct Card_Previews: PreviewProvider {

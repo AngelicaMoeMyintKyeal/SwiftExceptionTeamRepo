@@ -8,18 +8,19 @@
 import SwiftUI
 
 class ViewModel: ObservableObject {
-    @Published var fetchedWords: [Word] = []
-    @Published var displayingWords: [Word]?
+    @Published var fetchedWords: [Word] = Word.exampleWords.shuffled()
+    @Published var displayingWords: [Word] = []
     @Published var selectedWords: [Word] = []
-    @Published var words: [Word] = []
+//    @Published var words: [Word] = Word.exampleWords.shuffled()
     @Published var ideaArray: [Idea] = []
     
-    private var wordPool: [Word] = Word.exampleWords.shuffled()
+    private var wordCounter: Int = Word.exampleWords.count - 1
     
     init() {
-        Task {
-            for word in wordPool {
-                await fetchDefinition(randomWord: word.word)
+        if displayingWords.isEmpty {
+            for _ in 0...2 {
+                displayingWords.append(fetchedWords[wordCounter])
+                wordCounter -= 1
             }
         }
     }
@@ -37,7 +38,7 @@ class ViewModel: ObservableObject {
     
     // Get the index of the user. This is used in the StackCardView
     func getIndex(word: Word) -> Int {
-        let index = words.firstIndex(where: { currentWord in
+        let index = displayingWords.firstIndex(where: { currentWord in
             return word.id == currentWord.id
         }) ?? 0
         
