@@ -24,7 +24,7 @@
 		AC493DA1296EA532001B8538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA0296EA532001B8538 /* Assets.xcassets */; };
 		AC493DA4296EA532001B8538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA3296EA532001B8538 /* Preview Assets.xcassets */; };
 		AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC870947296F20EC00E5EA23 /* PhaseTwoMainView.swift */; };
-		AC874E27298027F0003EA045 /* WordDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC874E25298027F0003EA045 /* WordDatabase.xcdatamodeld */; };
+		AC874E27298027F0003EA045 /* IdeaDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC874E25298027F0003EA045 /* IdeaDatabase.xcdatamodeld */; };
 		AC874E2A29802924003EA045 /* PersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC874E2929802924003EA045 /* PersistenceManager.swift */; };
 		ACCBEA302976AD0300D4A72C /* (null) in Sources */ = {isa = PBXBuildFile; };
 		ACCBEA312976D74600D4A72C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9E296EA531001B8538 /* ContentView.swift */; };
@@ -120,10 +120,9 @@
 				4C98BDE3297534660050519D /* ViewModel */,
 				4C43B0CF296F0C67003FE504 /* Views */,
 				4C43B0CC296F0BD7003FE504 /* Model */,
-				AC874E2829802912003EA045 /* Utility */,
+				AC874E2829802912003EA045 /* Storage */,
 				AC493DA0296EA532001B8538 /* Assets.xcassets */,
 				AC493DA2296EA532001B8538 /* Preview Content */,
-				AC874E25298027F0003EA045 /* WordDatabase.xcdatamodeld */,
 			);
 			path = IdeaBank;
 			sourceTree = "<group>";
@@ -162,12 +161,13 @@
 			path = PhaseThree;
 			sourceTree = "<group>";
 		};
-		AC874E2829802912003EA045 /* Utility */ = {
+		AC874E2829802912003EA045 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				AC874E25298027F0003EA045 /* IdeaDatabase.xcdatamodeld */,
 				AC874E2929802924003EA045 /* PersistenceManager.swift */,
 			);
-			path = Utility;
+			path = Storage;
 			sourceTree = "<group>";
 		};
 		ACD47AE22976DD6800B5068B /* Components */ = {
@@ -282,7 +282,7 @@
 				AC874E2A29802924003EA045 /* PersistenceManager.swift in Sources */,
 				AA4FA5F12971B3A0007A0D84 /* IdeaModel.swift in Sources */,
 				ACCBEA312976D74600D4A72C /* ContentView.swift in Sources */,
-				AC874E27298027F0003EA045 /* WordDatabase.xcdatamodeld in Sources */,
+				AC874E27298027F0003EA045 /* IdeaDatabase.xcdatamodeld in Sources */,
 				AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */,
 				88216BBA29772F00004615BB /* Header.swift in Sources */,
 				AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */,
@@ -497,13 +497,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		AC874E25298027F0003EA045 /* WordDatabase.xcdatamodeld */ = {
+		AC874E25298027F0003EA045 /* IdeaDatabase.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				AC874E26298027F0003EA045 /* WordDatabase.xcdatamodel */,
 			);
 			currentVersion = AC874E26298027F0003EA045 /* WordDatabase.xcdatamodel */;
-			path = WordDatabase.xcdatamodeld;
+			path = IdeaDatabase.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
