@@ -24,7 +24,18 @@ class ViewModel: ObservableObject {
         }
     }
     
-    // Get the index of the user
+    // Function to add new card to displayingWords array
+    func addToDisplayingWords() {
+        if wordCounter != 0 {
+            displayingWords.append(fetchedWords[wordCounter])
+            wordCounter -= 1
+        } else {
+            fetchedWords = fetchedWords.shuffled()
+            wordCounter = Word.exampleWords.count - 1
+        }
+    }
+    
+    // Get the index of the user. This is used in the StackCardView
     func getIndex(word: Word) -> Int {
         let index = words.firstIndex(where: { currentWord in
             return word.id == currentWord.id
@@ -33,32 +44,44 @@ class ViewModel: ObservableObject {
         return index
     }
     
-    @MainActor
-    func fetchDefinition(randomWord: String) async {
-        guard let url = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\(randomWord)") else {
-            return
-        }
-        
-        do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            let decodedWords = try JSONDecoder().decode([Word].self, from: data)
-            if decodedWords.count == 1 {
-                self.words.append(contentsOf: decodedWords)
-            } else {
-                let firstWord = decodedWords[0]
-                words.append(firstWord)
-            }
-            print("API Called")
-        } catch {
-            print("Catch block!")
-            if words.isEmpty {
-                for word in wordPool {
-                    words.append(word)
-                }
-            }
-            print(error.localizedDescription)
-        }
-    }
+//    NOTE: We no longer require the API calls as they are not really necessary
+    
+//    private var words: [Word] = Word.exampleWords.shuffled()
+//
+//    init() {
+//        Task {
+//            for word in wordPool {
+//                await fetchDefinition(randomWord: word.word)
+//            }
+//        }
+//    }
+//
+//    @MainActor
+//    func fetchDefinition(randomWord: String) async {
+//        guard let url = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\(randomWord)") else {
+//            return
+//        }
+//
+//        do {
+//            let (data, _) = try await URLSession.shared.data(from: url)
+//            let decodedWords = try JSONDecoder().decode([Word].self, from: data)
+//            if decodedWords.count == 1 {
+//                self.words.append(contentsOf: decodedWords)
+//            } else {
+//                let firstWord = decodedWords[0]
+//                words.append(firstWord)
+//            }
+//            print("API Called")
+//        } catch {
+//            print("Catch block!")
+//            if words.isEmpty {
+//                for word in wordPool {
+//                    words.append(word)
+//                }
+//            }
+//            print(error.localizedDescription)
+//        }
+//    }
 }
 
 // MARK: special code for canvas debugging
@@ -117,9 +140,9 @@ extension ViewModel {
         self.init()
         switch previewType {
         case .filledWords:
-            words = placeholderWords
+            fetchedWords = placeholderWords
         case .emptyWords:
-            words = []
+            fetchedWords = []
         case .filledSelectedWords:
             selectedWords = placeholderWords
         case .fillIdeaArray:
