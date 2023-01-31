@@ -33,6 +33,7 @@ struct PhaseOneMainView: View {
                         ForEach(words.reversed()) { word in
                             StackCardView(word: word)
                                 .frame(width: 320, height: 300)
+                                .shadow(color: .black.opacity(0.4),radius: 3, x: 2, y: -1)
                         }
                     }
                 } else {
