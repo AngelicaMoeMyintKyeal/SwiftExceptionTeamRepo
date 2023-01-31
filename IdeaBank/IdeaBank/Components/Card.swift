@@ -23,7 +23,6 @@ struct Card: View {
             .frame(height: 180)
             .background(.thinMaterial)
             .cornerRadius(20)
-            .shadow(color: .black.opacity(0.4),radius: 3, x: 2, y: -1)
     }
     
 }
