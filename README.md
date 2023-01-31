@@ -10,6 +10,7 @@
       <a href="#application-name">Application Name</a>
     </li>
     <li><a href="#description">Description</a></li>
+    <li><a href="#branches">Branches</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#authors-and-contributors">Authors and Contributors</a></li>
@@ -20,10 +21,13 @@
 
 ## About The Project
 
-Brainstorming about ideas can be fun but also troublesome sometimes. Our main goal is to help users brainstorm multiple ideas by selecting the desired words provided randomly with the definitions. 
+Brainstorming about ideas can be fun but also troublesome sometimes. 
 
-In this project, we aim to create an application to meet that specific need for users.
+Our main goal is to help users brainstorm multiple ideas by choosing from the random word cards. To make it more fun, we have implmented an awesome animation that let users swipe right or left to choose or discard the words. 
 
+In this project, we aim to create an application to meet this kind of specific need for users.
+
+We have previously used an API to get the definitions of our random words but in our latest updates, only the words will be provided without the definitions.
 The information about the public `API` implemented in this project can found here -> [Free Dictionary API](https://dictionaryapi.dev)
 
 Our project release schedule style will be one week sprint.
@@ -34,7 +38,17 @@ We still have to decide the application's name and icon.
 
 ## Description
 
-With our application, user can swipe left or right to choose or reject the words randomly provided and create multiple ideas by their chosen words.
+With our application, the user can swipe left or right to choose or reject the words randomly provided and create multiple ideas by their chosen words.
+
+## Branches
+
+`main` - most stable branch and contains the final codes release
+
+`dev-master` - branch for merging of the currently in progress codes
+
+`core-data-definitions-storage` - about core data that let the users store the definitions of the words from the API
+
+`new-APICaller` - includes the codes to call for the API in a different way
 
 ## Installation
 
@@ -64,6 +78,15 @@ With our application, user can swipe left or right to choose or reject the words
   - Release additional second screen
   - Implement the API to get the random words' definitions.
   - Support both Light and Dark modes system.
+
+- Week Three (23/January/2023 - 27/January/2023)
+  - Release all the finished screens
+  - Implement core data to store the definitions of the words given from the API.
+  
+- Week Four (30/January/2023 - 03/February/2023)
+  - Codes clean up and refactoring
+  - Fortify the project's software architecture
+  - Do some final codes changes
 
 ## Authors and Contributors
 
