@@ -47,9 +47,8 @@ struct PhaseOneMainView: View {
 struct PhaseOneMainView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            Color.background.ignoresSafeArea()
-            PhaseOneMainView()
-                .environmentObject(ViewModel(setPreviewWith: .filledWords))
+            ContentView()
+                .environmentObject(ViewModel())
         }
     }
 }
