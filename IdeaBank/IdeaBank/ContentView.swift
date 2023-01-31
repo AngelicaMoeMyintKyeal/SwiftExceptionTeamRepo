@@ -22,9 +22,6 @@ struct ContentView: View {
                     PhaseOneMainView()
                 } else {
                     PhaseTwoMainView()
-                        .onAppear {
-                            vm.selectedWords.shuffle()
-                        }
                 }
             }
         }
