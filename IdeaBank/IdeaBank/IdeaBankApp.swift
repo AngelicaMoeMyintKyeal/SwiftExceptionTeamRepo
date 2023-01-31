@@ -15,7 +15,7 @@ struct IdeaBankApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PhaseZeroMainView()
                 .environmentObject(viewModel)
                 .environment(\.managedObjectContext,persistenceManager.persistenceContainer.viewContext)
         }

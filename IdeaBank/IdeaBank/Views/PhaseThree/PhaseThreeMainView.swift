@@ -32,6 +32,16 @@ struct PhaseThreeMainView: View {
                 
             }
         }
+        .toolbar {
+            ToolbarItem {
+                Button {
+                    vm.savedIdeas.append(contentsOf: vm.ideaArray)
+                    vm.ideaArray = []
+                } label: {
+                    Text("Save")
+                }
+            }
+        }
     }
 }
 
