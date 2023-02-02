@@ -46,10 +46,6 @@ struct PhaseOneMainView: View {
             }
             .toolbar {
                 ToolbarItem {
-                    NavigationLink("Next", destination: PhaseTwoMainView())
-                    .disabled(vm.selectedWords.count < 10)
-                }
-                ToolbarItem {
                     Button {
                         print(vm.selectedWords)
                         vm.selectedWords = []
@@ -58,6 +54,12 @@ struct PhaseOneMainView: View {
                         Image(systemName: "trash")
                     }
                 }
+                
+                ToolbarItem {
+                    NavigationLink("Next", destination: PhaseTwoMainView())
+                    .disabled(vm.selectedWords.count < 10)
+                }
+                
             }
             
         }
