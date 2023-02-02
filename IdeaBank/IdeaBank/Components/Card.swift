@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct Card: View {
-    @EnvironmentObject var vm: ViewModel
     var word: Word
-    
     var body: some View {
         ZStack {
             HStack {
@@ -18,10 +16,9 @@ struct Card: View {
                     Text(word.word)
                         .font(.title)
                         .fontWeight(.bold)
-                    Text(word.meanings?[0].definitions[0].definition ?? "")
+                    Text(word.definition)
                     Spacer()
                 }
-
                 Spacer()
             }
             .padding(24)
@@ -34,26 +31,16 @@ struct Card: View {
                 .opacity(0.5)
         )
     }
-
 }
 
 struct Card_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.background.ignoresSafeArea()
-            Card(
-                word: Word(
-                    word: "Apple",
-                    meanings: [
-                        Meaning(
-                            definitions: [
-                                Definition(definition: "An expensive computer"),
-                                Definition(definition: "A tool to keep doctors away")
-                            ]
-                        )
-                    ]
-                )
-            )
+            Card(word: Word(
+                word: "Apple",
+                definition: "An expensive computer"
+            ))
             .environmentObject(ViewModel())
         }
     }

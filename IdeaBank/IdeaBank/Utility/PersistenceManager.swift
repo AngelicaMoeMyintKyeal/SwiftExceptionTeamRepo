@@ -9,7 +9,8 @@ import CoreData
 import Foundation
 
 class PersisenceManager: ObservableObject {
-    let container = NSPersistentContainer(name: "WordDatabase") // Only connect to the DB (prepare)
+    // Only connect to the DB (prepare)
+    let container = NSPersistentContainer(name: "WordDatabase")
     
     static var shared = PersisenceManager()
     

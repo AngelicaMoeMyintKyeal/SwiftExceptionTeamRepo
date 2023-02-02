@@ -10,7 +10,7 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var moc: NSManagedObjectContext
-    @EnvironmentObject var vm: ViewModel
+    @EnvironmentObject var VM: ViewModel
     
     @State private var isShowingPhaseTwo: Bool = false
 
@@ -18,12 +18,12 @@ struct ContentView: View {
         NavigationStack {
             ZStack {
                 Color.background.ignoresSafeArea()
-                if vm.selectedWords.count < 10 {
+                if VM.selectedWords.count < 10 {
                     PhaseOneMainView()
                 } else {
                     PhaseTwoMainView()
                         .onAppear {
-                            vm.selectedWords.shuffle()
+                            VM.selectedWords.shuffle()
                         }
                 }
             }

@@ -14,14 +14,14 @@ class ViewModel: ObservableObject {
     @Published var words: [Word] = []
     @Published var ideaArray: [Idea] = []
     
-    private var wordPool: [Word] = Word.exampleWords.shuffled()
+//    private var wordPool: [Word] = Word.exampleWords.shuffled()
     
     init() {
-        Task {
-            for word in wordPool {
-                await fetchDefinition(randomWord: word.word)
-            }
-        }
+//        Task {
+//            for word in wordPool {
+//                await fetchDefinition(randomWord: word.word)
+//            }
+//        }
     }
     
     // Get the index of the user
@@ -33,92 +33,43 @@ class ViewModel: ObservableObject {
         return index
     }
     
-    @MainActor
-    func fetchDefinition(randomWord: String) async {
-        guard let url = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\(randomWord)") else {
-            return
+//    @MainActor
+//    func fetchDefinition(randomWord: String) async {
+//        guard let url = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\(randomWord)") else {
+//            return
+//        }
+//
+//        do {
+//            let (data, _) = try await URLSession.shared.data(from: url)
+//            let decodedWords = try JSONDecoder().decode([Word].self, from: data)
+//            if decodedWords.count == 1 {
+//                self.words.append(contentsOf: decodedWords)
+//            } else {
+//                let firstWord = decodedWords[0]
+//                words.append(firstWord)
+//            }
+//        } catch {
+//            print("Catch block!")
+//            print(error.localizedDescription)
+//        }
+//    }
+}
+
+#if DEBUG
+// MARK: special code for canvas preview
+extension ViewModel {
+    static var preview: ViewModel {
+        let debugPreview = ViewModel()
+        
+        for _ in 0..<10 {
+            debugPreview.words.append(Word.preview)
         }
         
-        do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            let decodedWords = try JSONDecoder().decode([Word].self, from: data)
-            if decodedWords.count == 1 {
-                self.words.append(contentsOf: decodedWords)
-            } else {
-                let firstWord = decodedWords[0]
-                words.append(firstWord)
-            }
-        } catch {
-            print("Catch block!")
-            print(error.localizedDescription)
+        for _ in 0..<5 {
+            debugPreview.ideaArray.append(Idea.preview)
         }
+        
+        return debugPreview
     }
 }
-
-// MARK: special code for canvas debugging
-extension ViewModel {
-    var placeholderWords: [Word] {
-        var placeholders: [Word] = []
-        for i in 0..<10 {
-            placeholders.append(
-                Word(
-                    word: "Laziness \(i)",
-                    meanings: [
-                        Meaning(
-                            definitions: [
-                                Definition(definition: "The art of taking rest before getting tired. Because prevention is better than cure"),
-                                Definition(definition: "Me")
-                            ]
-                        ),
-                        Meaning(
-                            definitions: [
-                                Definition(definition: "If you see me, be worried"),
-                                Definition(definition: "If you also see me, run")
-                            ]
-                        )
-                    ]
-                )
-            )
-        }
-        return placeholders
-    }
-    
-    var placeholderIdeas: [Idea] {
-        var placeholders: [Idea] = []
-        for i in 0..<5 {
-            placeholders.append(
-                Idea(
-                    body: "Roasted Duck \(i)",
-                    parentWords: [
-                        "Louie \(i)",
-                        "Huey \(i)",
-                        "Dewey \(i)"
-                    ]
-                )
-            )
-        }
-        return placeholders
-    }
-    
-    enum canvasPreview {
-        case filledWords
-        case emptyWords
-        case filledSelectedWords
-        case fillIdeaArray
-    }
-    
-    convenience init(setPreviewWith previewType: canvasPreview) {
-        self.init()
-        switch previewType {
-        case .filledWords:
-            words = placeholderWords
-        case .emptyWords:
-            words = []
-        case .filledSelectedWords:
-            selectedWords = placeholderWords
-        case .fillIdeaArray:
-            ideaArray = placeholderIdeas
-        }
-    }
-}
-
+#endif

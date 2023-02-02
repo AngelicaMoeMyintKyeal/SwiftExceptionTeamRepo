@@ -80,6 +80,6 @@ struct PhaseTwoMainView: View {
 struct PhaseTwoMainView_Previews: PreviewProvider {
     static var previews: some View {
         PhaseTwoMainView()
-            .environmentObject(ViewModel(setPreviewWith: .filledSelectedWords))
+            .environmentObject(ViewModel.preview)
     }
 }
