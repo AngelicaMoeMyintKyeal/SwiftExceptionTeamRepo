@@ -19,7 +19,9 @@
 		88216BC2297841DA004615BB /* CompactWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88216BC1297841DA004615BB /* CompactWord.swift */; };
 		AA2985F229706EA200196733 /* IdeaAtCheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */; };
 		AA3100FF297ED8AD00955F55 /* PhaseThreeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3100FE297ED8AD00955F55 /* PhaseThreeMainView.swift */; };
+		AA3DA67929896CCA00FB7981 /* PhaseZeroMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3DA67829896CCA00FB7981 /* PhaseZeroMainView.swift */; };
 		AA4FA5F12971B3A0007A0D84 /* IdeaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4FA5F02971B3A0007A0D84 /* IdeaModel.swift */; };
+		AAB3C26B29897DCF004EE89E /* SavedIdea.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3C26A29897DCF004EE89E /* SavedIdea.swift */; };
 		AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9C296EA531001B8538 /* IdeaBankApp.swift */; };
 		AC493DA1296EA532001B8538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA0296EA532001B8538 /* Assets.xcassets */; };
 		AC493DA4296EA532001B8538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA3296EA532001B8538 /* Preview Assets.xcassets */; };
@@ -44,7 +46,9 @@
 		88216BC1297841DA004615BB /* CompactWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactWord.swift; sourceTree = "<group>"; };
 		AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaAtCheckoutView.swift; sourceTree = "<group>"; };
 		AA3100FE297ED8AD00955F55 /* PhaseThreeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseThreeMainView.swift; sourceTree = "<group>"; };
+		AA3DA67829896CCA00FB7981 /* PhaseZeroMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseZeroMainView.swift; sourceTree = "<group>"; };
 		AA4FA5F02971B3A0007A0D84 /* IdeaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaModel.swift; sourceTree = "<group>"; };
+		AAB3C26A29897DCF004EE89E /* SavedIdea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SavedIdea.swift; path = IdeaBank/Views/PhaseZero/SavedIdea.swift; sourceTree = SOURCE_ROOT; };
 		AC493D99296EA531001B8538 /* IdeaBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdeaBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC493D9C296EA531001B8538 /* IdeaBankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaBankApp.swift; sourceTree = "<group>"; };
 		AC493D9E296EA531001B8538 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 		4C43B0CF296F0C67003FE504 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AAB3C26929897D8B004EE89E /* PhaseZero */,
 				AC874E22298026B2003EA045 /* PhaseOne */,
 				AC874E23298026D9003EA045 /* PhaseTwo */,
 				AC874E24298026DF003EA045 /* PhaseThree */,
@@ -92,6 +97,23 @@
 				4C98BDE4297534780050519D /* ViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AAB3C26829897D27004EE89E /* Not Needed */ = {
+			isa = PBXGroup;
+			children = (
+				AC493D9E296EA531001B8538 /* ContentView.swift */,
+			);
+			path = "Not Needed";
+			sourceTree = "<group>";
+		};
+		AAB3C26929897D8B004EE89E /* PhaseZero */ = {
+			isa = PBXGroup;
+			children = (
+				AA3DA67829896CCA00FB7981 /* PhaseZeroMainView.swift */,
+				AAB3C26A29897DCF004EE89E /* SavedIdea.swift */,
+			);
+			path = PhaseZero;
 			sourceTree = "<group>";
 		};
 		AC493D90296EA531001B8538 = {
@@ -115,7 +137,7 @@
 			children = (
 				4CDF513929784A5700A71EE1 /* Info.plist */,
 				AC493D9C296EA531001B8538 /* IdeaBankApp.swift */,
-				AC493D9E296EA531001B8538 /* ContentView.swift */,
+				AAB3C26829897D27004EE89E /* Not Needed */,
 				ACD47AE22976DD6800B5068B /* Components */,
 				4C98BDE3297534660050519D /* ViewModel */,
 				4C43B0CF296F0C67003FE504 /* Views */,
@@ -277,6 +299,7 @@
 				4CC36A472975AC6500269953 /* PhaseOneMainView.swift in Sources */,
 				4C98BDE5297534780050519D /* ViewModel.swift in Sources */,
 				4C43B0CE296F0BEE003FE504 /* WordModel.swift in Sources */,
+				AA3DA67929896CCA00FB7981 /* PhaseZeroMainView.swift in Sources */,
 				ACCBEA302976AD0300D4A72C /* (null) in Sources */,
 				4CC36A492975AE3F00269953 /* GridView.swift in Sources */,
 				AC874E2A29802924003EA045 /* PersistenceManager.swift in Sources */,
@@ -290,6 +313,7 @@
 				AA3100FF297ED8AD00955F55 /* PhaseThreeMainView.swift in Sources */,
 				4C98BDE7297538370050519D /* StackCardView.swift in Sources */,
 				88216BB629772B49004615BB /* ThinContainer.swift in Sources */,
+				AAB3C26B29897DCF004EE89E /* SavedIdea.swift in Sources */,
 				88216BC2297841DA004615BB /* CompactWord.swift in Sources */,
 				88216BBE29774447004615BB /* Card.swift in Sources */,
 				AA2985F229706EA200196733 /* IdeaAtCheckoutView.swift in Sources */,
@@ -421,7 +445,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IdeaBank/Preview Content\"";
-				DEVELOPMENT_TEAM = U77Q6FJLJF;
+				DEVELOPMENT_TEAM = GK876HMNDW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IdeaBank/Info.plist;
@@ -451,7 +475,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IdeaBank/Preview Content\"";
-				DEVELOPMENT_TEAM = U77Q6FJLJF;
+				DEVELOPMENT_TEAM = GK876HMNDW;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IdeaBank/Info.plist;

@@ -13,6 +13,7 @@ class ViewModel: ObservableObject {
     @Published var selectedWords: [Word] = []
 //    @Published var words: [Word] = Word.exampleWords.shuffled()
     @Published var ideaArray: [Idea] = []
+    @Published var savedIdeas: [Idea] = []
     
     private var wordCounter: Int = Word.exampleWords.count - 1
     
