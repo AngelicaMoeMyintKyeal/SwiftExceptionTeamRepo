@@ -11,6 +11,7 @@ struct PhaseOneMainView: View {
     @EnvironmentObject var vm: ViewModel
     
     var body: some View {
+
         ZStack {
             
             Color.background.ignoresSafeArea()
@@ -38,6 +39,7 @@ struct PhaseOneMainView: View {
                                 StackCardView(word: word)
                                     .frame(width: 320, height: 300)
                             }
+
                         }
                     } else {
                         ProgressView()
@@ -71,9 +73,8 @@ struct PhaseOneMainView: View {
 struct PhaseOneMainView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            Color.background.ignoresSafeArea()
-            PhaseOneMainView()
-                .environmentObject(ViewModel(setPreviewWith: .filledWords))
+            ContentView()
+                .environmentObject(ViewModel())
         }
     }
 }
