@@ -17,7 +17,7 @@ struct IdeaBankApp: App {
             ContentView()
                 .environmentObject(VM)
                 .task {
-                    for wordInPool in wordPool.shuffled() {
+                    for wordInPool in Word.pool.shuffled().prefix(10) {
                         do {
                             let newWord = try await WebService.fetchDefinition(for: wordInPool)
                             debugPrint("Fetched Word: \(newWord.word) | Definition: \(newWord.definition)")
@@ -31,7 +31,7 @@ struct IdeaBankApp: App {
                                     debugPrint("Error with the request")
                                 }
                             } else {
-                                print(error.localizedDescription)
+                                debugPrint(error.localizedDescription)
                             }
                         }
                     }

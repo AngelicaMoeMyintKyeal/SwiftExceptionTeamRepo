@@ -27,11 +27,18 @@ struct StackCardView: View {
             
             ZStack {
                 Card(word: word)
-                    .frame(width: size.width - topOffset, height: (size.height / 1.5 ))
+                    .frame(
+                        width: size.width - topOffset,
+                        height: (size.height / 1.5 )
+                    )
                     .cornerRadius(15)
                     .offset(y: -topOffset)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .frame(
+                maxWidth: .infinity,
+                maxHeight: .infinity,
+                alignment: .center
+            )
         }
         .offset(x: offset)
         .rotationEffect(.init(degrees: getRotation(angle: 8)))
@@ -78,7 +85,6 @@ struct StackCardView: View {
         return rotation
     }
     
-    
     func endSwipeActions() {
         withAnimation(.none) {
             endSwipe = true
@@ -97,7 +103,7 @@ struct StackCardView: View {
     
     func leftSwipe() {
         // Do stuff
-        print("Swiped left")
+        debugPrint("Swiped left")
     }
     
     func rightSwipe() {
@@ -107,7 +113,7 @@ struct StackCardView: View {
         } else {
             // What to do when you hit 10 words
         }
-        print("Swiped right")
+        debugPrint("Swiped right")
     }
 }
 
