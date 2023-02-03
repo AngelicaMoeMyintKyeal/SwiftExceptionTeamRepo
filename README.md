@@ -84,6 +84,7 @@ With our application, the user can swipe left or right to choose or reject the w
   - Implement core data to store the definitions of the words given from the API.
   
 - Week Four (30/January/2023 - 03/February/2023)
+  - Release additional phase screen
   - Codes clean up and refactoring
   - Fortify the project's software architecture
   - Do some final codes changes
@@ -101,4 +102,4 @@ With our application, the user can swipe left or right to choose or reject the w
 
 ## Project Status
 
-- Work in Progress
+- Complete
