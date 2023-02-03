@@ -103,7 +103,7 @@ struct StackCardView: View {
     
     func leftSwipe() {
         // Do stuff
-        debugPrint("Swiped left")
+        print("Swiped left")
     }
     
     func rightSwipe() {
@@ -113,7 +113,7 @@ struct StackCardView: View {
         } else {
             // What to do when you hit 10 words
         }
-        debugPrint("Swiped right")
+        print("Swiped right")
     }
 }
 

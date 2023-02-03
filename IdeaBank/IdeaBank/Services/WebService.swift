@@ -31,6 +31,7 @@ struct WebService {
         let definitions = try JSONDecoder().decode([WordResponse].self, from: data)
         return Word(
             word: word,
-            definition: definitions.first!.meanings.first!.definitions.first!.definition)
+            definition: definitions.first!.meanings.first!.definitions.first!.definition
+        )
     }
 }

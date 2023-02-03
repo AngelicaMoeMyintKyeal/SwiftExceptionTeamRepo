@@ -20,18 +20,18 @@ struct IdeaBankApp: App {
                     for wordInPool in Word.pool.shuffled().prefix(10) {
                         do {
                             let newWord = try await WebService.fetchDefinition(for: wordInPool)
-                            debugPrint("Fetched Word: \(newWord.word) | Definition: \(newWord.definition)")
+                            print("Fetched Word: \(newWord.word) | Definition: \(newWord.definition)")
                             VM.words.append(newWord)
                         } catch {
                             if let error = error as? NetworkError {
                                 switch error {
                                 case .badUrl:
-                                    debugPrint("Error with the url")
+                                    print("Error with the url")
                                 case .invalidRequest:
-                                    debugPrint("Error with the request")
+                                    print("Error with the request")
                                 }
                             } else {
-                                debugPrint(error.localizedDescription)
+                                print(error.localizedDescription)
                             }
                         }
                     }

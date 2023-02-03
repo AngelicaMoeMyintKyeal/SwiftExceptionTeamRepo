@@ -7,13 +7,10 @@
 
 import SwiftUI
 
-class ViewModel: ObservableObject {
+final class ViewModel: ObservableObject {
     @Published var selectedWords: [Word] = []
     @Published var words: [Word] = []
-    @Published var ideaArray: [Idea] = []
-    
-    init() {
-    }
+    @Published var ideas: [Idea] = []
     
     // Get the index of the user
     func getIndex(word: Word) -> Int {
@@ -36,7 +33,7 @@ extension ViewModel {
         }
         
         for _ in 0..<5 {
-            debugPreview.ideaArray.append(Idea.preview)
+            debugPreview.ideas.append(Idea.preview)
         }
         
         return debugPreview

@@ -21,7 +21,7 @@ struct PhaseThreeMainView: View {
                 )
                 
                 ScrollView {
-                    ForEach(vm.ideaArray) { x in
+                    ForEach(vm.ideas) { x in
                         IdeaAtCheckoutView(usedWords: x.parentWords, title: "Idea", description: x.body, isToggled: false)
                     }
                 }
