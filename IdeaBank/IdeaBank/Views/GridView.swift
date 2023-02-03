@@ -33,7 +33,7 @@ struct GridView_Previews: PreviewProvider {
         ZStack {
             Color.background.ignoresSafeArea()
             GridView()
-                .environmentObject(ViewModel())
+                .environmentObject(ViewModel(setPreviewWith: .filledSelectedWords))
         }
     }
 }

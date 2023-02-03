@@ -18,10 +18,10 @@ struct CompactWord: View {
                 Spacer()
             }
         }
-        .padding(16)
+        .padding(15)
         .frame(height: 50)
         .background(.thinMaterial)
-        .cornerRadius(8)
+        .cornerRadius(10)
     }
 }
 
@@ -29,7 +29,7 @@ struct CompactWord_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.background.ignoresSafeArea()
-            CompactWord(word: "Potato")
+            CompactWord(word: "Pizza")
         }
     }
 }

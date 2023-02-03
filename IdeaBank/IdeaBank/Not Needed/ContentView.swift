@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) private var moc: NSManagedObjectContext
     @EnvironmentObject var vm: ViewModel
     
     @State private var isShowingPhaseTwo: Bool = false
@@ -30,6 +32,5 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(ViewModel())
-//            .environmentObject(WordDefinitionSearchManager())
     }
 }

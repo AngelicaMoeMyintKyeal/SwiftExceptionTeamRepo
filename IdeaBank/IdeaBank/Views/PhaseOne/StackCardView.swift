@@ -3,19 +3,16 @@
 //  IdeaBank
 //
 //  Created by シェイミ on 16/01/2023.
-//
 
 import SwiftUI
 
 struct StackCardView: View {
     @EnvironmentObject var vm: ViewModel
-    
     var word: Word
     
     // Gesture properties
     @State private var offset: CGFloat = 0
     @GestureState var isDragging: Bool = false
-    
     @State private var endSwipe: Bool = false
     
     var body: some View {
@@ -89,9 +86,9 @@ struct StackCardView: View {
         
         // The delay time is based on the animation time
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            if let _ = vm.words.first {
+            if let _ = vm.displayingWords.first {
                 let _ = withAnimation {
-                    vm.words.removeFirst()
+                    vm.displayingWords.removeFirst()
                 }
             }
         }
@@ -100,6 +97,7 @@ struct StackCardView: View {
     func leftSwipe() {
         // Do stuff
         print("Swiped left")
+        vm.addToDisplayingWords()
     }
     
     func rightSwipe() {
@@ -111,6 +109,7 @@ struct StackCardView: View {
 
         }
         print("Swiped right")
+        vm.addToDisplayingWords()
     }
 }
 

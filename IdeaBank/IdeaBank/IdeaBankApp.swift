@@ -6,17 +6,18 @@
 //
 
 import SwiftUI
+import CoreData
 
 @main
 struct IdeaBankApp: App {
+    let persistenceManager = PersistenceManager.shared
     @StateObject var viewModel = ViewModel()
-    @StateObject var wordDefinitionManager = WordDefinitionSearchManager()
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            PhaseZeroMainView()
                 .environmentObject(viewModel)
-                .environmentObject(wordDefinitionManager)
+                .environment(\.managedObjectContext,persistenceManager.persistenceContainer.viewContext)
         }
     }
 }
