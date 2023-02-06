@@ -13,7 +13,6 @@ struct PhaseTwoMainView: View {
     
     var body: some View {
         NavigationStack {
-            
             ZStack {
                 Color.background.ignoresSafeArea()
                 VStack {
@@ -39,8 +38,15 @@ struct PhaseTwoMainView: View {
                             .padding(.trailing, 4.0)
                             .keyboardType(.default)
                         Button {
-                            vm.ideaArray.append(Idea(body: textFieldInput, parentWords: [vm.selectedWords[0].word, vm.selectedWords[1].word, vm.selectedWords[2].word]))
-                            
+                            vm.ideaArray.append(
+                                Idea(body: textFieldInput,
+                                     parentWords: [
+                                        vm.selectedWords[0].word,
+                                        vm.selectedWords[1].word,
+                                        vm.selectedWords[2].word
+                                     ]
+                                    )
+                            )
                             print(vm.ideaArray)
                             print("\n")
                             textFieldInput = ""
@@ -48,7 +54,6 @@ struct PhaseTwoMainView: View {
                         } label: {
                             VStack(alignment: .center) {
                                 Image(systemName: "square.and.arrow.down")
-                                    
                                     .padding(10.0)
                             }
                         }
@@ -80,6 +85,6 @@ struct PhaseTwoMainView: View {
 struct PhaseTwoMainView_Previews: PreviewProvider {
     static var previews: some View {
         PhaseTwoMainView()
-            .environmentObject(ViewModel(setPreviewWith: .filledSelectedWords))
+            .environmentObject(ViewModel.preview)
     }
 }

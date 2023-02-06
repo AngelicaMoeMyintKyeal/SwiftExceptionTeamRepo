@@ -45,111 +45,27 @@ class ViewModel: ObservableObject {
         
         return index
     }
-    
-//    NOTE: We no longer require the API calls as they are not really necessary
-    
-//    private var words: [Word] = Word.exampleWords.shuffled()
-//
-//    init() {
-//        Task {
-//            for word in wordPool {
-//                await fetchDefinition(randomWord: word.word)
-//            }
-//        }
-//    }
-//
-//    @MainActor
-//    func fetchDefinition(randomWord: String) async {
-//        guard let url = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\(randomWord)") else {
-//            return
-//        }
-//
-//        do {
-//            let (data, _) = try await URLSession.shared.data(from: url)
-//            let decodedWords = try JSONDecoder().decode([Word].self, from: data)
-//            if decodedWords.count == 1 {
-//                self.words.append(contentsOf: decodedWords)
-//            } else {
-//                let firstWord = decodedWords[0]
-//                words.append(firstWord)
-//            }
-//            print("API Called")
-//        } catch {
-//            print("Catch block!")
-//            if words.isEmpty {
-//                for word in wordPool {
-//                    words.append(word)
-//                }
-//            }
-//            print(error.localizedDescription)
-//        }
-//    }
 }
 
-// MARK: special code for canvas debugging
+#if DEBUG
+// MARK: special code for canvas preview
 extension ViewModel {
-    var placeholderWords: [Word] {
-        var placeholders: [Word] = []
-        for i in 0..<10 {
-            placeholders.append(
-                Word(
-                    word: "Laziness \(i)",
-                    meanings: [
-                        Meaning(
-                            definitions: [
-                                Definition(definition: "The art of taking rest before getting tired. Because prevention is better than cure"),
-                                Definition(definition: "Me")
-                            ]
-                        ),
-                        Meaning(
-                            definitions: [
-                                Definition(definition: "If you see me, be worried"),
-                                Definition(definition: "If you also see me, run")
-                            ]
-                        )
-                    ]
-                )
-            )
+    static var preview: ViewModel {
+        let debugPreview = ViewModel()
+        
+        for _ in 0..<10 {
+            debugPreview.fetchedWords.append(Word.preview)
         }
-        return placeholders
-    }
-    
-    var placeholderIdeas: [Idea] {
-        var placeholders: [Idea] = []
-        for i in 0..<5 {
-            placeholders.append(
-                Idea(
-                    body: "Roasted Duck \(i)",
-                    parentWords: [
-                        "Louie \(i)",
-                        "Huey \(i)",
-                        "Dewey \(i)"
-                    ]
-                )
-            )
+        
+        for _ in 0..<3 {
+            debugPreview.selectedWords.append(Word.preview)
         }
-        return placeholders
-    }
-    
-    enum canvasPreview {
-        case filledWords
-        case emptyWords
-        case filledSelectedWords
-        case fillIdeaArray
-    }
-    
-    convenience init(setPreviewWith previewType: canvasPreview) {
-        self.init()
-        switch previewType {
-        case .filledWords:
-            fetchedWords = placeholderWords
-        case .emptyWords:
-            fetchedWords = []
-        case .filledSelectedWords:
-            selectedWords = placeholderWords
-        case .fillIdeaArray:
-            ideaArray = placeholderIdeas
+        
+        for _ in 0..<5 {
+            debugPreview.ideaArray.append(Idea.preview)
         }
+        
+        return debugPreview
     }
 }
-
+#endif

@@ -75,7 +75,7 @@ struct PhaseOneMainView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             ContentView()
-                .environmentObject(ViewModel())
+                .environmentObject(ViewModel.preview)
         }
     }
 }
