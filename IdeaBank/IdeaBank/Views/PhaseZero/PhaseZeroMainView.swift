@@ -18,7 +18,6 @@ struct PhaseZeroMainView: View {
                 } else {
                     IdeaStackView()
                 }
-                
                 VStack {
                     Spacer()
                     VStack {

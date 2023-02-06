@@ -9,11 +9,15 @@ import SwiftUI
 
 @main
 struct IdeaBankApp: App {
-    @StateObject private var ersistenceManager = PersistenceManager.shared
+    let persistenceManager = PersistenceManager.shared
     @StateObject var VM = ViewModel()
     
     var body: some Scene {
         WindowGroup {
+            PhaseZeroMainView()
+                .environmentObject(VM)
+                .environment(\.managedObjectContext,persistenceManager.persistenceManager.viewContext)
+            /* Old code that uses the WebService kept for learning purposes
             ContentView()
                 .environmentObject(VM)
                 .task {
@@ -36,6 +40,7 @@ struct IdeaBankApp: App {
                         }
                     }
                 }
+             */
         }
     }
 }
