@@ -14,22 +14,33 @@ struct PhaseThreeMainView: View {
         ZStack {
             Color.background.ignoresSafeArea()
             VStack {
-                
                 Header(
                     title: "Confirm",
                     description: "These are all the ideas you generated, which ones do you like the most?"
                 )
-                
                 ScrollView {
-                    ForEach(vm.ideas) { x in
-                        IdeaAtCheckoutView(usedWords: x.parentWords, title: "Idea", description: x.body, isToggled: false)
+                    ForEach(vm.ideas) { idea in
+                        IdeaAtCheckoutView(
+                            usedWords: idea.parentWords,
+                            title: "Idea",
+                            description: idea.body,
+                            isToggled: false
+                        )
                     }
                 }
                 .scrollIndicators(.hidden)
                 .padding(.top)
                 .frame(maxWidth: .infinity)
-                
-                
+            }
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        vm.savedIdeas.append(contentsOf: vm.ideas)
+                        vm.ideas = []
+                    } label: {
+                        Text("Save")
+                    }
+                }
             }
         }
     }

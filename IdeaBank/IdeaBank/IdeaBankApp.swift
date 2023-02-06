@@ -16,7 +16,7 @@ struct IdeaBankApp: App {
         WindowGroup {
             PhaseZeroMainView()
                 .environmentObject(VM)
-                .environment(\.managedObjectContext,persistenceManager.persistenceManager.viewContext)
+                .environment(\.managedObjectContext,persistenceManager.persistenceContainer.viewContext)
             /* Old code that uses the WebService kept for learning purposes
             ContentView()
                 .environmentObject(VM)
