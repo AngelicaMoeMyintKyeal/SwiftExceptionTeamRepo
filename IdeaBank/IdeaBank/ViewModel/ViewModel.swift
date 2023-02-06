@@ -11,6 +11,7 @@ final class ViewModel: ObservableObject {
     @Published var selectedWords: [Word] = []
     @Published var words: [Word] = []
     @Published var ideas: [Idea] = []
+    @Published var savedIdeas: [Idea] = []
     
     // Get the index of the user
     func getIndex(word: Word) -> Int {

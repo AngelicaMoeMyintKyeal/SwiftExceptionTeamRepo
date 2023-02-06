@@ -18,6 +18,9 @@
 		88216BC2297841DA004615BB /* CompactWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88216BC1297841DA004615BB /* CompactWord.swift */; };
 		88715EAE2988051300AD0AA9 /* WordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88715EAD2988051300AD0AA9 /* WordResponse.swift */; };
 		88715EB0298962FD00AD0AA9 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88715EAF298962FD00AD0AA9 /* WebService.swift */; };
+		889793CD299112B100F31F5F /* PhaseZeroMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889793CC299112B100F31F5F /* PhaseZeroMainView.swift */; };
+		889793CF2991134000F31F5F /* IdeaEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889793CE2991134000F31F5F /* IdeaEmptyView.swift */; };
+		889793D12991135E00F31F5F /* IdeaStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889793D02991135E00F31F5F /* IdeaStackView.swift */; };
 		AA2985F229706EA200196733 /* IdeaAtCheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */; };
 		AA3100FF297ED8AD00955F55 /* PhaseThreeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3100FE297ED8AD00955F55 /* PhaseThreeMainView.swift */; };
 		AA4FA5F12971B3A0007A0D84 /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4FA5F02971B3A0007A0D84 /* Idea.swift */; };
@@ -44,6 +47,9 @@
 		88216BC1297841DA004615BB /* CompactWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactWord.swift; sourceTree = "<group>"; };
 		88715EAD2988051300AD0AA9 /* WordResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordResponse.swift; sourceTree = "<group>"; };
 		88715EAF298962FD00AD0AA9 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		889793CC299112B100F31F5F /* PhaseZeroMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseZeroMainView.swift; sourceTree = "<group>"; };
+		889793CE2991134000F31F5F /* IdeaEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaEmptyView.swift; sourceTree = "<group>"; };
+		889793D02991135E00F31F5F /* IdeaStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaStackView.swift; sourceTree = "<group>"; };
 		AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaAtCheckoutView.swift; sourceTree = "<group>"; };
 		AA3100FE297ED8AD00955F55 /* PhaseThreeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseThreeMainView.swift; sourceTree = "<group>"; };
 		AA4FA5F02971B3A0007A0D84 /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
@@ -81,6 +87,7 @@
 		4C43B0CF296F0C67003FE504 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				889793CB2991129D00F31F5F /* PhaseZero */,
 				AC874E22298026B2003EA045 /* PhaseOne */,
 				AC874E23298026D9003EA045 /* PhaseTwo */,
 				AC874E24298026DF003EA045 /* PhaseThree */,
@@ -103,6 +110,16 @@
 				88715EAF298962FD00AD0AA9 /* WebService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		889793CB2991129D00F31F5F /* PhaseZero */ = {
+			isa = PBXGroup;
+			children = (
+				889793CC299112B100F31F5F /* PhaseZeroMainView.swift */,
+				889793CE2991134000F31F5F /* IdeaEmptyView.swift */,
+				889793D02991135E00F31F5F /* IdeaStackView.swift */,
+			);
+			path = PhaseZero;
 			sourceTree = "<group>";
 		};
 		AC493D90296EA531001B8538 = {
@@ -296,6 +313,7 @@
 				88715EB0298962FD00AD0AA9 /* WebService.swift in Sources */,
 				AC874E27298027F0003EA045 /* WordDatabase.xcdatamodeld in Sources */,
 				AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */,
+				889793D12991135E00F31F5F /* IdeaStackView.swift in Sources */,
 				88715EAE2988051300AD0AA9 /* WordResponse.swift in Sources */,
 				88216BBA29772F00004615BB /* Header.swift in Sources */,
 				AC870948296F20EC00E5EA23 /* PhaseTwoMainView.swift in Sources */,
@@ -304,7 +322,9 @@
 				4C98BDE7297538370050519D /* StackCardView.swift in Sources */,
 				88216BC2297841DA004615BB /* CompactWord.swift in Sources */,
 				88216BBE29774447004615BB /* Card.swift in Sources */,
+				889793CD299112B100F31F5F /* PhaseZeroMainView.swift in Sources */,
 				AA2985F229706EA200196733 /* IdeaAtCheckoutView.swift in Sources */,
+				889793CF2991134000F31F5F /* IdeaEmptyView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
