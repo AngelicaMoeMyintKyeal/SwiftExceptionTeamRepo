@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct IdeaBankApp: App {
-    @StateObject private var persisenceManager = PersisenceManager.shared
+    @StateObject private var ersistenceManager = PersistenceManager.shared
     @StateObject var VM = ViewModel()
     
     var body: some Scene {
