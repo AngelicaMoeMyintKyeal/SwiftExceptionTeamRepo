@@ -10,26 +10,17 @@ import SwiftUI
 struct Card: View {
     var word: Word
     var body: some View {
-        ZStack {
-            HStack {
-                VStack(alignment: .leading) {
-                    Text(word.word)
-                        .font(.title)
-                        .fontWeight(.bold)
-                    Text(word.definition)
-                    Spacer()
-                }
-                Spacer()
-            }
-            .padding(24)
-            .background(.thinMaterial)
+        HStack {
+            Spacer()
+            Text(word.word)
+                .font(.title)
+                .fontWeight(.bold)
+            Spacer()
         }
-        .overlay(
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(.secondary, lineWidth: 4)
-                .padding(-2)
-                .opacity(0.5)
-        )
+        .padding(24)
+        .frame(height: 180)
+        .background(.thinMaterial)
+        .cornerRadius(20)
     }
 }
 
