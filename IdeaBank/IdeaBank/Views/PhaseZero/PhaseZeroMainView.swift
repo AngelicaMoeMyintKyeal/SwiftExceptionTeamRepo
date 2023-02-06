@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct PhaseZeroMainView: View {
-    
     @EnvironmentObject var vm: ViewModel
     
     var body: some View {
         NavigationStack {
             ZStack {
+                Color.background.ignoresSafeArea()
                 if vm.savedIdeas.count == 0 {
                     VStack {
                         Spacer()

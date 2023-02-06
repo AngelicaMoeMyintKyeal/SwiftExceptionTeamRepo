@@ -16,11 +16,18 @@ struct Idea: Identifiable, Codable {
 #if DEBUG
 // MARK: special code for canvas preview
 extension Idea {
-    static var preview: Idea {
-        Idea(
-            body: "Roasted Duck",
-            parentWords: ["Louie", "Huey", "Dewey"]
-        )
+    static func preview(withIndex: Int = -1) -> Idea {
+        if withIndex > -1 {
+            return Idea(
+                body: "Roasted Duck \(withIndex)",
+                parentWords: ["Louie \(withIndex)", "Huey \(withIndex)", "Dewey \(withIndex)"]
+            )
+        } else {
+            return Idea(
+                body: "Roasted Duck",
+                parentWords: ["Louie", "Huey", "Dewey"]
+            )
+        }
     }
 }
 #endif

@@ -11,11 +11,8 @@ struct PhaseOneMainView: View {
     @EnvironmentObject var vm: ViewModel
     
     var body: some View {
-
         ZStack {
-            
             Color.background.ignoresSafeArea()
-            
             VStack {
                 Spacer()
                 Header(
@@ -40,7 +37,6 @@ struct PhaseOneMainView: View {
                                     .frame(width: 320, height: 300)
                                     .shadow(color: .black.opacity(0.4),radius: 3, x: 2)
                             }
-
                         }
                     } else {
                         ProgressView()
@@ -57,17 +53,12 @@ struct PhaseOneMainView: View {
                         Image(systemName: "trash")
                     }
                 }
-                
                 ToolbarItem {
                     NavigationLink("Next", destination: PhaseTwoMainView())
                     .disabled(vm.selectedWords.count < 10)
                 }
-                
             }
-            
         }
-        
-        
     }
 }
 
@@ -75,7 +66,7 @@ struct PhaseOneMainView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             ContentView()
-                .environmentObject(ViewModel.preview)
+                .environmentObject(ViewModel())
         }
     }
 }

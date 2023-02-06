@@ -53,16 +53,16 @@ extension ViewModel {
     static var preview: ViewModel {
         let debugPreview = ViewModel()
         
-        for _ in 0..<10 {
-            debugPreview.fetchedWords.append(Word.preview)
+        for i in 0..<10 {
+            debugPreview.fetchedWords.append(Word.preview(withIndex: i))
         }
         
-        for _ in 0..<3 {
-            debugPreview.selectedWords.append(Word.preview)
+        for i in 0..<3 {
+            debugPreview.selectedWords.append(Word.preview(withIndex: i))
         }
         
-        for _ in 0..<5 {
-            debugPreview.ideaArray.append(Idea.preview)
+        for i in 0..<5 {
+            debugPreview.ideaArray.append(Idea.preview(withIndex: i))
         }
         
         return debugPreview

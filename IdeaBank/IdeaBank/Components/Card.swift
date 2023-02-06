@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct Card: View {
-    @EnvironmentObject var vm: ViewModel
     var word: String
     
     var body: some View {
@@ -32,7 +31,6 @@ struct Card_Previews: PreviewProvider {
         ZStack {
             Color.background.ignoresSafeArea()
             Card(word: "Apple")
-            .environmentObject(ViewModel())
         }
     }
 }
