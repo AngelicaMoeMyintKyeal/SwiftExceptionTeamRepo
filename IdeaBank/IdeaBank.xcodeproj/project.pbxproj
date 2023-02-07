@@ -103,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				AC493D9E296EA531001B8538 /* ContentView.swift */,
+				88216BB529772B49004615BB /* ThinContainer.swift */,
 			);
 			path = "Not Needed";
 			sourceTree = "<group>";
@@ -197,7 +198,6 @@
 			children = (
 				88216BC1297841DA004615BB /* CompactWord.swift */,
 				88216BBD29774447004615BB /* Card.swift */,
-				88216BB529772B49004615BB /* ThinContainer.swift */,
 				88216BB929772F00004615BB /* Header.swift */,
 				88216BBF297837AA004615BB /* ColorExtension.swift */,
 			);

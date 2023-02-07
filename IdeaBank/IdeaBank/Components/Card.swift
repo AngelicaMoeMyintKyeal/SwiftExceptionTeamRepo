@@ -23,7 +23,6 @@ struct Card: View {
             .background(.thinMaterial)
             .cornerRadius(20)
     }
-    
 }
 
 struct Card_Previews: PreviewProvider {
