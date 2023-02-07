@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PhaseTwoMainView: View {
-    @EnvironmentObject var vm: ViewModel
+    @EnvironmentObject var VM: ViewModel
     @State private var textFieldInput: String = ""
     
     var body: some View {
@@ -25,7 +25,7 @@ struct PhaseTwoMainView: View {
                     VStack {
 //                        var shuffledSelectedWords = vm.selectedWords
                         ForEach(0..<3, id:\.self) { index in
-                            CompactWord(word: vm.selectedWords[index].word)
+                            CompactWord(word: VM.selectedWords[index].word)
                         }
                     }
                     .padding(.horizontal)
@@ -39,12 +39,12 @@ struct PhaseTwoMainView: View {
                             .padding(.trailing, 4.0)
                             .keyboardType(.default)
                         Button {
-                            vm.ideas.append(Idea(body: textFieldInput, parentWords: [vm.selectedWords[0].word, vm.selectedWords[1].word, vm.selectedWords[2].word]))
+                            VM.ideas.append(Idea(body: textFieldInput, parentWords: [VM.selectedWords[0].word, VM.selectedWords[1].word, VM.selectedWords[2].word]))
                             
-                            print(vm.ideas)
+                            print(VM.ideas)
                             print("\n")
                             textFieldInput = ""
-                            vm.selectedWords.shuffle()
+                            VM.selectedWords.shuffle()
                         } label: {
                             VStack(alignment: .center) {
                                 Image(systemName: "square.and.arrow.down")
@@ -55,7 +55,7 @@ struct PhaseTwoMainView: View {
                         .background(.thinMaterial)
                         .clipShape(Circle())
                         Button {
-                            vm.selectedWords.shuffle()
+                            VM.selectedWords.shuffle()
                         } label: {
                             VStack(alignment: .center) {
                                 Image(systemName: "shuffle")

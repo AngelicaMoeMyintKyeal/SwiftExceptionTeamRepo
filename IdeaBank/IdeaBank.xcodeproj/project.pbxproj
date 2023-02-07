@@ -122,12 +122,12 @@
 			path = PhaseZero;
 			sourceTree = "<group>";
 		};
-		889793D2299119BF00F31F5F /* Unused */ = {
+		889793D2299119BF00F31F5F /* Not Needed */ = {
 			isa = PBXGroup;
 			children = (
 				AC493D9E296EA531001B8538 /* ContentView.swift */,
 			);
-			path = Unused;
+			path = "Not Needed";
 			sourceTree = "<group>";
 		};
 		AC493D90296EA531001B8538 = {
@@ -151,7 +151,7 @@
 			children = (
 				4CDF513929784A5700A71EE1 /* Info.plist */,
 				AC493D9C296EA531001B8538 /* IdeaBankApp.swift */,
-				889793D2299119BF00F31F5F /* Unused */,
+				889793D2299119BF00F31F5F /* Not Needed */,
 				ACD47AE22976DD6800B5068B /* Components */,
 				4C98BDE3297534660050519D /* ViewModel */,
 				4C43B0CF296F0C67003FE504 /* Views */,

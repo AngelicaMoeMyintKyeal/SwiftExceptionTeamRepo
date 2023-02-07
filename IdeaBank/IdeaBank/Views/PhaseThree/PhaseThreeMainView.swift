@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PhaseThreeMainView: View {
-    @EnvironmentObject var vm: ViewModel
+    @EnvironmentObject var VM: ViewModel
     
     var body: some View {
         ZStack {
@@ -19,7 +19,7 @@ struct PhaseThreeMainView: View {
                     description: "These are all the ideas you generated, which ones do you like the most?"
                 )
                 ScrollView {
-                    ForEach(vm.ideas) { idea in
+                    ForEach(VM.ideas) { idea in
                         IdeaAtCheckoutView(
                             usedWords: idea.parentWords,
                             title: "Idea",
@@ -35,8 +35,8 @@ struct PhaseThreeMainView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
-                        vm.savedIdeas.append(contentsOf: vm.ideas)
-                        vm.ideas = []
+                        VM.savedIdeas.append(contentsOf: VM.ideas)
+                        VM.ideas = []
                     } label: {
                         Text("Save")
                     }
