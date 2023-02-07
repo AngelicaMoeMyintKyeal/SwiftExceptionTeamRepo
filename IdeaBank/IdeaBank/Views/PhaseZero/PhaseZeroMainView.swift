@@ -9,15 +9,12 @@ import SwiftUI
 
 struct PhaseZeroMainView: View {
     @EnvironmentObject var vm: ViewModel
-    
     @FetchRequest(sortDescriptors: []) var storedIdeas: FetchedResults<StoredIdea>
     
     var body: some View {
         NavigationStack {
             ZStack {
-                
                 if storedIdeas.count == 0 {
-
                     VStack {
                         Spacer()
                         Spacer()
@@ -35,7 +32,14 @@ struct PhaseZeroMainView: View {
                 } else {
                     ScrollView {
                         ForEach(storedIdeas) { idea in
-                            SavedIdea(usedWords: [idea.parentWordOne ?? "boh", idea.parentWordTwo ?? "boh2", idea.parentWordThree ?? "boh3"], description: idea.body ?? "a body")
+                            SavedIdea(
+                                usedWords:[
+                                    idea.parentWordOne ?? "boh",
+                                    idea.parentWordTwo ?? "boh2",
+                                    idea.parentWordThree ?? "boh3"
+                                ],
+                                description: idea.body ?? "a body"
+                            )
                         }
                         Spacer(minLength: 120)
                     }
@@ -65,9 +69,7 @@ struct PhaseZeroMainView: View {
                     .background(.thinMaterial)
                 }
             }
-
             .navigationTitle("Ideas")
-
         }
     }
 }
