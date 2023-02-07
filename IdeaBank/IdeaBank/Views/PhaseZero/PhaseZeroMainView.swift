@@ -8,15 +8,13 @@
 import SwiftUI
 
 struct PhaseZeroMainView: View {
-    
     @EnvironmentObject var vm: ViewModel
     
     var body: some View {
         NavigationStack {
             ZStack {
-                
+                Color.background.ignoresSafeArea()
                 if vm.savedIdeas.count == 0 {
-                    
                     VStack {
                         Spacer()
                         Spacer()
@@ -31,22 +29,16 @@ struct PhaseZeroMainView: View {
                         Spacer()
                         Spacer()
                     }
-                    
                 } else {
                     ScrollView {
                         ForEach(vm.savedIdeas) { idea in
                             SavedIdea(usedWords: idea.parentWords, description: idea.body)
                         }
-                        
                         Spacer(minLength: 120)
                     }
-                    
                 }
-                
                 VStack {
-                    
                     Spacer()
-                    
                     VStack {
                         NavigationLink {
                             PhaseOneMainView()
@@ -62,21 +54,15 @@ struct PhaseZeroMainView: View {
                             .background(.purple)
                             .cornerRadius(20)
                             .padding()
-                            
                         }
                         .simultaneousGesture(TapGesture().onEnded{
                             vm.selectedWords = []
                         })
                     }
                     .background(.thinMaterial)
-                    
                 }
-                
-                
             }
             .navigationTitle("IdeaBank")
-            
-            
         }
     }
 }
@@ -84,7 +70,7 @@ struct PhaseZeroMainView: View {
 struct PhaseZeroMainView_Previews: PreviewProvider {
     static var previews: some View {
         PhaseZeroMainView()
-            .environmentObject(ViewModel(setPreviewWith: .fillIdeaArray))
+            .environmentObject(ViewModel.preview)
     }
 }
 

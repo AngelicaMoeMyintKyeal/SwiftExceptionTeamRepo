@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C43B0CE296F0BEE003FE504 /* WordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0CD296F0BEE003FE504 /* WordModel.swift */; };
+		4C43B0CE296F0BEE003FE504 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C43B0CD296F0BEE003FE504 /* Word.swift */; };
 		4C98BDE5297534780050519D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98BDE4297534780050519D /* ViewModel.swift */; };
 		4C98BDE7297538370050519D /* StackCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C98BDE6297538370050519D /* StackCardView.swift */; };
 		4CC36A472975AC6500269953 /* PhaseOneMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC36A462975AC6500269953 /* PhaseOneMainView.swift */; };
@@ -20,7 +20,7 @@
 		AA2985F229706EA200196733 /* IdeaAtCheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */; };
 		AA3100FF297ED8AD00955F55 /* PhaseThreeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3100FE297ED8AD00955F55 /* PhaseThreeMainView.swift */; };
 		AA3DA67929896CCA00FB7981 /* PhaseZeroMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3DA67829896CCA00FB7981 /* PhaseZeroMainView.swift */; };
-		AA4FA5F12971B3A0007A0D84 /* IdeaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4FA5F02971B3A0007A0D84 /* IdeaModel.swift */; };
+		AA4FA5F12971B3A0007A0D84 /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4FA5F02971B3A0007A0D84 /* Idea.swift */; };
 		AAB3C26B29897DCF004EE89E /* SavedIdea.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3C26A29897DCF004EE89E /* SavedIdea.swift */; };
 		AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9C296EA531001B8538 /* IdeaBankApp.swift */; };
 		AC493DA1296EA532001B8538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA0296EA532001B8538 /* Assets.xcassets */; };
@@ -33,7 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C43B0CD296F0BEE003FE504 /* WordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModel.swift; sourceTree = "<group>"; };
+		4C43B0CD296F0BEE003FE504 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		4C98BDE4297534780050519D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		4C98BDE6297538370050519D /* StackCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackCardView.swift; sourceTree = "<group>"; };
 		4CC36A462975AC6500269953 /* PhaseOneMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseOneMainView.swift; sourceTree = "<group>"; };
@@ -47,7 +47,7 @@
 		AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaAtCheckoutView.swift; sourceTree = "<group>"; };
 		AA3100FE297ED8AD00955F55 /* PhaseThreeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseThreeMainView.swift; sourceTree = "<group>"; };
 		AA3DA67829896CCA00FB7981 /* PhaseZeroMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseZeroMainView.swift; sourceTree = "<group>"; };
-		AA4FA5F02971B3A0007A0D84 /* IdeaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaModel.swift; sourceTree = "<group>"; };
+		AA4FA5F02971B3A0007A0D84 /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
 		AAB3C26A29897DCF004EE89E /* SavedIdea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SavedIdea.swift; path = IdeaBank/Views/PhaseZero/SavedIdea.swift; sourceTree = SOURCE_ROOT; };
 		AC493D99296EA531001B8538 /* IdeaBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdeaBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC493D9C296EA531001B8538 /* IdeaBankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaBankApp.swift; sourceTree = "<group>"; };
@@ -73,8 +73,8 @@
 		4C43B0CC296F0BD7003FE504 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4C43B0CD296F0BEE003FE504 /* WordModel.swift */,
-				AA4FA5F02971B3A0007A0D84 /* IdeaModel.swift */,
+				4C43B0CD296F0BEE003FE504 /* Word.swift */,
+				AA4FA5F02971B3A0007A0D84 /* Idea.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -103,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				AC493D9E296EA531001B8538 /* ContentView.swift */,
+				88216BB529772B49004615BB /* ThinContainer.swift */,
 			);
 			path = "Not Needed";
 			sourceTree = "<group>";
@@ -197,7 +198,6 @@
 			children = (
 				88216BC1297841DA004615BB /* CompactWord.swift */,
 				88216BBD29774447004615BB /* Card.swift */,
-				88216BB529772B49004615BB /* ThinContainer.swift */,
 				88216BB929772F00004615BB /* Header.swift */,
 				88216BBF297837AA004615BB /* ColorExtension.swift */,
 			);
@@ -298,12 +298,12 @@
 			files = (
 				4CC36A472975AC6500269953 /* PhaseOneMainView.swift in Sources */,
 				4C98BDE5297534780050519D /* ViewModel.swift in Sources */,
-				4C43B0CE296F0BEE003FE504 /* WordModel.swift in Sources */,
+				4C43B0CE296F0BEE003FE504 /* Word.swift in Sources */,
 				AA3DA67929896CCA00FB7981 /* PhaseZeroMainView.swift in Sources */,
 				ACCBEA302976AD0300D4A72C /* (null) in Sources */,
 				4CC36A492975AE3F00269953 /* GridView.swift in Sources */,
 				AC874E2A29802924003EA045 /* PersistenceManager.swift in Sources */,
-				AA4FA5F12971B3A0007A0D84 /* IdeaModel.swift in Sources */,
+				AA4FA5F12971B3A0007A0D84 /* Idea.swift in Sources */,
 				ACCBEA312976D74600D4A72C /* ContentView.swift in Sources */,
 				AC874E27298027F0003EA045 /* IdeaDatabase.xcdatamodeld in Sources */,
 				AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */,

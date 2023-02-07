@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-/// A view that puts its subviews in a custom container based on the RoundedRectangle shape
 struct ThinContainer<Content: View>: View {
     var content: () -> Content
     var body: some View {

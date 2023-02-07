@@ -25,7 +25,7 @@ struct StackCardView: View {
             let topOffset = (index <= 2 ? index : 2) * 15
             
             ZStack {
-                Card(word: word)
+                Card(word: word.word)
                     .frame(width: size.width - topOffset, height: (size.height / 1.5 ))
                     .cornerRadius(15)
                     .offset(y: -topOffset)
@@ -123,6 +123,6 @@ extension View {
 struct StackCardView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(ViewModel())
+            .environmentObject(ViewModel.preview)
     }
 }
