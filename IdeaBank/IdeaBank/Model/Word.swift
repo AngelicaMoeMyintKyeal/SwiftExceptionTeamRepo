@@ -21,11 +21,18 @@ extension Word {
 #if DEBUG
 // MARK: special code for canvas preview
 extension Word {
-    static var preview: Word {
-        Word(
-            word: "Laziness",
-            definition: "The art of taking rest before getting tired. Because prevention is better than cure"
-        )
+    static func preview(withIndex: Int = -1) -> Word {
+        if withIndex > -1 {
+            return Word(
+                word: "Laziness \(withIndex)",
+                definition: "The art of taking rest before getting tired. Because prevention is better than cure"
+            )
+        } else {
+            return Word(
+                word: "Laziness",
+                definition: "The art of taking rest before getting tired. Because prevention is better than cure"
+            )
+        }
     }
 }
 #endif

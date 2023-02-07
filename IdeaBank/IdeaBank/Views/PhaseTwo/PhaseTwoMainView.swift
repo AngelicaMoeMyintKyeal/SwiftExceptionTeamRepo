@@ -32,8 +32,8 @@ struct PhaseTwoMainView: View {
                     Spacer()
                     HStack {
                         TextField("Enter your idea", text: $textFieldInput)
-                            .padding(/*@START_MENU_TOKEN@*/.leading, 16.0/*@END_MENU_TOKEN@*/)
-                            .padding(/*@START_MENU_TOKEN@*/.all, 8.0/*@END_MENU_TOKEN@*/)
+                            .padding(.leading, 16.0)
+                            .padding(.all, 8.0)
                             .background(.thinMaterial)
                             .clipShape(Capsule())
                             .padding(.trailing, 4.0)

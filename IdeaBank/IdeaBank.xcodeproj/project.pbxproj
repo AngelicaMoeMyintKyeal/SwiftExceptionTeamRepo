@@ -176,8 +176,8 @@
 		AC874E22298026B2003EA045 /* PhaseOne */ = {
 			isa = PBXGroup;
 			children = (
-				4C98BDE6297538370050519D /* StackCardView.swift */,
 				4CC36A462975AC6500269953 /* PhaseOneMainView.swift */,
+				4C98BDE6297538370050519D /* StackCardView.swift */,
 			);
 			path = PhaseOne;
 			sourceTree = "<group>";

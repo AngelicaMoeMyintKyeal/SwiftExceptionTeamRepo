@@ -29,12 +29,12 @@ extension ViewModel {
     static var preview: ViewModel {
         let debugPreview = ViewModel()
         
-        for _ in 0..<10 {
-            debugPreview.words.append(Word.preview)
+        for i in 0..<10 {
+            debugPreview.words.append(Word.preview(withIndex: i))
         }
         
-        for _ in 0..<5 {
-            debugPreview.ideas.append(Idea.preview)
+        for i in 0..<5 {
+            debugPreview.ideas.append(Idea.preview(withIndex: i))
         }
         
         return debugPreview
