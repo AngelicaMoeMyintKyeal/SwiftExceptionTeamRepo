@@ -22,10 +22,8 @@ struct SavedIdea: View {
                                     .fontWeight(.bold)
                                     .foregroundColor(.secondary)
                             }
-                            
                         }
                         .padding(.bottom, 2.0)
-                        
                         Text(description)
                             .font(.title2)
                             .multilineTextAlignment(.leading)
@@ -43,9 +41,12 @@ struct SavedIdea: View {
 
 struct SavedIdea_Previews: PreviewProvider {
     static var previews: some View {
-        SavedIdea(
-            usedWords: ["one", "two", "three"],
-            description: "Abc"
-        )
+        ZStack {
+            Color.background.ignoresSafeArea()
+            SavedIdea(
+                usedWords: ["one", "two", "three"],
+                description: "Abc"
+            )
+        }
     }
 }

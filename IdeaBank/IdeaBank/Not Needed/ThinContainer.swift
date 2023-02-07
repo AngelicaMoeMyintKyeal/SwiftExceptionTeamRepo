@@ -5,6 +5,10 @@
 //  Created by Pierpaolo Siciliano on 17/01/23.
 //
 
+/*
+This component is not needed anymore but I'm keeping
+it for learning purpouses
+
 import SwiftUI
 
 struct ThinContainer<Content: View>: View {
@@ -26,3 +30,4 @@ struct ThinContainer_Previews: PreviewProvider {
         }
     }
 }
+*/
