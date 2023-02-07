@@ -34,7 +34,7 @@ struct PhaseThreeMainView: View {
                 )
                 
                 ScrollView {
-                    ForEach(vm.ideaArray) { x in
+                    ForEach(vm.ideas) { x in
                         IdeaAtCheckoutView(usedWords: x.parentWords, title: "Idea", description: x.body, isToggled: false)
                     }
                 }
@@ -48,12 +48,12 @@ struct PhaseThreeMainView: View {
                 ToolbarItem {
                     Button {
                         
-                        for x in vm.ideaArray {
+                        for x in vm.ideas {
                             pushToSalvation(idea: x)
                         }
                         
-//                        vm.savedIdeas.append(contentsOf: vm.ideaArray)
-                        vm.ideaArray = []
+//                        vm.savedIdeas.append(contentsOf: vm.ideas)
+                        vm.ideas = []
                     } label: {
                         Text("Save")
                     }

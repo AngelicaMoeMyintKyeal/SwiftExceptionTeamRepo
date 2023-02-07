@@ -12,7 +12,7 @@ class ViewModel: ObservableObject {
     @Published var displayingWords: [Word] = []
     @Published var selectedWords: [Word] = []
 //    @Published var words: [Word] = Word.exampleWords.shuffled()
-    @Published var ideaArray: [Idea] = []
+    @Published var ideas: [Idea] = []
     @Published var savedIdeas: [Idea] = []
     
     private var wordCounter: Int = Word.exampleWords.count - 1
@@ -62,7 +62,7 @@ extension ViewModel {
         }
         
         for i in 0..<5 {
-            debugPreview.ideaArray.append(Idea.preview(withIndex: i))
+            debugPreview.ideas.append(Idea.preview(withIndex: i))
         }
         
         return debugPreview
