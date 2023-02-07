@@ -10,6 +10,19 @@ import SwiftUI
 struct PhaseThreeMainView: View {
     @EnvironmentObject var vm: ViewModel
     
+    @Environment(\.managedObjectContext) var moc
+    
+    func pushToSalvation(idea: Idea) {
+        let newIdea = StoredIdea(context: moc)
+        newIdea.body = idea.body
+        newIdea.parentWordOne = idea.parentWords[0]
+        newIdea.parentWordTwo = idea.parentWords[1]
+        newIdea.parentWordThree = idea.parentWords[2]
+        newIdea.id = UUID()
+        
+        try? moc.save()
+    }
+    
     var body: some View {
         ZStack {
             Color.background.ignoresSafeArea()
@@ -34,7 +47,12 @@ struct PhaseThreeMainView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
-                        vm.savedIdeas.append(contentsOf: vm.ideaArray)
+                        
+                        for x in vm.ideaArray {
+                            pushToSalvation(idea: x)
+                        }
+                        
+//                        vm.savedIdeas.append(contentsOf: vm.ideaArray)
                         vm.ideaArray = []
                     } label: {
                         Text("Save")

@@ -22,6 +22,7 @@
 		AA3DA67929896CCA00FB7981 /* PhaseZeroMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3DA67829896CCA00FB7981 /* PhaseZeroMainView.swift */; };
 		AA4FA5F12971B3A0007A0D84 /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4FA5F02971B3A0007A0D84 /* Idea.swift */; };
 		AAB3C26B29897DCF004EE89E /* SavedIdea.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAB3C26A29897DCF004EE89E /* SavedIdea.swift */; };
+		AAEAAB8B298D6D1F000862CE /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEAAB8A298D6D1F000862CE /* DataController.swift */; };
 		AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC493D9C296EA531001B8538 /* IdeaBankApp.swift */; };
 		AC493DA1296EA532001B8538 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA0296EA532001B8538 /* Assets.xcassets */; };
 		AC493DA4296EA532001B8538 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC493DA3296EA532001B8538 /* Preview Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		AA3DA67829896CCA00FB7981 /* PhaseZeroMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseZeroMainView.swift; sourceTree = "<group>"; };
 		AA4FA5F02971B3A0007A0D84 /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
 		AAB3C26A29897DCF004EE89E /* SavedIdea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SavedIdea.swift; path = IdeaBank/Views/PhaseZero/SavedIdea.swift; sourceTree = SOURCE_ROOT; };
+		AAEAAB8A298D6D1F000862CE /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		AC493D99296EA531001B8538 /* IdeaBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IdeaBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC493D9C296EA531001B8538 /* IdeaBankApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaBankApp.swift; sourceTree = "<group>"; };
 		AC493D9E296EA531001B8538 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				AC874E25298027F0003EA045 /* IdeaDatabase.xcdatamodeld */,
+				AAEAAB8A298D6D1F000862CE /* DataController.swift */,
 				AC874E2929802924003EA045 /* PersistenceManager.swift */,
 			);
 			path = Storage;
@@ -301,6 +304,7 @@
 				4C43B0CE296F0BEE003FE504 /* Word.swift in Sources */,
 				AA3DA67929896CCA00FB7981 /* PhaseZeroMainView.swift in Sources */,
 				ACCBEA302976AD0300D4A72C /* (null) in Sources */,
+				AAEAAB8B298D6D1F000862CE /* DataController.swift in Sources */,
 				4CC36A492975AE3F00269953 /* GridView.swift in Sources */,
 				AC874E2A29802924003EA045 /* PersistenceManager.swift in Sources */,
 				AA4FA5F12971B3A0007A0D84 /* Idea.swift in Sources */,
