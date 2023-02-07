@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PhaseZeroMainView: View {
-    
     @EnvironmentObject var vm: ViewModel
     
     @FetchRequest(sortDescriptors: []) var storedIdeas: FetchedResults<StoredIdea>
@@ -18,7 +17,7 @@ struct PhaseZeroMainView: View {
             ZStack {
                 
                 if storedIdeas.count == 0 {
-                    
+
                     VStack {
                         Spacer()
                         Spacer()
@@ -33,22 +32,16 @@ struct PhaseZeroMainView: View {
                         Spacer()
                         Spacer()
                     }
-                    
                 } else {
                     ScrollView {
                         ForEach(storedIdeas) { idea in
                             SavedIdea(usedWords: [idea.parentWordOne ?? "boh", idea.parentWordTwo ?? "boh2", idea.parentWordThree ?? "boh3"], description: idea.body ?? "a body")
                         }
-                        
                         Spacer(minLength: 120)
                     }
-                    
                 }
-                
                 VStack {
-                    
                     Spacer()
-                    
                     VStack {
                         NavigationLink {
                             PhaseOneMainView()
@@ -64,21 +57,17 @@ struct PhaseZeroMainView: View {
                             .background(.purple)
                             .cornerRadius(20)
                             .padding()
-                            
                         }
                         .simultaneousGesture(TapGesture().onEnded{
                             vm.selectedWords = []
                         })
                     }
                     .background(.thinMaterial)
-                    
                 }
-                
-                
             }
+
             .navigationTitle("Ideas")
-            
-            
+
         }
     }
 }
@@ -86,7 +75,7 @@ struct PhaseZeroMainView: View {
 struct PhaseZeroMainView_Previews: PreviewProvider {
     static var previews: some View {
         PhaseZeroMainView()
-            .environmentObject(ViewModel(setPreviewWith: .fillIdeaArray))
+            .environmentObject(ViewModel.preview)
     }
 }
 

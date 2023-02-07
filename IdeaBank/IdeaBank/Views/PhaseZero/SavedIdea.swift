@@ -8,12 +8,10 @@
 import SwiftUI
 
 struct SavedIdea: View {
-    
-    var usedWords = [String]()
+    var usedWords: [String] = []
     var description: String
     
     var body: some View {
-        
             ZStack {
                 HStack {
                     VStack(alignment: .leading) {
@@ -40,12 +38,14 @@ struct SavedIdea: View {
                 .cornerRadius(20)
             }
             .padding(.horizontal)
-        
     }
 }
 
 struct SavedIdea_Previews: PreviewProvider {
     static var previews: some View {
-        SavedIdea(usedWords: ["uno", "due", "tre"], description: "Ciaone")
+        SavedIdea(
+            usedWords: ["one", "two", "three"],
+            description: "Abc"
+        )
     }
 }

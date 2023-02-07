@@ -67,6 +67,6 @@ struct PhaseThreeMainView: View {
 struct PhaseThreeMainView_Previews: PreviewProvider {
     static var previews: some View {
         PhaseThreeMainView()
-            .environmentObject(ViewModel(setPreviewWith: .fillIdeaArray))
+            .environmentObject(ViewModel.preview)
     }
 }
