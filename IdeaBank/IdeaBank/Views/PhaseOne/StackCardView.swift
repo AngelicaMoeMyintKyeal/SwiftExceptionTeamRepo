@@ -122,7 +122,15 @@ extension View {
 
 struct StackCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ZStack {
+            Color.background.ignoresSafeArea()
+            StackCardView(
+                word: Word(
+                    word: "Apple",
+                    definition: "An expensive computer"
+                )
+            )
             .environmentObject(ViewModel.preview)
+        }
     }
 }
