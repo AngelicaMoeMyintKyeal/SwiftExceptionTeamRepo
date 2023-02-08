@@ -14,6 +14,7 @@ struct Word: Codable, Identifiable {
 }
 
 extension Word {
+    // pool must contain always more than 10 words to avoid unexpected behaviours
     static let pool = ["Monkey", "Banana", "Chicken", "Contrary", "Cantankerous", "University", "Professor", "Message", "Shy", "Food", "Educator", "Number", "Anxiety", "Cook", "Hairdresser", "Pressure", "Engineering", "Artist", "Manager", "Tax", "Healthcare", "Planner", "Birthday", "Scientist", "Receptionist", "Actor", "Books", "Photographer", "Mathematician", "Writer", "Cylinder", "Therapist", "Electrician", "Settle", "Lake", "Need", "Depression", "Mention", "Sunrise", "Monster", "Packet", "Rocket", "Sticky", "Tea", "Fresh", "Leftover", "Quote", "Get", "Modify", "Highlight", "Gather", "Lack", "Attract", "Push", "Attach", "Question", "Smile", "Reach", "Examine", "Hope", "Guarantee", "Fall", "Hope", "Fit", "Catch", "Heat", "Transmit", "Visit", "Worry", "Characterise", "Communicate", "Track", "Waste", "Clear", "Allow", "Start", "Mix", "Entertain", "Bound", "Deny", "Integrate", "Link", "Build", "Pin", "Rush", "Determine", "Dictate", "Discharge", "Furry", "Suitable", "Hard", "Nostalgic", "Amusing", "Sorry", "Women", "Bored", "Plucky", "Thoughtless", "Descriptive", "Even", "Adaptable", "Comfortable", "Breezy", "Sharp", "Puny", "Useless", "Spare", "Left", "Lovely", "Abrupt", "Habitual", "Panoramic", "Tasteful", "Harsh", "Realistic", "Standing", "Funny", "Unique", "Polite", "Tension", "Crazy", "Educated", "Quiet", "Sad"]
 }
 

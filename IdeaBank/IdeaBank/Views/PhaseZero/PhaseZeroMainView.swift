@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PhaseZeroMainView: View {
-    @EnvironmentObject var vm: ViewModel
+    @EnvironmentObject var VM: ViewModel
     @FetchRequest(sortDescriptors: []) var storedIdeas: FetchedResults<StoredIdea>
     
     var body: some View {
@@ -63,7 +63,7 @@ struct PhaseZeroMainView: View {
                             .padding()
                         }
                         .simultaneousGesture(TapGesture().onEnded{
-                            vm.selectedWords = []
+                            VM.selectedWords = []
                         })
                     }
                     .background(.thinMaterial)
