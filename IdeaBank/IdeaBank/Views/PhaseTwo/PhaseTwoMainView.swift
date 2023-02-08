@@ -38,7 +38,7 @@ struct PhaseTwoMainView: View {
                             .padding(.trailing, 4.0)
                             .keyboardType(.default)
                         Button {
-                            vm.ideaArray.append(
+                            vm.ideas.append(
                                 Idea(body: textFieldInput,
                                      parentWords: [
                                         vm.selectedWords[0].word,
@@ -47,7 +47,7 @@ struct PhaseTwoMainView: View {
                                      ]
                                     )
                             )
-                            print(vm.ideaArray)
+                            print(vm.ideas)
                             print("\n")
                             textFieldInput = ""
                             vm.selectedWords.shuffle()
