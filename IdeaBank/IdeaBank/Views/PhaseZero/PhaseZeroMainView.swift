@@ -14,6 +14,7 @@ struct PhaseZeroMainView: View {
     var body: some View {
         NavigationStack {
             ZStack {
+                Color.background.ignoresSafeArea()
                 if storedIdeas.count == 0 {
                     VStack {
                         Spacer()
@@ -33,12 +34,12 @@ struct PhaseZeroMainView: View {
                     ScrollView {
                         ForEach(storedIdeas) { idea in
                             SavedIdea(
-                                usedWords:[
-                                    idea.parentWordOne ?? "boh",
-                                    idea.parentWordTwo ?? "boh2",
-                                    idea.parentWordThree ?? "boh3"
+                                usedWords: [
+                                    idea.parentWordOne ?? "unknown 1",
+                                    idea.parentWordTwo ?? "unknown 2",
+                                    idea.parentWordThree ?? "unknown 3"
                                 ],
-                                description: idea.body ?? "a body"
+                                description: idea.body ?? "unknown description"
                             )
                         }
                         Spacer(minLength: 120)

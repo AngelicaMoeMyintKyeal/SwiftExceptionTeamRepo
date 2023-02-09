@@ -18,7 +18,6 @@ struct StackCardView: View {
     var body: some View {
         GeometryReader { proxy in
             let size = proxy.size
-            
             let index = CGFloat(VM.getIndex(word: word))
             
             // Show the next two cards above like a stack
@@ -30,7 +29,11 @@ struct StackCardView: View {
                     .cornerRadius(15)
                     .offset(y: -topOffset)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .frame(
+                maxWidth: .infinity,
+                maxHeight: .infinity,
+                alignment: .center
+            )
         }
         .offset(x: offset)
         .rotationEffect(.init(degrees: getRotation(angle: 8)))
@@ -77,7 +80,6 @@ struct StackCardView: View {
         return rotation
     }
     
-    
     func endSwipeActions() {
         withAnimation(.none) {
             endSwipe = true
@@ -106,7 +108,6 @@ struct StackCardView: View {
             VM.selectedWords.append(word)
         } else {
             // What to do when you hit 10 words
-
         }
         print("Swiped right")
         VM.addToDisplayingWords()
