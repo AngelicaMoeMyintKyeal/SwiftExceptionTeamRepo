@@ -17,6 +17,7 @@
 		88216BBE29774447004615BB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88216BBD29774447004615BB /* Card.swift */; };
 		88216BC0297837AA004615BB /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88216BBF297837AA004615BB /* ColorExtension.swift */; };
 		88216BC2297841DA004615BB /* CompactWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88216BC1297841DA004615BB /* CompactWord.swift */; };
+		88633B9E299409930095FFED /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88633B9D299409930095FFED /* WebService.swift */; };
 		AA2985F229706EA200196733 /* IdeaAtCheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */; };
 		AA3100FF297ED8AD00955F55 /* PhaseThreeMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3100FE297ED8AD00955F55 /* PhaseThreeMainView.swift */; };
 		AA3DA67929896CCA00FB7981 /* PhaseZeroMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3DA67829896CCA00FB7981 /* PhaseZeroMainView.swift */; };
@@ -45,6 +46,7 @@
 		88216BBD29774447004615BB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		88216BBF297837AA004615BB /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		88216BC1297841DA004615BB /* CompactWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompactWord.swift; sourceTree = "<group>"; };
+		88633B9D299409930095FFED /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		AA2985F129706EA200196733 /* IdeaAtCheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdeaAtCheckoutView.swift; sourceTree = "<group>"; };
 		AA3100FE297ED8AD00955F55 /* PhaseThreeMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseThreeMainView.swift; sourceTree = "<group>"; };
 		AA3DA67829896CCA00FB7981 /* PhaseZeroMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseZeroMainView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				AC493D9E296EA531001B8538 /* ContentView.swift */,
 				88216BB529772B49004615BB /* ThinContainer.swift */,
+				88633B9D299409930095FFED /* WebService.swift */,
 			);
 			path = "Not Needed";
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				AC874E2A29802924003EA045 /* PersistenceManager.swift in Sources */,
 				AA4FA5F12971B3A0007A0D84 /* Idea.swift in Sources */,
 				ACCBEA312976D74600D4A72C /* ContentView.swift in Sources */,
+				88633B9E299409930095FFED /* WebService.swift in Sources */,
 				AC874E27298027F0003EA045 /* IdeaDatabase.xcdatamodeld in Sources */,
 				AC493D9D296EA531001B8538 /* IdeaBankApp.swift in Sources */,
 				88216BBA29772F00004615BB /* Header.swift in Sources */,

@@ -16,7 +16,7 @@ class ViewModel: ObservableObject {
     
     private var wordIndex: Int = 0 {
         didSet {
-            if wordIndex < 0 || wordIndex == Word.pool.count - 1 {
+            if wordIndex < 0 || wordIndex >= Word.pool.count {
                 wordIndex = 0
                 words = words.shuffled()
             }
@@ -35,15 +35,30 @@ class ViewModel: ObservableObject {
     
     // Add new card to displayingWords array
     func addToDisplayingWords() {
-        displayingWords.append(words[wordIndex])
+        /* FIXME: there is a rare bug that happens if you swipe right on a word already present in the lazygrid, hopefully this fixes that but I haven't tested enough
+        */
+        let nextWord = words[wordIndex]
+        var wordArr: [String] = []
+        for word in words {
+            wordArr.append(word.word)
+        }
+        print("wordArr = \(wordArr)")
+        print("wordIndex = \(wordIndex)")
+        print("nextWord = \(nextWord.word)")
+        let isContained = selectedWords.contains { currentWord in
+            nextWord.id == currentWord.id
+        }
+        if isContained == false {
+            displayingWords.append(words[wordIndex])
+        }
         wordIndex += 1
     }
     
     // Get the index of the user
     func getIndex(word: Word) -> Int {
-        let index = displayingWords.firstIndex(where: { currentWord in
+        let index = displayingWords.firstIndex { currentWord in
             return word.id == currentWord.id
-        }) ?? 0
+        } ?? 0
         
         return index
     }

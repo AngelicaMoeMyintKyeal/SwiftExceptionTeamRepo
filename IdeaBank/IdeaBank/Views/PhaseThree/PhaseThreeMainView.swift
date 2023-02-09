@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct PhaseThreeMainView: View {
-    @EnvironmentObject var vm: ViewModel
-    
+    @EnvironmentObject var VM: ViewModel
     @Environment(\.managedObjectContext) var moc
     
     func pushToSalvation(idea: Idea) {
@@ -27,40 +26,37 @@ struct PhaseThreeMainView: View {
         ZStack {
             Color.background.ignoresSafeArea()
             VStack {
-                
                 Header(
                     title: "Confirm",
                     description: "These are all the ideas you generated, which ones do you like the most?"
                 )
-                
                 ScrollView {
-                    ForEach(vm.ideas) { x in
-                        IdeaAtCheckoutView(usedWords: x.parentWords, title: "Idea", description: x.body, isToggled: false)
+                    ForEach(VM.ideas) { idea in
+                        IdeaAtCheckoutView(
+                            usedWords: idea.parentWords,
+                            title: "Idea",
+                            description: idea.body,
+                            isToggled: false
+                        )
                     }
                 }
                 .scrollIndicators(.hidden)
                 .padding(.top)
                 .frame(maxWidth: .infinity)
-                
-                
             }
             .toolbar {
                 ToolbarItem {
                     Button {
-                        
-                        for x in vm.ideas {
-                            pushToSalvation(idea: x)
+                        for idea in VM.ideas {
+                            pushToSalvation(idea: idea)
                         }
-                        
-//                        vm.savedIdeas.append(contentsOf: vm.ideas)
-                        vm.ideas = []
+                        VM.ideas = []
                     } label: {
                         Text("Save")
                     }
                 }
             }
         }
-        
     }
 }
 
