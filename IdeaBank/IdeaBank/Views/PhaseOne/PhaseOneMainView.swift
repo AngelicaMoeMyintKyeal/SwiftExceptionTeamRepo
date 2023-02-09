@@ -8,14 +8,11 @@
 import SwiftUI
 
 struct PhaseOneMainView: View {
-    @EnvironmentObject var vm: ViewModel
+    @EnvironmentObject var VM: ViewModel
     
     var body: some View {
-
         ZStack {
-            
             Color.background.ignoresSafeArea()
-            
             VStack {
                 Spacer()
                 Header(
@@ -26,7 +23,7 @@ struct PhaseOneMainView: View {
                 GridView()
                 Spacer()
                 ZStack {
-                    if let words = vm.displayingWords {
+                    if let words = VM.displayingWords {
                         if words.isEmpty {
                             Text("Nothing to display right now. Come back later...")
                                 .font(.caption)
@@ -40,7 +37,6 @@ struct PhaseOneMainView: View {
                                     .frame(width: 320, height: 300)
                                     .shadow(color: .black.opacity(0.4),radius: 3, x: 2)
                             }
-
                         }
                     } else {
                         ProgressView()
@@ -50,31 +46,26 @@ struct PhaseOneMainView: View {
             .toolbar {
                 ToolbarItem {
                     Button {
-                        print(vm.selectedWords)
-                        vm.selectedWords = []
-                        print(vm.selectedWords)
+                        print(VM.selectedWords)
+                        VM.selectedWords = []
+                        print(VM.selectedWords)
                     } label: {
                         Image(systemName: "trash")
                     }
                 }
-                
                 ToolbarItem {
                     NavigationLink("Next", destination: PhaseTwoMainView())
-                    .disabled(vm.selectedWords.count < 10)
+                    .disabled(VM.selectedWords.count < 10)
                 }
-                
             }
-            
         }
-        
-        
     }
 }
 
 struct PhaseOneMainView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
-            ContentView()
+            PhaseOneMainView()
                 .environmentObject(ViewModel())
         }
     }

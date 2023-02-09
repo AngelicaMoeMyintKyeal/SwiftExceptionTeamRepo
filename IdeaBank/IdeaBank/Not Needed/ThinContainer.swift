@@ -5,9 +5,12 @@
 //  Created by Pierpaolo Siciliano on 17/01/23.
 //
 
+/*
+This component is not needed anymore but I'm keeping
+it for learning purpouses
+
 import SwiftUI
 
-/// A view that puts its subviews in a custom container based on the RoundedRectangle shape
 struct ThinContainer<Content: View>: View {
     var content: () -> Content
     var body: some View {
@@ -27,3 +30,4 @@ struct ThinContainer_Previews: PreviewProvider {
         }
     }
 }
+*/

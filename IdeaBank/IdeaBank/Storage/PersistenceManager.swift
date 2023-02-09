@@ -5,6 +5,7 @@
 //  Created by Htet Myat Moe Myint Kyeal on 24/01/23.
 //
 
+/*
 import CoreData
 import Foundation
 
@@ -86,3 +87,4 @@ struct PersistenceManager {
         }
     }
 }
+*/

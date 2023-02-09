@@ -5,12 +5,16 @@
 //  Created by Htet Myat Moe Myint Kyeal on 11/01/23.
 //
 
+/*
+This view is not needed anymore but I'm keeping
+it for learning purpouses
+ 
 import SwiftUI
 import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var moc: NSManagedObjectContext
-    @EnvironmentObject var vm: ViewModel
+    @EnvironmentObject var VM: ViewModel
     
     @State private var isShowingPhaseTwo: Bool = false
 
@@ -18,7 +22,7 @@ struct ContentView: View {
         NavigationStack {
             ZStack {
                 Color.background.ignoresSafeArea()
-                if vm.selectedWords.count < 10 {
+                if VM.selectedWords.count < 10 {
                     PhaseOneMainView()
                 } else {
                     PhaseTwoMainView()
@@ -34,3 +38,4 @@ struct ContentView_Previews: PreviewProvider {
             .environmentObject(ViewModel())
     }
 }
+*/

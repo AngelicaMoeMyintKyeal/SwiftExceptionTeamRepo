@@ -8,15 +8,14 @@
 import SwiftUI
 
 struct PhaseZeroMainView: View {
-    
-    @EnvironmentObject var vm: ViewModel
+    @EnvironmentObject var VM: ViewModel
+    @FetchRequest(sortDescriptors: []) var storedIdeas: FetchedResults<StoredIdea>
     
     var body: some View {
         NavigationStack {
             ZStack {
-                
-                if vm.savedIdeas.count == 0 {
-                    
+                Color.background.ignoresSafeArea()
+                if storedIdeas.count == 0 {
                     VStack {
                         Spacer()
                         Spacer()
@@ -31,22 +30,23 @@ struct PhaseZeroMainView: View {
                         Spacer()
                         Spacer()
                     }
-                    
                 } else {
                     ScrollView {
-                        ForEach(vm.savedIdeas) { idea in
-                            SavedIdea(usedWords: idea.parentWords, description: idea.body)
+                        ForEach(storedIdeas) { idea in
+                            SavedIdea(
+                                usedWords: [
+                                    idea.parentWordOne ?? "unknown 1",
+                                    idea.parentWordTwo ?? "unknown 2",
+                                    idea.parentWordThree ?? "unknown 3"
+                                ],
+                                description: idea.body ?? "unknown description"
+                            )
                         }
-                        
                         Spacer(minLength: 120)
                     }
-                    
                 }
-                
                 VStack {
-                    
                     Spacer()
-                    
                     VStack {
                         NavigationLink {
                             PhaseOneMainView()
@@ -62,21 +62,15 @@ struct PhaseZeroMainView: View {
                             .background(.purple)
                             .cornerRadius(20)
                             .padding()
-                            
                         }
                         .simultaneousGesture(TapGesture().onEnded{
-                            vm.selectedWords = []
+                            VM.selectedWords = []
                         })
                     }
                     .background(.thinMaterial)
-                    
                 }
-                
-                
             }
-            .navigationTitle("IdeaBank")
-            
-            
+            .navigationTitle("Ideas")
         }
     }
 }
@@ -84,7 +78,7 @@ struct PhaseZeroMainView: View {
 struct PhaseZeroMainView_Previews: PreviewProvider {
     static var previews: some View {
         PhaseZeroMainView()
-            .environmentObject(ViewModel(setPreviewWith: .fillIdeaArray))
+            .environmentObject(ViewModel.preview)
     }
 }
 

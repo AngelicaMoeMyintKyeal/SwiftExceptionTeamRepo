@@ -10,14 +10,16 @@ import CoreData
 
 @main
 struct IdeaBankApp: App {
-    let persistenceManager = PersistenceManager.shared
+//    let persistenceManager = PersistenceManager.shared
     @StateObject var viewModel = ViewModel()
+    @StateObject private var dataController = DataController()
     
     var body: some Scene {
         WindowGroup {
             PhaseZeroMainView()
                 .environmentObject(viewModel)
-                .environment(\.managedObjectContext,persistenceManager.persistenceContainer.viewContext)
+                .environment(\.managedObjectContext, dataController.container.viewContext)
+//                .environment(\.managedObjectContext,persistenceManager.persistenceContainer.viewContext)
         }
     }
 }

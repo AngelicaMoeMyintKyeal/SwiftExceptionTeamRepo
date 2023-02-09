@@ -1,4 +1,14 @@
-<h1 align="center">Swift Exception Team's Repository</h3>
+<p align="center">
+<img width="120" alt="IdeaBankLogo" src="https://user-images.githubusercontent.com/74500135/217266584-fe6d83db-0d41-414a-bce4-a34cb4f58be3.png">
+<h1 align="center">Swift Exception Team's Repository </h1>
+<div style="text" align="center">
+
+![Version](https://img.shields.io/static/v1?label=Version&message=1.0&color=brightgreen)
+![Swift Version](https://img.shields.io/static/v1?label=Swift%20Version&message=5&color=brightgreen&logo=swift)
+![Frameworks](https://img.shields.io/static/v1?label=Frameworks&message=SwiftUI&color=brightgreen&logo=swift)
+
+</div>
+</p>
 
 <details>
   <summary>Table of Contents</summary>
@@ -9,7 +19,7 @@
     <li>
       <a href="#application-name">Application Name</a>
     </li>
-    <li><a href="#description">Description</a></li>
+    <li><a href="#application-description">Application Description</a></li>
     <li><a href="#branches">Branches</a></li>
     <li><a href="#installation">Installation</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -21,34 +31,29 @@
 
 ## About The Project
 
-Brainstorming about ideas can be fun but also troublesome sometimes. 
+Brainstorming ideas can be fun, but also frustrating sometimes. 
 
-Our main goal is to help users brainstorm multiple ideas by choosing from the random word cards. To make it more fun, we have implmented an awesome animation that let users swipe right or left to choose or discard the words. 
+Our main goal is to help users brainstorm ideas by providing random words and asking the user to come up with ideas based on them. To make it more fun, we have implmented addictive animations where users can swipe left or right on the cards to select or discard the word. 
 
-In this project, we aim to create an application to meet this kind of specific need for users.
-
-We have previously used an API to get the definitions of our random words but in our latest updates, only the words will be provided without the definitions.
+We originally used an API to get the definitions of our random words. However, this was not particularly useful so it was discarded.
 The information about the public `API` implemented in this project can found here -> [Free Dictionary API](https://dictionaryapi.dev)
 
-Our project release schedule style will be one week sprint.
+Our project release schedule style is weekly sprint.
 
 ## Application Name
+`
+Idea Bank
+`
 
-We still have to decide the application's name and icon.
+## Application Description
 
-## Description
-
-With our application, the user can swipe left or right to choose or reject the words randomly provided and create multiple ideas by their chosen words.
+Our application presents random words displayed on cards to the user. The user can swipe to select or discard a word. When 10 words are selected, we display three of the selected words at random and prompt the users to come up with an idea based on them. The user can select which ideas to save. 
 
 ## Branches
 
 `main` - most stable branch and contains the final codes release
 
 `dev-master` - branch for merging of the currently in progress codes
-
-`core-data-definitions-storage` - about core data that let the users store the definitions of the words from the API
-
-`new-APICaller` - includes the codes to call for the API in a different way
 
 ## Installation
 

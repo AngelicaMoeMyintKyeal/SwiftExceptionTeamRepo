@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct Card: View {
-    @EnvironmentObject var vm: ViewModel
-    var word: Word
+    var word: String
     
     var body: some View {
             HStack {
                 Spacer()
-                Text(word.word)
+                Text(word)
                     .font(.title)
                     .fontWeight(.bold)
                 Spacer()
@@ -24,27 +23,13 @@ struct Card: View {
             .background(.thinMaterial)
             .cornerRadius(20)
     }
-    
 }
 
 struct Card_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.background.ignoresSafeArea()
-            Card(
-                word: Word(
-                    word: "Apple",
-                    meanings: [
-                        Meaning(
-                            definitions: [
-                                Definition(definition: "An expensive computer"),
-                                Definition(definition: "A tool to keep doctors away")
-                            ]
-                        )
-                    ]
-                )
-            )
-            .environmentObject(ViewModel())
+            Card(word: "Apple")
         }
     }
 }

@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct StackCardView: View {
-    @EnvironmentObject var vm: ViewModel
+    @EnvironmentObject var VM: ViewModel
     var word: Word
     
     // Gesture properties
@@ -18,19 +18,22 @@ struct StackCardView: View {
     var body: some View {
         GeometryReader { proxy in
             let size = proxy.size
-            
-            let index = CGFloat(vm.getIndex(word: word))
+            let index = CGFloat(VM.getIndex(word: word))
             
             // Show the next two cards above like a stack
             let topOffset = (index <= 2 ? index : 2) * 15
             
             ZStack {
-                Card(word: word)
+                Card(word: word.word)
                     .frame(width: size.width - topOffset, height: (size.height / 1.5 ))
                     .cornerRadius(15)
                     .offset(y: -topOffset)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
+            .frame(
+                maxWidth: .infinity,
+                maxHeight: .infinity,
+                alignment: .center
+            )
         }
         .offset(x: offset)
         .rotationEffect(.init(degrees: getRotation(angle: 8)))
@@ -77,18 +80,17 @@ struct StackCardView: View {
         return rotation
     }
     
-    
     func endSwipeActions() {
         withAnimation(.none) {
             endSwipe = true
         }
         // After the card is swiped away, remove the card from the array to preserve memory
         
-        // The delay time is based on the animation time
+        // Delay time is based on the animation time
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-            if let _ = vm.displayingWords.first {
+            if let _ = VM.displayingWords.first {
                 let _ = withAnimation {
-                    vm.displayingWords.removeFirst()
+                    VM.displayingWords.removeFirst()
                 }
             }
         }
@@ -97,19 +99,18 @@ struct StackCardView: View {
     func leftSwipe() {
         // Do stuff
         print("Swiped left")
-        vm.addToDisplayingWords()
+        VM.addToDisplayingWords()
     }
     
     func rightSwipe() {
         // Do stuff
-        if vm.selectedWords.count < 10 {
-            vm.selectedWords.append(word)
+        if VM.selectedWords.count < 10 {
+            VM.selectedWords.append(word)
         } else {
             // What to do when you hit 10 words
-
         }
         print("Swiped right")
-        vm.addToDisplayingWords()
+        VM.addToDisplayingWords()
     }
 }
 
@@ -122,7 +123,15 @@ extension View {
 
 struct StackCardView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-            .environmentObject(ViewModel())
+        ZStack {
+            Color.background.ignoresSafeArea()
+            StackCardView(
+                word: Word(
+                    word: "Apple",
+                    definition: "An expensive computer"
+                )
+            )
+            .environmentObject(ViewModel.preview)
+        }
     }
 }

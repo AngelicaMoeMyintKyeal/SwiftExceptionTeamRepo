@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GridView: View {
-    @EnvironmentObject var vm: ViewModel
+    @EnvironmentObject var VM: ViewModel
     
     private var layout = [
         GridItem(.flexible()),
@@ -17,7 +17,7 @@ struct GridView: View {
     
     var body: some View {
         LazyVGrid(columns: layout, alignment: .leading) {
-            ForEach(vm.selectedWords) { word in
+            ForEach(VM.selectedWords) { word in
                 CompactWord(word: word.word)
                     .lineLimit(1)
                     .minimumScaleFactor(0.6)
@@ -33,7 +33,7 @@ struct GridView_Previews: PreviewProvider {
         ZStack {
             Color.background.ignoresSafeArea()
             GridView()
-                .environmentObject(ViewModel(setPreviewWith: .filledSelectedWords))
+                .environmentObject(ViewModel.preview)
         }
     }
 }
