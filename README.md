@@ -96,7 +96,7 @@ Our application presents random words displayed on cards to the user. The user c
 
 ## Authors and Contributors
 
-- [Htet Myat Moe Myin Kyeal](https://github.com/AngelicaMoeMyintKyeal)
+- [Htet Myat Moe Myin Kyeal](https://gitlab.com/AngelicaMoeMyintKyeal)
 - [Séamus Ó Connor](https://github.com/shinra-electric)
 - [Pierpaolo Siciliano](https://github.com/PierSic-dev)
 - [Andrea Copellino](https://github.com/andreacopellino1)
